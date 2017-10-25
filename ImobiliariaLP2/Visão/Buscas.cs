@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ImobiliariaLP2.Visão
 {
-    public partial class RelatoriosV : Form
+    public partial class Buscas : Form
     {
-        public RelatoriosV()
+        public Buscas()
         {
             InitializeComponent();
         }
@@ -20,23 +20,31 @@ namespace ImobiliariaLP2.Visão
         private void RltVendasP_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            RelatorioVendaPeridoV rvp = new RelatorioVendaPeridoV();
-            rvp.ShowDialog();
-            
+            BuscaCliente bc = new BuscaCliente();
+            bc.ShowDialog();
+        }
+
+        private void btnBImovel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            BuscaImovel bi = new BuscaImovel();
+            bi.ShowDialog();
+
         }
 
         private void btnRltVendasF_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            RelatorioVendaFuncV rvf = new RelatorioVendaFuncV();
-            rvf.ShowDialog();
+            BuscaFuncionario bf = new BuscaFuncionario();
+            bf.ShowDialog();
+
         }
 
-        private void btnRltImoveisDisp_Click(object sender, EventArgs e)
+        private void btnBProprietario_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            RelatorioImoveisDisponivelV rid = new RelatorioImoveisDisponivelV();
-            rid.ShowDialog();
+            BuscaProprietario bp = new BuscaProprietario();
+            bp.ShowDialog();
         }
 
         private void btn_voltarMenu_Click(object sender, EventArgs e)
@@ -44,7 +52,6 @@ namespace ImobiliariaLP2.Visão
             this.Dispose();
             Inicio i = new Inicio();
             i.ShowDialog();
-            
         }
     }
 }

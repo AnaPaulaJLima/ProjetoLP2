@@ -37,43 +37,59 @@
             // btnRltImoveisDisp
             // 
             this.btnRltImoveisDisp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnRltImoveisDisp.Location = new System.Drawing.Point(65, 253);
+            this.btnRltImoveisDisp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRltImoveisDisp.Image = global::ImobiliariaLP2.Properties.Resources.home_icon;
+            this.btnRltImoveisDisp.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRltImoveisDisp.Location = new System.Drawing.Point(41, 169);
             this.btnRltImoveisDisp.Name = "btnRltImoveisDisp";
-            this.btnRltImoveisDisp.Size = new System.Drawing.Size(131, 75);
+            this.btnRltImoveisDisp.Size = new System.Drawing.Size(131, 87);
             this.btnRltImoveisDisp.TabIndex = 10;
-            this.btnRltImoveisDisp.Text = "Relatorio - Imoveis Disponivel";
+            this.btnRltImoveisDisp.Text = "Imoveis Disponivel";
+            this.btnRltImoveisDisp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRltImoveisDisp.UseVisualStyleBackColor = true;
             this.btnRltImoveisDisp.Click += new System.EventHandler(this.btnRltImoveisDisp_Click);
             // 
             // btnRltVendasF
             // 
             this.btnRltVendasF.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnRltVendasF.Location = new System.Drawing.Point(314, 116);
+            this.btnRltVendasF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRltVendasF.Image = global::ImobiliariaLP2.Properties.Resources.businessmen64;
+            this.btnRltVendasF.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRltVendasF.Location = new System.Drawing.Point(245, 43);
             this.btnRltVendasF.Name = "btnRltVendasF";
-            this.btnRltVendasF.Size = new System.Drawing.Size(131, 75);
+            this.btnRltVendasF.Size = new System.Drawing.Size(131, 87);
             this.btnRltVendasF.TabIndex = 9;
-            this.btnRltVendasF.Text = "Relatorio - Vendas Por Func";
+            this.btnRltVendasF.Text = "Vendas Por Funcionario";
+            this.btnRltVendasF.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRltVendasF.UseVisualStyleBackColor = true;
             this.btnRltVendasF.Click += new System.EventHandler(this.btnRltVendasF_Click);
             // 
             // RltVendasP
             // 
             this.RltVendasP.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.RltVendasP.Location = new System.Drawing.Point(65, 116);
+            this.RltVendasP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RltVendasP.Image = global::ImobiliariaLP2.Properties.Resources.icon_cash64;
+            this.RltVendasP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.RltVendasP.Location = new System.Drawing.Point(41, 43);
             this.RltVendasP.Name = "RltVendasP";
-            this.RltVendasP.Size = new System.Drawing.Size(131, 75);
+            this.RltVendasP.Size = new System.Drawing.Size(131, 87);
             this.RltVendasP.TabIndex = 8;
-            this.RltVendasP.Text = "Relatorio - Vendas Por Periodo";
+            this.RltVendasP.Text = "Vendas Por Periodo";
+            this.RltVendasP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.RltVendasP.UseVisualStyleBackColor = true;
             this.RltVendasP.Click += new System.EventHandler(this.RltVendasP_Click);
             // 
             // btn_voltarMenu
             // 
-            this.btn_voltarMenu.Location = new System.Drawing.Point(314, 253);
+            this.btn_voltarMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_voltarMenu.Image = global::ImobiliariaLP2.Properties.Resources.close_1_64;
+            this.btn_voltarMenu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_voltarMenu.Location = new System.Drawing.Point(245, 169);
             this.btn_voltarMenu.Name = "btn_voltarMenu";
-            this.btn_voltarMenu.Size = new System.Drawing.Size(131, 75);
+            this.btn_voltarMenu.Size = new System.Drawing.Size(131, 87);
             this.btn_voltarMenu.TabIndex = 11;
             this.btn_voltarMenu.Text = "Voltar";
+            this.btn_voltarMenu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_voltarMenu.UseVisualStyleBackColor = true;
             this.btn_voltarMenu.Click += new System.EventHandler(this.btn_voltarMenu_Click);
             // 
@@ -81,7 +97,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 471);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = global::ImobiliariaLP2.Properties.Resources._2e5c24508a096ca6510d07e3f0190adf;
+            this.ClientSize = new System.Drawing.Size(418, 296);
             this.Controls.Add(this.btn_voltarMenu);
             this.Controls.Add(this.btnRltImoveisDisp);
             this.Controls.Add(this.btnRltVendasF);

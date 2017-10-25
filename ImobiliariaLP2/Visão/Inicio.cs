@@ -160,5 +160,87 @@ namespace ImobiliariaLP2.Visão
             BuscaFuncionario b = new BuscaFuncionario();
             b.ShowDialog();
         }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            Buscas b = new Buscas();
+            b.ShowDialog();
+            this.Dispose();
+        }
+
+        private void btn_sair_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void proprietáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imóveisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void funcionariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void relatoriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imoveisDisponiveisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vendasPorFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vendasPorPeriodoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHora_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

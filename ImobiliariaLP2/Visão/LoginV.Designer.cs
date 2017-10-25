@@ -105,11 +105,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(153, 42);
+            this.label3.Location = new System.Drawing.Point(26, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 13);
+            this.label3.Size = new System.Drawing.Size(237, 39);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Desenvolvido por ...";
+            this.label3.Text = "Desenvolvido por : Yudji Nakaema Oliveira\r\n                               Ana Pau" +
+    "la Julio de Lima\r\n                               João Pedro Enoki Guimarães";
             // 
             // panel2
             // 
@@ -150,10 +151,11 @@
             // btn_sair
             // 
             this.btn_sair.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_sair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sair.Image = global::ImobiliariaLP2.Properties.Resources.close30;
             this.btn_sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sair.Location = new System.Drawing.Point(171, 206);
+            this.btn_sair.Location = new System.Drawing.Point(196, 206);
             this.btn_sair.Name = "btn_sair";
             this.btn_sair.Size = new System.Drawing.Size(83, 40);
             this.btn_sair.TabIndex = 1;
@@ -165,10 +167,11 @@
             // btn_entrar
             // 
             this.btn_entrar.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_entrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_entrar.Image = global::ImobiliariaLP2.Properties.Resources.ok30;
             this.btn_entrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_entrar.Location = new System.Drawing.Point(68, 206);
+            this.btn_entrar.Location = new System.Drawing.Point(96, 206);
             this.btn_entrar.Name = "btn_entrar";
             this.btn_entrar.Size = new System.Drawing.Size(83, 40);
             this.btn_entrar.TabIndex = 0;

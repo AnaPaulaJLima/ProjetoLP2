@@ -81,6 +81,12 @@
     <Compile Include="Visão\BuscaProprietario.Designer.cs">
       <DependentUpon>BuscaProprietario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visão\Buscas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visão\Buscas.Designer.cs">
+      <DependentUpon>Buscas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visão\ClienteV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     </Compile>
     <Compile Include="Visão\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visão\InicioDMovel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visão\InicioDMovel.Designer.cs">
+      <DependentUpon>InicioDMovel.cs</DependentUpon>
     </Compile>
     <Compile Include="Visão\LoginV.cs">
       <SubType>Form</SubType>
@@ -199,6 +211,9 @@
     <EmbeddedResource Include="Visão\BuscaProprietario.resx">
       <DependentUpon>BuscaProprietario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visão\Buscas.resx">
+      <DependentUpon>Buscas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visão\ClienteV.resx">
       <DependentUpon>ClienteV.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visão\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visão\InicioDMovel.resx">
+      <DependentUpon>InicioDMovel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visão\LoginV.resx">
       <DependentUpon>LoginV.cs</DependentUpon>
@@ -338,6 +356,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\businessmen64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_1-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impressora64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grunge-background-azul.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grunge-background-azul1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2e5c24508a096ca6510d07e3f0190adf.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -122,3 +122,34 @@ C:\Users\João Pedro Guimarães\Documents\ImobiliariaLP2\ImobiliariaLP2\obj\Debu
 C:\Users\João Pedro Guimarães\Documents\ImobiliariaLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.exe.config
 C:\Users\João Pedro Guimarães\Documents\ImobiliariaLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.exe
 C:\Users\João Pedro Guimarães\Documents\ImobiliariaLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.pdb
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.exe.config
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.exe
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.pdb
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csprojResolveAssemblyReference.cache
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Properties.Resources.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.BuscaCliente.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.BuscaFuncionario.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.BuscaImovel.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.BuscaProprietario.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.ClienteV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.FuncionarioV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.ImovelV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.Inicio.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.LoginV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.ProprietariosV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.RelatorioImoveisDisponivelV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.RelatoriosV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.RelatorioVendaFuncV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.RelatorioVendaPeridoV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VendaV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VisualizarFuncionario.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VisualizarImovelV.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VisualizarVenda.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VizualizarCliente.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VizualizarProprietario.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.GenerateResource.Cache
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.CoreCompileInputs.cache
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.exe
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.pdb
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.Buscas.resources
+C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.InicioDMovel.resources

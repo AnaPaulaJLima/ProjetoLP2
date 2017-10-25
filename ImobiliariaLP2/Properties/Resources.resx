@@ -118,82 +118,103 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="usuarios 40x40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuarios 40x40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document_icon70" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_icon70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Consultar contas a Receber" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Consultar contas a Receber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="relatorios 40 x 40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\relatorios 40 x 40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="budget64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\budget64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Relatório" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Relatório.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-cash64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-cash64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Laeacco-Abstract-Grunge-font-b-Gradient-b-font-Solid-Portrait-Photography-font-b-Backgrounds-b-font" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Laeacco-Abstract-Grunge-font-b-Gradient-b-font-Solid-Portrait-Photography-font-b-Backgrounds-b-font.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone sair 25 x 25" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone sair 25 x 25.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lock_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock_32.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botao-cliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botao-cliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="b360d4aa-5bdc-49f8-82c3-3471be35b8f8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b360d4aa-5bdc-49f8-82c3-3471be35b8f8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="documents64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\documents64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="boy-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boy-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="grunge-background-azul1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grunge-background-azul1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="grupo64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grupo64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="couple64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\couple64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-cash64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-cash64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botao-cliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botao-cliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuarios 40x40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuarios 40x40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="San-Marino-logo-correta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\San-Marino-logo-correta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="group" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="impressora64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\impressora64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ok30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ok30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Consultar contas a Receber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Consultar contas a Receber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="86777170-4ee2-49b5-b651-9c654145ad03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\86777170-4ee2-49b5-b651-9c654145ad03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lupa64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lupa64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="couple64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\couple64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="budget64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\budget64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="depositphotos_18674489-stock-photo-grey-wall-texture-grunge-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_18674489-stock-photo-grey-wall-texture-grunge-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="documents64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\documents64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Laeacco-Abstract-Grunge-font-b-Gradient-b-font-Solid-Portrait-Photography-font-b-Backgrounds-b-font" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Laeacco-Abstract-Grunge-font-b-Gradient-b-font-Solid-Portrait-Photography-font-b-Backgrounds-b-font.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_icon70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_icon70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boy-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boy-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="group" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b360d4aa-5bdc-49f8-82c3-3471be35b8f8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b360d4aa-5bdc-49f8-82c3-3471be35b8f8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="power64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\power64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="relatorios 40 x 40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\relatorios 40 x 40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="86777170-4ee2-49b5-b651-9c654145ad03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\86777170-4ee2-49b5-b651-9c654145ad03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ok30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ok30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_1-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_1-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone sair 25 x 25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone sair 25 x 25.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="businessmen64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\businessmen64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock_32.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grunge-background-azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grunge-background-azul.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2e5c24508a096ca6510d07e3f0190adf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2e5c24508a096ca6510d07e3f0190adf.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

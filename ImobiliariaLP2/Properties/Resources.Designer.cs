@@ -63,6 +63,16 @@ namespace ImobiliariaLP2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2e5c24508a096ca6510d07e3f0190adf {
+            get {
+                object obj = ResourceManager.GetObject("2e5c24508a096ca6510d07e3f0190adf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _86777170_4ee2_49b5_b651_9c654145ad03 {
             get {
                 object obj = ResourceManager.GetObject("86777170-4ee2-49b5-b651-9c654145ad03", resourceCulture);
@@ -116,6 +126,16 @@ namespace ImobiliariaLP2.Properties {
         internal static System.Drawing.Bitmap businessmen64 {
             get {
                 object obj = ResourceManager.GetObject("businessmen64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_1_64 {
+            get {
+                object obj = ResourceManager.GetObject("close_1-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +213,26 @@ namespace ImobiliariaLP2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap grunge_background_azul {
+            get {
+                object obj = ResourceManager.GetObject("grunge-background-azul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grunge_background_azul1 {
+            get {
+                object obj = ResourceManager.GetObject("grunge-background-azul1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grupo64 {
             get {
                 object obj = ResourceManager.GetObject("grupo64", resourceCulture);
@@ -243,6 +283,16 @@ namespace ImobiliariaLP2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap impressora64 {
+            get {
+                object obj = ResourceManager.GetObject("impressora64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Laeacco_Abstract_Grunge_font_b_Gradient_b_font_Solid_Portrait_Photography_font_b_Backgrounds_b_font {
             get {
                 object obj = ResourceManager.GetObject("Laeacco-Abstract-Grunge-font-b-Gradient-b-font-Solid-Portrait-Photography-font-b-" +
@@ -264,9 +314,29 @@ namespace ImobiliariaLP2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lupa64 {
+            get {
+                object obj = ResourceManager.GetObject("lupa64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ok30 {
             get {
                 object obj = ResourceManager.GetObject("ok30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap power64 {
+            get {
+                object obj = ResourceManager.GetObject("power64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

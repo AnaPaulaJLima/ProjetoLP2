@@ -46,6 +46,9 @@
             this.imóveisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.buscaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.vendaAluguelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imoveisDisponiveisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,9 +63,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.funcionariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.btn_sair = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -70,13 +73,13 @@
             // 
             // btnProprietarios
             // 
-            this.btnProprietarios.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnProprietarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnProprietarios.BackColor = System.Drawing.SystemColors.Control;
             this.btnProprietarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProprietarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProprietarios.Image = global::ImobiliariaLP2.Properties.Resources.businessmen64;
             this.btnProprietarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProprietarios.Location = new System.Drawing.Point(171, 145);
+            this.btnProprietarios.Location = new System.Drawing.Point(50, 71);
             this.btnProprietarios.Name = "btnProprietarios";
             this.btnProprietarios.Size = new System.Drawing.Size(113, 96);
             this.btnProprietarios.TabIndex = 0;
@@ -87,12 +90,12 @@
             // 
             // btnImoveis
             // 
-            this.btnImoveis.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnImoveis.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnImoveis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImoveis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImoveis.Image = global::ImobiliariaLP2.Properties.Resources.home_icon;
             this.btnImoveis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImoveis.Location = new System.Drawing.Point(515, 145);
+            this.btnImoveis.Location = new System.Drawing.Point(394, 71);
             this.btnImoveis.Name = "btnImoveis";
             this.btnImoveis.Size = new System.Drawing.Size(113, 96);
             this.btnImoveis.TabIndex = 1;
@@ -103,12 +106,12 @@
             // 
             // btnVenda
             // 
-            this.btnVenda.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnVenda.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVenda.Image = global::ImobiliariaLP2.Properties.Resources.icon_cash64;
             this.btnVenda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVenda.Location = new System.Drawing.Point(337, 270);
+            this.btnVenda.Location = new System.Drawing.Point(216, 215);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(113, 96);
             this.btnVenda.TabIndex = 4;
@@ -120,7 +123,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.proprietáriosToolStripMenuItem,
@@ -133,9 +136,10 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(771, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(772, 28);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // cadastrosToolStripMenuItem
             // 
@@ -144,27 +148,28 @@
             this.clientesToolStripMenuItem,
             this.funcionariosToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
+            this.cadastrosToolStripMenuItem.Click += new System.EventHandler(this.cadastrosToolStripMenuItem_Click);
             // 
             // imoveisToolStripMenuItem
             // 
             this.imoveisToolStripMenuItem.Name = "imoveisToolStripMenuItem";
-            this.imoveisToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.imoveisToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.imoveisToolStripMenuItem.Text = "Imoveis";
             this.imoveisToolStripMenuItem.Click += new System.EventHandler(this.imoveisToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // funcionariosToolStripMenuItem
             // 
             this.funcionariosToolStripMenuItem.Name = "funcionariosToolStripMenuItem";
-            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funcionariosToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.funcionariosToolStripMenuItem.Text = "Funcionarios";
             this.funcionariosToolStripMenuItem.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
             // 
@@ -174,20 +179,21 @@
             this.cadastroToolStripMenuItem,
             this.buscaToolStripMenuItem});
             this.proprietáriosToolStripMenuItem.Name = "proprietáriosToolStripMenuItem";
-            this.proprietáriosToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.proprietáriosToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.proprietáriosToolStripMenuItem.Text = "Proprietários";
+            this.proprietáriosToolStripMenuItem.Click += new System.EventHandler(this.proprietáriosToolStripMenuItem_Click);
             // 
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
             // buscaToolStripMenuItem
             // 
             this.buscaToolStripMenuItem.Name = "buscaToolStripMenuItem";
-            this.buscaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.buscaToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.buscaToolStripMenuItem.Text = "Busca";
             this.buscaToolStripMenuItem.Click += new System.EventHandler(this.buscaToolStripMenuItem_Click);
             // 
@@ -197,20 +203,21 @@
             this.cadastroToolStripMenuItem1,
             this.buscaToolStripMenuItem1});
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(63, 20);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(76, 24);
             this.clientesToolStripMenuItem1.Text = "Clientes";
+            this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // cadastroToolStripMenuItem1
             // 
             this.cadastroToolStripMenuItem1.Name = "cadastroToolStripMenuItem1";
-            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(140, 24);
             this.cadastroToolStripMenuItem1.Text = "Cadastro";
             this.cadastroToolStripMenuItem1.Click += new System.EventHandler(this.cadastroToolStripMenuItem1_Click);
             // 
             // buscaToolStripMenuItem1
             // 
             this.buscaToolStripMenuItem1.Name = "buscaToolStripMenuItem1";
-            this.buscaToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.buscaToolStripMenuItem1.Size = new System.Drawing.Size(140, 24);
             this.buscaToolStripMenuItem1.Text = "Busca";
             this.buscaToolStripMenuItem1.Click += new System.EventHandler(this.buscaToolStripMenuItem1_Click);
             // 
@@ -220,27 +227,52 @@
             this.cadastroToolStripMenuItem2,
             this.buscaToolStripMenuItem2});
             this.imóveisToolStripMenuItem.Name = "imóveisToolStripMenuItem";
-            this.imóveisToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.imóveisToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.imóveisToolStripMenuItem.Text = "Imóveis";
+            this.imóveisToolStripMenuItem.Click += new System.EventHandler(this.imóveisToolStripMenuItem_Click);
             // 
             // cadastroToolStripMenuItem2
             // 
             this.cadastroToolStripMenuItem2.Name = "cadastroToolStripMenuItem2";
-            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(140, 24);
             this.cadastroToolStripMenuItem2.Text = "Cadastro";
             this.cadastroToolStripMenuItem2.Click += new System.EventHandler(this.cadastroToolStripMenuItem2_Click);
             // 
             // buscaToolStripMenuItem2
             // 
             this.buscaToolStripMenuItem2.Name = "buscaToolStripMenuItem2";
-            this.buscaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.buscaToolStripMenuItem2.Size = new System.Drawing.Size(140, 24);
             this.buscaToolStripMenuItem2.Text = "Busca";
             this.buscaToolStripMenuItem2.Click += new System.EventHandler(this.buscaToolStripMenuItem2_Click);
+            // 
+            // funcionariosToolStripMenuItem1
+            // 
+            this.funcionariosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroToolStripMenuItem3,
+            this.buscaToolStripMenuItem3});
+            this.funcionariosToolStripMenuItem1.Name = "funcionariosToolStripMenuItem1";
+            this.funcionariosToolStripMenuItem1.Size = new System.Drawing.Size(110, 24);
+            this.funcionariosToolStripMenuItem1.Text = "Funcionarios";
+            this.funcionariosToolStripMenuItem1.Click += new System.EventHandler(this.funcionariosToolStripMenuItem1_Click);
+            // 
+            // cadastroToolStripMenuItem3
+            // 
+            this.cadastroToolStripMenuItem3.Name = "cadastroToolStripMenuItem3";
+            this.cadastroToolStripMenuItem3.Size = new System.Drawing.Size(140, 24);
+            this.cadastroToolStripMenuItem3.Text = "Cadastro";
+            this.cadastroToolStripMenuItem3.Click += new System.EventHandler(this.cadastroToolStripMenuItem3_Click);
+            // 
+            // buscaToolStripMenuItem3
+            // 
+            this.buscaToolStripMenuItem3.Name = "buscaToolStripMenuItem3";
+            this.buscaToolStripMenuItem3.Size = new System.Drawing.Size(140, 24);
+            this.buscaToolStripMenuItem3.Text = "Busca";
+            this.buscaToolStripMenuItem3.Click += new System.EventHandler(this.buscaToolStripMenuItem3_Click);
             // 
             // vendaAluguelToolStripMenuItem
             // 
             this.vendaAluguelToolStripMenuItem.Name = "vendaAluguelToolStripMenuItem";
-            this.vendaAluguelToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.vendaAluguelToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
             this.vendaAluguelToolStripMenuItem.Text = "Venda/Aluguel";
             this.vendaAluguelToolStripMenuItem.Click += new System.EventHandler(this.vendaAluguelToolStripMenuItem_Click);
             // 
@@ -251,47 +283,52 @@
             this.vendasPorFuncionarioToolStripMenuItem,
             this.vendasPorPeriodoToolStripMenuItem});
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.relatoriosToolStripMenuItem.Text = "Relatorios";
+            this.relatoriosToolStripMenuItem.Click += new System.EventHandler(this.relatoriosToolStripMenuItem_Click);
             // 
             // imoveisDisponiveisToolStripMenuItem
             // 
             this.imoveisDisponiveisToolStripMenuItem.Name = "imoveisDisponiveisToolStripMenuItem";
-            this.imoveisDisponiveisToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.imoveisDisponiveisToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.imoveisDisponiveisToolStripMenuItem.Text = "Imoveis Disponiveis";
+            this.imoveisDisponiveisToolStripMenuItem.Click += new System.EventHandler(this.imoveisDisponiveisToolStripMenuItem_Click);
             // 
             // vendasPorFuncionarioToolStripMenuItem
             // 
             this.vendasPorFuncionarioToolStripMenuItem.Name = "vendasPorFuncionarioToolStripMenuItem";
-            this.vendasPorFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.vendasPorFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.vendasPorFuncionarioToolStripMenuItem.Text = "Vendas Por Funcionario";
+            this.vendasPorFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.vendasPorFuncionarioToolStripMenuItem_Click);
             // 
             // vendasPorPeriodoToolStripMenuItem
             // 
             this.vendasPorPeriodoToolStripMenuItem.Name = "vendasPorPeriodoToolStripMenuItem";
-            this.vendasPorPeriodoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.vendasPorPeriodoToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.vendasPorPeriodoToolStripMenuItem.Text = "Vendas Por Periodo";
+            this.vendasPorPeriodoToolStripMenuItem.Click += new System.EventHandler(this.vendasPorPeriodoToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 24);
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // btnRelatorios
             // 
-            this.btnRelatorios.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnRelatorios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnRelatorios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRelatorios.Image = global::ImobiliariaLP2.Properties.Resources.documents64;
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRelatorios.Location = new System.Drawing.Point(515, 270);
+            this.btnRelatorios.Location = new System.Drawing.Point(394, 215);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Size = new System.Drawing.Size(113, 96);
             this.btnRelatorios.TabIndex = 9;
@@ -302,12 +339,12 @@
             // 
             // btnFuncionario
             // 
-            this.btnFuncionario.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnFuncionario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFuncionario.Image = global::ImobiliariaLP2.Properties.Resources.grupo64;
             this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFuncionario.Location = new System.Drawing.Point(171, 270);
+            this.btnFuncionario.Location = new System.Drawing.Point(50, 215);
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.Size = new System.Drawing.Size(113, 96);
             this.btnFuncionario.TabIndex = 3;
@@ -318,12 +355,12 @@
             // 
             // btnClientes
             // 
-            this.btnClientes.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnClientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Image = global::ImobiliariaLP2.Properties.Resources.boy_64;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnClientes.Location = new System.Drawing.Point(337, 145);
+            this.btnClientes.Location = new System.Drawing.Point(216, 71);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(113, 96);
             this.btnClientes.TabIndex = 2;
@@ -334,68 +371,96 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox1.Image = global::ImobiliariaLP2.Properties.Resources.San_Marino_logo_correta;
-            this.pictureBox1.Location = new System.Drawing.Point(312, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(272, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 130);
+            this.pictureBox1.Size = new System.Drawing.Size(299, 201);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblHora);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-9, 463);
+            this.panel1.Location = new System.Drawing.Point(-9, 389);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(789, 164);
+            this.panel1.Size = new System.Drawing.Size(789, 238);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblHora
             // 
+            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(611, 78);
+            this.lblHora.Location = new System.Drawing.Point(611, 152);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(51, 16);
             this.lblHora.TabIndex = 11;
             this.lblHora.Text = "label1";
+            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // funcionariosToolStripMenuItem1
+            // btn_buscar
             // 
-            this.funcionariosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem3,
-            this.buscaToolStripMenuItem3});
-            this.funcionariosToolStripMenuItem1.Name = "funcionariosToolStripMenuItem1";
-            this.funcionariosToolStripMenuItem1.Size = new System.Drawing.Size(88, 20);
-            this.funcionariosToolStripMenuItem1.Text = "Funcionarios";
+            this.btn_buscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.Image = global::ImobiliariaLP2.Properties.Resources.lupa64;
+            this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_buscar.Location = new System.Drawing.Point(595, 71);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(113, 96);
+            this.btn_buscar.TabIndex = 12;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
-            // cadastroToolStripMenuItem3
+            // btn_sair
             // 
-            this.cadastroToolStripMenuItem3.Name = "cadastroToolStripMenuItem3";
-            this.cadastroToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
-            this.cadastroToolStripMenuItem3.Text = "Cadastro";
-            this.cadastroToolStripMenuItem3.Click += new System.EventHandler(this.cadastroToolStripMenuItem3_Click);
+            this.btn_sair.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_sair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sair.Image = global::ImobiliariaLP2.Properties.Resources.power64;
+            this.btn_sair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_sair.Location = new System.Drawing.Point(595, 215);
+            this.btn_sair.Name = "btn_sair";
+            this.btn_sair.Size = new System.Drawing.Size(113, 96);
+            this.btn_sair.TabIndex = 13;
+            this.btn_sair.Text = "Sair";
+            this.btn_sair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_sair.UseVisualStyleBackColor = true;
+            this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
             // 
-            // buscaToolStripMenuItem3
+            // label3
             // 
-            this.buscaToolStripMenuItem3.Name = "buscaToolStripMenuItem3";
-            this.buscaToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
-            this.buscaToolStripMenuItem3.Text = "Busca";
-            this.buscaToolStripMenuItem3.Click += new System.EventHandler(this.buscaToolStripMenuItem3_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(237, 39);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Desenvolvido por : Yudji Nakaema Oliveira\r\n                               Ana Pau" +
+    "la Julio de Lima\r\n                               João Pedro Enoki Guimarães";
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ImobiliariaLP2.Properties.Resources.Laeacco_Abstract_Grunge_font_b_Gradient_b_font_Solid_Portrait_Photography_font_b_Backgrounds_b_font;
-            this.ClientSize = new System.Drawing.Size(771, 587);
+            this.BackgroundImage = global::ImobiliariaLP2.Properties.Resources.grunge_background_azul;
+            this.ClientSize = new System.Drawing.Size(772, 587);
+            this.Controls.Add(this.btn_sair);
+            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRelatorios);
             this.Controls.Add(this.btnVenda);
@@ -409,6 +474,8 @@
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -455,5 +522,8 @@
         private System.Windows.Forms.ToolStripMenuItem funcionariosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem buscaToolStripMenuItem3;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.Button btn_sair;
+        private System.Windows.Forms.Label label3;
     }
 }

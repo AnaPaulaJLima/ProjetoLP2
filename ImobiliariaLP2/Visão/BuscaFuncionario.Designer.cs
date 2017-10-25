@@ -98,7 +98,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.lbNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BuscaFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuscaFuncionario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
