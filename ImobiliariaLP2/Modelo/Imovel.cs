@@ -12,6 +12,8 @@ namespace ImobiliariaLP2.Modelo
         private string tipo; // casa/apartamento
         private string categoria; // venda/aluguel
         private float metragem;
+        private float frente;
+        private float fundo;
         private float valor;
         private string bairro;
         private string rua;
@@ -22,6 +24,18 @@ namespace ImobiliariaLP2.Modelo
         {
             get { return id; }
             set { id = value; }
+        }
+
+        public float Fundo
+        {
+            get { return fundo; }
+            set { fundo = value; }
+        }
+
+        public float Frente
+        {
+            get { return frente; }
+            set { frente = value; }
         }
 
         public string Tipo
