@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ImobiliariaLP2.Modelo;
+using ImobiliariaLP2.DAO;
 
 namespace ImobiliariaLP2.Visão
 {
@@ -26,6 +28,19 @@ namespace ImobiliariaLP2.Visão
         {
             VizualizarCliente vc = new VizualizarCliente();
             vc.ShowDialog();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Cliente c = new Cliente();
+            c.Nome = textBoxNome.Text;
+            c.Cpf = maskedTextBoxCpf.Text;
+            c.Rg = textBoxRg.Text;
+            c.Email = textBoxEmail.Text;
+            c.Telefone = maskedTextBoxTelefone.Text;
+
+            ClienteDAO cDAO = new ClienteDAO();
+            cDAO.Salvar(c);
         }
     }
 }

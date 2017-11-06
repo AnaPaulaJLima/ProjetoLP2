@@ -11,103 +11,117 @@ namespace ImobiliariaLP2.DAO
 {
     public class ClienteDAO
     {
-            public void Salvar(Cliente c) // Salvar no banco
-            {
-                Database bd = Database.GetInstance();
+        public void Salvar(Cliente c) // Salvar no banco
+        {
+            Database bd = Database.GetInstance();
 
-                string query = "INSERT INTO cliente(nome, cpf, rg, telefone, email) VALUES(@nome, @cpf, @rg, @telefone, @email)";
-                // essa string recebe o comando sql.
+            string query = "INSERT INTO cliente(nome, cpf, rg, telefone, email) VALUES(@nome, @cpf, @rg, @telefone, @email)";
+            // essa string recebe o comando sql.
 
-                MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 
-                // Especificações, colocando tipos em cada aroba
-                comando.Parameters.Add("@nome", MySqlDbType.VarChar);
-                comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
-                comando.Parameters.Add("@rg", MySqlDbType.VarChar);
-                comando.Parameters.Add("@telefone", MySqlDbType.VarChar);
-                comando.Parameters.Add("@email", MySqlDbType.VarChar);
+            // Especificações, colocando tipos em cada aroba
+            comando.Parameters.Add("@nome", MySqlDbType.VarChar);
+            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
+            comando.Parameters.Add("@rg", MySqlDbType.VarChar);
+            comando.Parameters.Add("@telefone", MySqlDbType.VarChar);
+            comando.Parameters.Add("@email", MySqlDbType.VarChar);
 
-                // Atribuição de valores
-                comando.Parameters["@nome"].Value = c.Nome;
-                comando.Parameters["@cpf"].Value = c.Cpf;
-                comando.Parameters["@rg"].Value = c.Rg;
-                comando.Parameters["@telefone"].Value = c.Telefone;
-                comando.Parameters["@email"].Value = c.Email;
+            // Atribuição de valores
+            comando.Parameters["@nome"].Value = c.Nome;
+            comando.Parameters["@cpf"].Value = c.Cpf;
+            comando.Parameters["@rg"].Value = c.Rg;
+            comando.Parameters["@telefone"].Value = c.Telefone;
+            comando.Parameters["@email"].Value = c.Email;
 
-                bd.ExecuteNonQuery(comando);
-            }
+            bd.ExecuteNonQuery(comando);
+        }
 
-            public Cliente Buscar(string cpf) // é para ver um cliente com um determinado cpf 
-            {
-                Database bd = Database.GetInstance();
+        public DataTable BuscarTodos() // busca todos do banco
+        {
+            Database bd = Database.GetInstance();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
 
-                string query = "SELECT * FROM cliente WHERE cpf = @cpf"; // é o comando sql 
+            string query = "SELECT * FROM cliente"; // é o comando sql 
 
-                MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            da.SelectCommand = comando;
+            da.Fill(dt);
 
-                // Especificações
-                comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
+            return dt;
+        }
 
-                // Atribuição de valores
-                comando.Parameters["@cpf"].Value = cpf;
+        public Cliente Buscar(string cpf) // é para ver um cliente com um determinado cpf 
+        {
+            Database bd = Database.GetInstance();
 
-                DataSet ds = bd.ExecuteQuery(comando);
-                Cliente c = new Cliente();
+            string query = "SELECT * FROM cliente WHERE cpf = @cpf"; // é o comando sql 
 
-                DataRow dr = ds.Tables[0].Rows[0];
-                c.Id = int.Parse(dr["id"].ToString());
-                c.Nome = dr["nome"].ToString();
-                c.Cpf = dr["cpf"].ToString();
-                c.Rg = dr["rg"].ToString();
-                c.Telefone = dr["telefone"].ToString();
-                c.Email = dr["email"].ToString();
+            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 
-                return c;
-            }
+            // Especificações
+            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
 
-            public void Atualizar(Cliente c)
-            {
-                Database bd = Database.GetInstance();
+            // Atribuição de valores
+            comando.Parameters["@cpf"].Value = cpf;
 
-                string query = "UPDATE cliente SET id = @id, nome = @nome, cpf = @cpf, rg = @rg, telefone = @telefone, email = @email WHERE id = @id;";
+            DataSet ds = bd.ExecuteQuery(comando);
+            Cliente c = new Cliente();
 
-                MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            DataRow dr = ds.Tables[0].Rows[0];
+            c.Id = int.Parse(dr["id"].ToString());
+            c.Nome = dr["nome"].ToString();
+            c.Cpf = dr["cpf"].ToString();
+            c.Rg = dr["rg"].ToString();
+            c.Telefone = dr["telefone"].ToString();
+            c.Email = dr["email"].ToString();
 
-                // Especificando que tipo de dado é cada @
-                comando.Parameters.Add("@id", MySqlDbType.Int32);
-                comando.Parameters.Add("@nome", MySqlDbType.VarChar);
-                comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
-                comando.Parameters.Add("@rg", MySqlDbType.VarChar);
-                comando.Parameters.Add("@telefone", MySqlDbType.VarChar);
-                comando.Parameters.Add("@email", MySqlDbType.VarChar);
+            return c;
+        }
 
-                /// Atribuindo os valores aos @
-                comando.Parameters["@id"].Value = c.Id;
-                comando.Parameters["@nome"].Value = c.Nome;
-                comando.Parameters["@cpf"].Value = c.Cpf;
-                comando.Parameters["@rg"].Value = c.Rg;
-                comando.Parameters["@telefone"].Value = c.Telefone;
-                comando.Parameters["@email"].Value = c.Email;
+        public void Atualizar(Cliente c)
+        {
+            Database bd = Database.GetInstance();
 
-                bd.ExecuteNonQuery(comando);
-            }
+            string query = "UPDATE cliente SET id = @id, nome = @nome, cpf = @cpf, rg = @rg, telefone = @telefone, email = @email WHERE id = @id;";
 
-            public void Excluir(string cpf)
-            {
-                Database bd = Database.GetInstance();
+            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 
-                string query = "DELETE FROM cliente WHERE cpf = @cpf;";
+            // Especificando que tipo de dado é cada @
+            comando.Parameters.Add("@id", MySqlDbType.Int32);
+            comando.Parameters.Add("@nome", MySqlDbType.VarChar);
+            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
+            comando.Parameters.Add("@rg", MySqlDbType.VarChar);
+            comando.Parameters.Add("@telefone", MySqlDbType.VarChar);
+            comando.Parameters.Add("@email", MySqlDbType.VarChar);
 
-                MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            /// Atribuindo os valores aos @
+            comando.Parameters["@id"].Value = c.Id;
+            comando.Parameters["@nome"].Value = c.Nome;
+            comando.Parameters["@cpf"].Value = c.Cpf;
+            comando.Parameters["@rg"].Value = c.Rg;
+            comando.Parameters["@telefone"].Value = c.Telefone;
+            comando.Parameters["@email"].Value = c.Email;
 
-                //Especificação
-                comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
+            bd.ExecuteNonQuery(comando);
+        }
 
-                //Atribuição
-                comando.Parameters["@cpf"].Value = cpf;
+        public void Excluir(string cpf)
+        {
+            Database bd = Database.GetInstance();
 
-                bd.ExecuteNonQuery(comando);
-            }
-        
+            string query = "DELETE FROM cliente WHERE cpf = @cpf;";
+
+            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+
+            //Especificação
+            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
+
+            //Atribuição
+            comando.Parameters["@cpf"].Value = cpf;
+
+            bd.ExecuteNonQuery(comando);
+        }   
     }
 }

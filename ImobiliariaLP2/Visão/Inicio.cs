@@ -170,7 +170,6 @@ namespace ImobiliariaLP2.Visão
         {
             Buscas b = new Buscas();
             b.ShowDialog();
-            this.Dispose();
         }
 
         private void btn_sair_Click(object sender, EventArgs e)

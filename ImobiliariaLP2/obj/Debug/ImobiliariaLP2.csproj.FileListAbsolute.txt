@@ -153,3 +153,37 @@ C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.
 C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.pdb
 C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.Buscas.resources
 C:\Users\Yudji\source\repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.InicioDMovel.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.exe.config
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.exe
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.pdb
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.exe
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.pdb
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\CrystalDecisions.Web.dll
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csprojResolveAssemblyReference.cache
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Properties.Resources.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.BuscaCliente.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.BuscaFuncionario.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.BuscaImovel.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.BuscaProprietario.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.Buscas.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.ClienteV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.FuncionarioV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.ImovelV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.Inicio.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.InicioDMovel.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.LoginV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.ProprietariosV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.RelatorioImoveisDisponivelV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.RelatoriosV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.RelatorioVendaFuncV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.RelatorioVendaPeridoV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VendaV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VisualizarFuncionario.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VisualizarImovelV.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VisualizarVenda.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VizualizarCliente.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.VizualizarProprietario.resources
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.GenerateResource.Cache
