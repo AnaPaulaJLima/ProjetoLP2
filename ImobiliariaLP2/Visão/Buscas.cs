@@ -50,8 +50,6 @@ namespace ImobiliariaLP2.Visão
         private void btn_voltarMenu_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            Inicio i = new Inicio();
-            i.ShowDialog();
         }
     }
 }

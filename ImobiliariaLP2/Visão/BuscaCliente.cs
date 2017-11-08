@@ -32,25 +32,15 @@ namespace ImobiliariaLP2.Visão
             b.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void textBoxNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbNome_Click(object sender, EventArgs e)
-        {
-
+            ClienteDAO c = new ClienteDAO();
+            dgvCliente.DataSource = c.BuscarPorNome(textBoxNome.Text);
         }
 
         private void BuscaCliente_Load(object sender, EventArgs e)
         {
             ClienteDAO cDAO = new ClienteDAO();
-
             dgvCliente.DataSource = cDAO.BuscarTodos();
         }
     }

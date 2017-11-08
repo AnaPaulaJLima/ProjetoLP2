@@ -22,7 +22,6 @@ namespace ImobiliariaLP2.Modelo
             {
                 return id;
             }
-
             set
             {
                 id = value;

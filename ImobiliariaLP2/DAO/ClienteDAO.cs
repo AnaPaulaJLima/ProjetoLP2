@@ -43,9 +43,31 @@ namespace ImobiliariaLP2.DAO
             MySqlDataAdapter da = new MySqlDataAdapter();
             DataTable dt = new DataTable();
 
-            string query = "SELECT * FROM cliente"; // é o comando sql 
+            string query = "SELECT id, nome FROM cliente"; // é o comando sql 
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            da.SelectCommand = comando;
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable BuscarPorNome(string nome) // é para ver um cliente com um determinado nome 
+        {
+            Database bd = Database.GetInstance();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+
+            string query = "SELECT id, nome FROM cliente WHERE nome LIKE @nome + '%'"; // é o comando sql 
+
+            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+
+            // Especificações
+            comando.Parameters.Add("@nome", MySqlDbType.VarChar);
+
+            // Atribuição de valores
+            comando.Parameters["@nome"].Value = nome;
+
             da.SelectCommand = comando;
             da.Fill(dt);
 

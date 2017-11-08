@@ -59,7 +59,6 @@
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.Size = new System.Drawing.Size(525, 419);
             this.dgvCliente.TabIndex = 7;
-            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBoxNome
             // 
@@ -69,7 +68,7 @@
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(302, 20);
             this.textBoxNome.TabIndex = 6;
-            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
+            this.textBoxNome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxNome_KeyUp);
             // 
             // lbNome
             // 
@@ -79,7 +78,6 @@
             this.lbNome.Size = new System.Drawing.Size(41, 13);
             this.lbNome.TabIndex = 5;
             this.lbNome.Text = "Nome: ";
-            this.lbNome.Click += new System.EventHandler(this.lbNome_Click);
             // 
             // buttonSair
             // 
