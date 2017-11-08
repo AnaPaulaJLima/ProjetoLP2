@@ -48,7 +48,7 @@
             // btnDeletar
             // 
             this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnDeletar.Location = new System.Drawing.Point(415, 161);
+            this.btnDeletar.Location = new System.Drawing.Point(415, 177);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(75, 22);
             this.btnDeletar.TabIndex = 54;
@@ -58,17 +58,18 @@
             // btnAlterar
             // 
             this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnAlterar.Location = new System.Drawing.Point(227, 161);
+            this.btnAlterar.Location = new System.Drawing.Point(230, 177);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 22);
             this.btnAlterar.TabIndex = 53;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnSair
             // 
             this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnSair.Location = new System.Drawing.Point(47, 161);
+            this.btnSair.Location = new System.Drawing.Point(23, 177);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 22);
             this.btnSair.TabIndex = 49;
@@ -195,7 +196,7 @@
             this.Controls.Add(this.lbRg);
             this.Controls.Add(this.lbCpf);
             this.Controls.Add(this.lbNome);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "VizualizarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VizualizarCliente";

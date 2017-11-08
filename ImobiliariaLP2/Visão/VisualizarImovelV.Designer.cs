@@ -278,7 +278,7 @@
             this.Controls.Add(this.lbCategoria);
             this.Controls.Add(this.lbTipo);
             this.Controls.Add(this.lbID);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "VisualizarImovelV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VisualizarImovelV";

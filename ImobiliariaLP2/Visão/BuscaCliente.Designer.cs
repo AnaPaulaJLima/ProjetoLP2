@@ -33,6 +33,8 @@
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.buttonSair = new System.Windows.Forms.Button();
+            this.checkBoxNome = new System.Windows.Forms.CheckBox();
+            this.checkBoxCPF = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             this.btnAlterarDeletar.Name = "btnAlterarDeletar";
             this.btnAlterarDeletar.Size = new System.Drawing.Size(97, 23);
             this.btnAlterarDeletar.TabIndex = 8;
-            this.btnAlterarDeletar.Text = "Alterar/Deletar";
+            this.btnAlterarDeletar.Text = "Vizualizar";
             this.btnAlterarDeletar.UseVisualStyleBackColor = true;
             this.btnAlterarDeletar.Click += new System.EventHandler(this.btnAlterarDeletar_Click);
             // 
@@ -54,10 +56,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(12, 36);
+            this.dgvCliente.Location = new System.Drawing.Point(12, 54);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.Size = new System.Drawing.Size(525, 419);
+            this.dgvCliente.Size = new System.Drawing.Size(525, 401);
             this.dgvCliente.TabIndex = 7;
             // 
             // textBoxNome
@@ -89,11 +91,35 @@
             this.buttonSair.UseVisualStyleBackColor = true;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
+            // checkBoxNome
+            // 
+            this.checkBoxNome.AutoSize = true;
+            this.checkBoxNome.Checked = true;
+            this.checkBoxNome.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNome.Location = new System.Drawing.Point(78, 36);
+            this.checkBoxNome.Name = "checkBoxNome";
+            this.checkBoxNome.Size = new System.Drawing.Size(54, 17);
+            this.checkBoxNome.TabIndex = 10;
+            this.checkBoxNome.Text = "Nome";
+            this.checkBoxNome.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCPF
+            // 
+            this.checkBoxCPF.AutoSize = true;
+            this.checkBoxCPF.Location = new System.Drawing.Point(212, 36);
+            this.checkBoxCPF.Name = "checkBoxCPF";
+            this.checkBoxCPF.Size = new System.Drawing.Size(46, 17);
+            this.checkBoxCPF.TabIndex = 11;
+            this.checkBoxCPF.Text = "CPF";
+            this.checkBoxCPF.UseVisualStyleBackColor = true;
+            // 
             // BuscaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 467);
+            this.Controls.Add(this.checkBoxCPF);
+            this.Controls.Add(this.checkBoxNome);
             this.Controls.Add(this.buttonSair);
             this.Controls.Add(this.btnAlterarDeletar);
             this.Controls.Add(this.dgvCliente);
@@ -116,5 +142,7 @@
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Button buttonSair;
+        private System.Windows.Forms.CheckBox checkBoxNome;
+        private System.Windows.Forms.CheckBox checkBoxCPF;
     }
 }

@@ -40,13 +40,13 @@
             // 
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.Image = global::ImobiliariaLP2.Properties.Resources.impressora64;
+            this.btnImprimir.Image = global::ImobiliariaLP2.Properties.Resources.icon_cash64;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnImprimir.Location = new System.Drawing.Point(241, 161);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(131, 86);
             this.btnImprimir.TabIndex = 17;
-            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.Text = "Vendas / Aluguel ";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 

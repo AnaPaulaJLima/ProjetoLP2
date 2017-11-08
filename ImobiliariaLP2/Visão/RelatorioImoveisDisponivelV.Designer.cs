@@ -135,7 +135,7 @@
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.comboBoxTipo);
             this.Controls.Add(this.lblTipo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RelatorioImoveisDisponivelV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RelatorioImoveisDisponivelV";

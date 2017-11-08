@@ -27,5 +27,10 @@ namespace ImobiliariaLP2.Visão
             VisualizarFuncionario vf = new VisualizarFuncionario();
             vf.ShowDialog();
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

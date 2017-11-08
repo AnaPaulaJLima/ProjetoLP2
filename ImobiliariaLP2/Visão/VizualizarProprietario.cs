@@ -23,5 +23,37 @@ namespace ImobiliariaLP2.Visão
         {
             Dispose();
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Proprietario p = new Proprietario();
+            ProprietarioDao pDAO = new ProprietarioDao();
+
+            // Criando DTO
+            p.Nome = textBoxNome.Text;
+            p.Cpf = maskedTextBoxCpf.Text;
+            p.Rg = textBoxRg.Text;
+            p.Telefone = maskedTextBoxTelefone.Text;
+            p.Email = textBoxEmail.Text;
+            p.Rua = textBoxRua.Text;
+            p.Numero = int.Parse(textBoxNumero.Text);
+            p.Bairro = textBoxBairro.Text;
+            p.Cidade = textBoxCidade.Text;
+
+            // Passando DTO para o DAO
+            pDAO.Atualizar(p);
+
+            MessageBox.Show("Cadastro atualizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            textBoxNome.Clear();
+            textBoxEmail.Clear();
+            textBoxRg.Clear();
+            maskedTextBoxTelefone.Clear();
+            maskedTextBoxCpf.Clear();
+            textBoxRua.Clear();
+            textBoxNumero.Clear();
+            textBoxBairro.Clear();
+            textBoxCidade.Clear();
+        }
     }
 }

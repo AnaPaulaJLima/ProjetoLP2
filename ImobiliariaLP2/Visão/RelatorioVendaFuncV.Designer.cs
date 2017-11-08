@@ -144,7 +144,7 @@
             this.Controls.Add(this.lblDataI);
             this.Controls.Add(this.lblIdFunc);
             this.Controls.Add(this.lblTipo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RelatorioVendaFuncV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RelatorioVendaFuncV";

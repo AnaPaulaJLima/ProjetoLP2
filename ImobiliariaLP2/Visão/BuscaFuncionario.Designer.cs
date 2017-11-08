@@ -52,7 +52,7 @@
             this.btnAlterarDeletar.Name = "btnAlterarDeletar";
             this.btnAlterarDeletar.Size = new System.Drawing.Size(97, 23);
             this.btnAlterarDeletar.TabIndex = 18;
-            this.btnAlterarDeletar.Text = "Alterar/Deletar";
+            this.btnAlterarDeletar.Text = "Vizualizar";
             this.btnAlterarDeletar.UseVisualStyleBackColor = true;
             this.btnAlterarDeletar.Click += new System.EventHandler(this.btnAlterarDeletar_Click);
             // 

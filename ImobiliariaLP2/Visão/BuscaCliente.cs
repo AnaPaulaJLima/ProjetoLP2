@@ -43,5 +43,6 @@ namespace ImobiliariaLP2.Visão
             ClienteDAO cDAO = new ClienteDAO();
             dgvCliente.DataSource = cDAO.BuscarTodos();
         }
+
     }
 }

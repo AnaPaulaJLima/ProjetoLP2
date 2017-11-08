@@ -230,7 +230,7 @@
             this.Controls.Add(this.lblFuncao);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblID);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "VisualizarFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VisualizarFuncionario";

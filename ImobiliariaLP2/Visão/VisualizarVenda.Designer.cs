@@ -848,7 +848,7 @@
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.textBoxIDVenda);
             this.Controls.Add(this.lblIDVenda);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "VisualizarVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VisualizarVenda";

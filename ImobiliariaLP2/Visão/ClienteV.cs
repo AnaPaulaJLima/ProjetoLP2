@@ -24,23 +24,28 @@ namespace ImobiliariaLP2.Visão
             Dispose();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            VizualizarCliente vc = new VizualizarCliente();
-            vc.ShowDialog();
-        }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente();
+            ClienteDAO cDAO = new ClienteDAO();
+
             c.Nome = textBoxNome.Text;
             c.Cpf = maskedTextBoxCpf.Text;
             c.Rg = textBoxRg.Text;
             c.Email = textBoxEmail.Text;
             c.Telefone = maskedTextBoxTelefone.Text;
 
-            ClienteDAO cDAO = new ClienteDAO();
             cDAO.Salvar(c);
+
+            MessageBox.Show("Cadastro realizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            textBoxNome.Clear();
+            maskedTextBoxCpf.Clear();
+            textBoxRg.Clear();
+            textBoxEmail.Clear();
+            maskedTextBoxTelefone.Clear();
         }
+
+      
     }
 }

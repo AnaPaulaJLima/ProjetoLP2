@@ -99,6 +99,7 @@
             this.btn_sair.Text = "Sair";
             this.btn_sair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_sair.UseVisualStyleBackColor = true;
+
             // 
             // btnRelatorios
             // 
@@ -190,7 +191,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ImobiliariaLP2.Properties.Resources.grunge_background_azul1;
-            this.ClientSize = new System.Drawing.Size(392, 857);
+            this.ClientSize = new System.Drawing.Size(392, 788);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnFuncionario);
             this.Controls.Add(this.btnClientes);

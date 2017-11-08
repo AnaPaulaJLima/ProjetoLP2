@@ -70,7 +70,6 @@ namespace ImobiliariaLP2.Visão
         {
             RelatoriosV r = new RelatoriosV();
             r.ShowDialog();
-            this.Dispose();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)

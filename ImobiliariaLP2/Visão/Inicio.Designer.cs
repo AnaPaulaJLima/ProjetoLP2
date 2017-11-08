@@ -61,11 +61,11 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_sair = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -79,7 +79,7 @@
             this.btnProprietarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProprietarios.Image = global::ImobiliariaLP2.Properties.Resources.businessmen64;
             this.btnProprietarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProprietarios.Location = new System.Drawing.Point(50, 71);
+            this.btnProprietarios.Location = new System.Drawing.Point(61, 71);
             this.btnProprietarios.Name = "btnProprietarios";
             this.btnProprietarios.Size = new System.Drawing.Size(113, 96);
             this.btnProprietarios.TabIndex = 0;
@@ -95,7 +95,7 @@
             this.btnImoveis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImoveis.Image = global::ImobiliariaLP2.Properties.Resources.home_icon;
             this.btnImoveis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnImoveis.Location = new System.Drawing.Point(394, 71);
+            this.btnImoveis.Location = new System.Drawing.Point(408, 71);
             this.btnImoveis.Name = "btnImoveis";
             this.btnImoveis.Size = new System.Drawing.Size(113, 96);
             this.btnImoveis.TabIndex = 1;
@@ -111,7 +111,7 @@
             this.btnVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVenda.Image = global::ImobiliariaLP2.Properties.Resources.icon_cash64;
             this.btnVenda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVenda.Location = new System.Drawing.Point(216, 215);
+            this.btnVenda.Location = new System.Drawing.Point(231, 215);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(113, 96);
             this.btnVenda.TabIndex = 4;
@@ -272,7 +272,7 @@
             // vendaAluguelToolStripMenuItem
             // 
             this.vendaAluguelToolStripMenuItem.Name = "vendaAluguelToolStripMenuItem";
-            this.vendaAluguelToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.vendaAluguelToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
             this.vendaAluguelToolStripMenuItem.Text = "Venda/Aluguel";
             this.vendaAluguelToolStripMenuItem.Click += new System.EventHandler(this.vendaAluguelToolStripMenuItem_Click);
             // 
@@ -290,21 +290,21 @@
             // imoveisDisponiveisToolStripMenuItem
             // 
             this.imoveisDisponiveisToolStripMenuItem.Name = "imoveisDisponiveisToolStripMenuItem";
-            this.imoveisDisponiveisToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.imoveisDisponiveisToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
             this.imoveisDisponiveisToolStripMenuItem.Text = "Imoveis Disponiveis";
             this.imoveisDisponiveisToolStripMenuItem.Click += new System.EventHandler(this.imoveisDisponiveisToolStripMenuItem_Click);
             // 
             // vendasPorFuncionarioToolStripMenuItem
             // 
             this.vendasPorFuncionarioToolStripMenuItem.Name = "vendasPorFuncionarioToolStripMenuItem";
-            this.vendasPorFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.vendasPorFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
             this.vendasPorFuncionarioToolStripMenuItem.Text = "Vendas Por Funcionario";
             this.vendasPorFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.vendasPorFuncionarioToolStripMenuItem_Click);
             // 
             // vendasPorPeriodoToolStripMenuItem
             // 
             this.vendasPorPeriodoToolStripMenuItem.Name = "vendasPorPeriodoToolStripMenuItem";
-            this.vendasPorPeriodoToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.vendasPorPeriodoToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
             this.vendasPorPeriodoToolStripMenuItem.Text = "Vendas Por Periodo";
             this.vendasPorPeriodoToolStripMenuItem.Click += new System.EventHandler(this.vendasPorPeriodoToolStripMenuItem_Click);
             // 
@@ -328,7 +328,7 @@
             this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRelatorios.Image = global::ImobiliariaLP2.Properties.Resources.documents64;
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRelatorios.Location = new System.Drawing.Point(394, 215);
+            this.btnRelatorios.Location = new System.Drawing.Point(408, 215);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Size = new System.Drawing.Size(113, 96);
             this.btnRelatorios.TabIndex = 9;
@@ -344,7 +344,7 @@
             this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFuncionario.Image = global::ImobiliariaLP2.Properties.Resources.grupo64;
             this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFuncionario.Location = new System.Drawing.Point(50, 215);
+            this.btnFuncionario.Location = new System.Drawing.Point(61, 215);
             this.btnFuncionario.Name = "btnFuncionario";
             this.btnFuncionario.Size = new System.Drawing.Size(113, 96);
             this.btnFuncionario.TabIndex = 3;
@@ -360,7 +360,7 @@
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Image = global::ImobiliariaLP2.Properties.Resources.boy_64;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnClientes.Location = new System.Drawing.Point(216, 71);
+            this.btnClientes.Location = new System.Drawing.Point(231, 71);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(113, 96);
             this.btnClientes.TabIndex = 2;
@@ -395,6 +395,16 @@
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(237, 39);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Desenvolvido por : Yudji Nakaema Oliveira\r\n                               Ana Pau" +
+    "la Julio de Lima\r\n                               João Pedro Enoki Guimarães";
+            // 
             // lblHora
             // 
             this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -418,7 +428,7 @@
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar.Image = global::ImobiliariaLP2.Properties.Resources.lupa64;
             this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_buscar.Location = new System.Drawing.Point(595, 71);
+            this.btn_buscar.Location = new System.Drawing.Point(583, 71);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(113, 96);
             this.btn_buscar.TabIndex = 12;
@@ -434,7 +444,7 @@
             this.btn_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sair.Image = global::ImobiliariaLP2.Properties.Resources.power64;
             this.btn_sair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_sair.Location = new System.Drawing.Point(595, 215);
+            this.btn_sair.Location = new System.Drawing.Point(583, 215);
             this.btn_sair.Name = "btn_sair";
             this.btn_sair.Size = new System.Drawing.Size(113, 96);
             this.btn_sair.TabIndex = 13;
@@ -442,16 +452,6 @@
             this.btn_sair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_sair.UseVisualStyleBackColor = true;
             this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(237, 39);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Desenvolvido por : Yudji Nakaema Oliveira\r\n                               Ana Pau" +
-    "la Julio de Lima\r\n                               João Pedro Enoki Guimarães";
             // 
             // Inicio
             // 

@@ -21,8 +21,7 @@ namespace ImobiliariaLP2.Visão
         {
             this.Dispose();
             RelatorioVendaPeridoV rvp = new RelatorioVendaPeridoV();
-            rvp.ShowDialog();
-            
+            rvp.ShowDialog();   
         }
 
         private void btnRltVendasF_Click(object sender, EventArgs e)

@@ -16,5 +16,7 @@ namespace ImobiliariaLP2.Visão
         {
             InitializeComponent();
         }
+
+       
     }
 }

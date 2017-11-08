@@ -55,7 +55,7 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.Location = new System.Drawing.Point(64, 32);
+            this.textBoxID.Location = new System.Drawing.Point(57, 19);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(41, 20);
@@ -64,7 +64,7 @@
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(37, 35);
+            this.lbID.Location = new System.Drawing.Point(22, 22);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(21, 13);
             this.lbID.TabIndex = 29;
@@ -72,14 +72,14 @@
             // 
             // textBoxRg
             // 
-            this.textBoxRg.Location = new System.Drawing.Point(336, 61);
+            this.textBoxRg.Location = new System.Drawing.Point(329, 53);
             this.textBoxRg.Name = "textBoxRg";
-            this.textBoxRg.Size = new System.Drawing.Size(200, 20);
+            this.textBoxRg.Size = new System.Drawing.Size(215, 20);
             this.textBoxRg.TabIndex = 28;
             // 
             // maskedTextBoxTelefone
             // 
-            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(95, 145);
+            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(80, 158);
             this.maskedTextBoxTelefone.Mask = "(00) 0000-0000";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(98, 20);
@@ -87,30 +87,30 @@
             // 
             // maskedTextBoxCpf
             // 
-            this.maskedTextBoxCpf.Location = new System.Drawing.Point(64, 61);
+            this.maskedTextBoxCpf.Location = new System.Drawing.Point(57, 53);
             this.maskedTextBoxCpf.Mask = "000.000.000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
-            this.maskedTextBoxCpf.Size = new System.Drawing.Size(166, 20);
+            this.maskedTextBoxCpf.Size = new System.Drawing.Size(200, 20);
             this.maskedTextBoxCpf.TabIndex = 26;
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(166, 32);
+            this.textBoxNome.Location = new System.Drawing.Point(149, 19);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(370, 20);
+            this.textBoxNome.Size = new System.Drawing.Size(395, 20);
             this.textBoxNome.TabIndex = 25;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(235, 144);
+            this.textBoxEmail.Location = new System.Drawing.Point(228, 158);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(301, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(316, 20);
             this.textBoxEmail.TabIndex = 24;
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(199, 148);
+            this.lbEmail.Location = new System.Drawing.Point(184, 161);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(38, 13);
             this.lbEmail.TabIndex = 23;
@@ -119,7 +119,7 @@
             // lbTelefone
             // 
             this.lbTelefone.AutoSize = true;
-            this.lbTelefone.Location = new System.Drawing.Point(37, 148);
+            this.lbTelefone.Location = new System.Drawing.Point(22, 161);
             this.lbTelefone.Name = "lbTelefone";
             this.lbTelefone.Size = new System.Drawing.Size(52, 13);
             this.lbTelefone.TabIndex = 22;
@@ -128,7 +128,7 @@
             // lbRg
             // 
             this.lbRg.AutoSize = true;
-            this.lbRg.Location = new System.Drawing.Point(284, 64);
+            this.lbRg.Location = new System.Drawing.Point(284, 56);
             this.lbRg.Name = "lbRg";
             this.lbRg.Size = new System.Drawing.Size(26, 13);
             this.lbRg.TabIndex = 21;
@@ -137,7 +137,7 @@
             // lbCpf
             // 
             this.lbCpf.AutoSize = true;
-            this.lbCpf.Location = new System.Drawing.Point(37, 64);
+            this.lbCpf.Location = new System.Drawing.Point(21, 56);
             this.lbCpf.Name = "lbCpf";
             this.lbCpf.Size = new System.Drawing.Size(30, 13);
             this.lbCpf.TabIndex = 20;
@@ -146,7 +146,7 @@
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(122, 35);
+            this.lbNome.Location = new System.Drawing.Point(113, 22);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(38, 13);
             this.lbNome.TabIndex = 19;
@@ -155,7 +155,7 @@
             // btnSair
             // 
             this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnSair.Location = new System.Drawing.Point(40, 183);
+            this.btnSair.Location = new System.Drawing.Point(25, 201);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 24);
             this.btnSair.TabIndex = 31;
@@ -166,17 +166,18 @@
             // btnAlterar
             // 
             this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnAlterar.Location = new System.Drawing.Point(260, 183);
+            this.btnAlterar.Location = new System.Drawing.Point(245, 201);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 24);
             this.btnAlterar.TabIndex = 35;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnDeletar
             // 
             this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnDeletar.Location = new System.Drawing.Point(461, 183);
+            this.btnDeletar.Location = new System.Drawing.Point(469, 201);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(75, 24);
             this.btnDeletar.TabIndex = 36;
@@ -186,7 +187,7 @@
             // lblRua
             // 
             this.lblRua.AutoSize = true;
-            this.lblRua.Location = new System.Drawing.Point(37, 90);
+            this.lblRua.Location = new System.Drawing.Point(22, 94);
             this.lblRua.Name = "lblRua";
             this.lblRua.Size = new System.Drawing.Size(30, 13);
             this.lblRua.TabIndex = 37;
@@ -195,7 +196,7 @@
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(426, 90);
+            this.lblNumero.Location = new System.Drawing.Point(435, 94);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(47, 13);
             this.lblNumero.TabIndex = 38;
@@ -204,7 +205,7 @@
             // lblBairro
             // 
             this.lblBairro.AutoSize = true;
-            this.lblBairro.Location = new System.Drawing.Point(37, 119);
+            this.lblBairro.Location = new System.Drawing.Point(22, 126);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(37, 13);
             this.lblBairro.TabIndex = 39;
@@ -213,7 +214,7 @@
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(284, 119);
+            this.lblCidade.Location = new System.Drawing.Point(284, 126);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(46, 13);
             this.lblCidade.TabIndex = 40;
@@ -221,30 +222,30 @@
             // 
             // textBoxRua
             // 
-            this.textBoxRua.Location = new System.Drawing.Point(64, 87);
+            this.textBoxRua.Location = new System.Drawing.Point(57, 90);
             this.textBoxRua.Name = "textBoxRua";
-            this.textBoxRua.Size = new System.Drawing.Size(363, 20);
+            this.textBoxRua.Size = new System.Drawing.Size(372, 20);
             this.textBoxRua.TabIndex = 41;
             // 
             // textBoxNumero
             // 
-            this.textBoxNumero.Location = new System.Drawing.Point(471, 87);
+            this.textBoxNumero.Location = new System.Drawing.Point(479, 91);
             this.textBoxNumero.Name = "textBoxNumero";
             this.textBoxNumero.Size = new System.Drawing.Size(65, 20);
             this.textBoxNumero.TabIndex = 42;
             // 
             // textBoxBairro
             // 
-            this.textBoxBairro.Location = new System.Drawing.Point(80, 116);
+            this.textBoxBairro.Location = new System.Drawing.Point(65, 123);
             this.textBoxBairro.Name = "textBoxBairro";
             this.textBoxBairro.Size = new System.Drawing.Size(182, 20);
             this.textBoxBairro.TabIndex = 43;
             // 
             // textBoxCidade
             // 
-            this.textBoxCidade.Location = new System.Drawing.Point(341, 116);
+            this.textBoxCidade.Location = new System.Drawing.Point(341, 123);
             this.textBoxCidade.Name = "textBoxCidade";
-            this.textBoxCidade.Size = new System.Drawing.Size(195, 20);
+            this.textBoxCidade.Size = new System.Drawing.Size(203, 20);
             this.textBoxCidade.TabIndex = 44;
             // 
             // VizualizarProprietario
@@ -275,7 +276,7 @@
             this.Controls.Add(this.lbRg);
             this.Controls.Add(this.lbCpf);
             this.Controls.Add(this.lbNome);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "VizualizarProprietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VizualizarProprietario";
