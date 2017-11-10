@@ -30,13 +30,13 @@
         {
             this.btnAlterarDeletar = new System.Windows.Forms.Button();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.colunaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.buttonSair = new System.Windows.Forms.Button();
             this.checkBoxNome = new System.Windows.Forms.CheckBox();
             this.checkBoxCPF = new System.Windows.Forms.CheckBox();
-            this.colunaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,21 @@
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.Size = new System.Drawing.Size(525, 401);
             this.dgvCliente.TabIndex = 7;
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
+            // 
+            // colunaId
+            // 
+            this.colunaId.FillWeight = 50F;
+            this.colunaId.HeaderText = "ID";
+            this.colunaId.Name = "colunaId";
+            this.colunaId.ReadOnly = true;
+            // 
+            // ColunaNome
+            // 
+            this.ColunaNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColunaNome.HeaderText = "Nome";
+            this.ColunaNome.Name = "ColunaNome";
+            this.ColunaNome.ReadOnly = true;
             // 
             // textBoxNome
             // 
@@ -75,7 +90,8 @@
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(302, 20);
             this.textBoxNome.TabIndex = 6;
-            this.textBoxNome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxNome_KeyUp);
+            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
+            //this.textBoxNome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxNome_KeyUp);
             // 
             // lbNome
             // 
@@ -117,20 +133,6 @@
             this.checkBoxCPF.TabIndex = 11;
             this.checkBoxCPF.Text = "CPF";
             this.checkBoxCPF.UseVisualStyleBackColor = true;
-            // 
-            // colunaId
-            // 
-            this.colunaId.FillWeight = 50F;
-            this.colunaId.HeaderText = "ID";
-            this.colunaId.Name = "colunaId";
-            this.colunaId.ReadOnly = true;
-            // 
-            // ColunaNome
-            // 
-            this.ColunaNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColunaNome.HeaderText = "Nome";
-            this.ColunaNome.Name = "ColunaNome";
-            this.ColunaNome.ReadOnly = true;
             // 
             // BuscaCliente
             // 

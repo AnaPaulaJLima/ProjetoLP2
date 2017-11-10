@@ -19,6 +19,12 @@ namespace ImobiliariaLP2.Visão
             InitializeComponent();
         }
 
+        public VizualizarCliente(Cliente c )
+        {
+            InitializeComponent();
+            SetDTO(c);
+        }
+
         private void btnSair_Click(object sender, EventArgs e)
         {
             Dispose();

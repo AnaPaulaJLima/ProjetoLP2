@@ -70,13 +70,55 @@ namespace ImobiliariaLP2.DAO
             return lista;
         }
 
+        public List<Cliente> Buscar(string chave) // busca todos do banco
+        {
+            Database bd = Database.GetInstance();
+            List<Cliente> lista = new List<Cliente>();
+            DataRow dr = null;
+            int linhas;
+
+            string query = "SELECT * FROM cliente"; // é o comando sql 
+
+            if (chave != "")
+                //query += " WHERE nome LIKE '%@nome%' OR cpf LIKE '@nome%'";
+            query += " WHERE nome LIKE '%" +chave+ "%' OR cpf LIKE '"+chave+"%'";
+
+            Console.WriteLine(">> " + query);
+
+
+
+            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            DataSet ds = bd.ExecuteQuery(comando);
+
+            // Conta quantas linhas tem a tabela que o comando retornou do banco
+            linhas = ds.Tables[0].Rows.Count;
+
+            for (int i = 0; i < linhas; i++)
+            {
+                Cliente c = new Cliente();
+
+                dr = ds.Tables[0].Rows[i];
+                c.Id = int.Parse(dr["id"].ToString());
+                c.Nome = dr["nome"].ToString();
+                c.Cpf = dr["cpf"].ToString();
+                c.Rg = dr["rg"].ToString();
+                c.Telefone = dr["telefone"].ToString();
+                c.Email = dr["email"].ToString();
+
+                lista.Add(c);
+            }
+
+            return lista;
+        }
+
+
         public DataTable BuscarPorNome(string nome) // é para ver um cliente com um determinado nome 
         {
             Database bd = Database.GetInstance();
             MySqlDataAdapter da = new MySqlDataAdapter();
             DataTable dt = new DataTable();
 
-            string query = "SELECT id, nome FROM cliente WHERE nome LIKE @nome + '%'"; // é o comando sql 
+            string query = "SELECT id, nome FROM cliente WHERE nome LIKE '%' + @nome + '%'"; // é o comando sql 
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 
@@ -92,7 +134,7 @@ namespace ImobiliariaLP2.DAO
             return dt;
         }
 
-        public Cliente Buscar(string cpf) // é para ver um cliente com um determinado cpf 
+        /*public Cliente Buscar(string cpf) // é para ver um cliente com um determinado cpf 
         {
             Database bd = Database.GetInstance();
 
@@ -118,7 +160,7 @@ namespace ImobiliariaLP2.DAO
             c.Email = dr["email"].ToString();
 
             return c;
-        }
+        }*/
 
         public void Atualizar(Cliente c)
         {
