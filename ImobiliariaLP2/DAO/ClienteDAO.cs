@@ -112,7 +112,7 @@ namespace ImobiliariaLP2.DAO
         }
 
 
-        public DataTable BuscarPorNome(string nome) // é para ver um cliente com um determinado nome 
+        public DataTable BuscarPorNome(string nome) // é para ver um cliente com um determinado no
         {
             Database bd = Database.GetInstance();
             MySqlDataAdapter da = new MySqlDataAdapter();
