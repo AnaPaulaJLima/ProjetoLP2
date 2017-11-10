@@ -37,19 +37,37 @@ namespace ImobiliariaLP2.DAO
             bd.ExecuteNonQuery(comando);
         }
 
-        public DataTable BuscarTodos() // busca todos do banco
+        public List<Cliente> BuscarTodos() // busca todos do banco
         {
             Database bd = Database.GetInstance();
-            MySqlDataAdapter da = new MySqlDataAdapter();
-            DataTable dt = new DataTable();
+            List<Cliente> lista = new List<Cliente>();
+            DataRow dr = null;
+            int linhas;
 
-            string query = "SELECT id, nome FROM cliente"; // é o comando sql 
+            string query = "SELECT * FROM cliente"; // é o comando sql 
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
-            da.SelectCommand = comando;
-            da.Fill(dt);
+            DataSet ds = bd.ExecuteQuery(comando);
 
-            return dt;
+            // Conta quantas linhas tem a tabela que o comando retornou do banco
+            linhas = ds.Tables[0].Rows.Count;
+
+            for(int i=0; i < linhas; i++)
+            {
+                Cliente c = new Cliente();
+
+                dr = ds.Tables[0].Rows[i];
+                c.Id = int.Parse(dr["id"].ToString());
+                c.Nome = dr["nome"].ToString();
+                c.Cpf = dr["cpf"].ToString();
+                c.Rg = dr["rg"].ToString();
+                c.Telefone = dr["telefone"].ToString();
+                c.Email = dr["email"].ToString();
+
+                lista.Add(c);
+            }
+
+            return lista;
         }
 
         public DataTable BuscarPorNome(string nome) // é para ver um cliente com um determinado nome 

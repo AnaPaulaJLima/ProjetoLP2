@@ -41,8 +41,13 @@ namespace ImobiliariaLP2.Visão
         private void BuscaCliente_Load(object sender, EventArgs e)
         {
             ClienteDAO cDAO = new ClienteDAO();
-            dgvCliente.DataSource = cDAO.BuscarTodos();
-        }
+            List<Cliente> lista = cDAO.BuscarTodos();
 
+            dgvCliente.Rows.Clear();
+            foreach(Cliente c in lista)
+            {
+                dgvCliente.Rows.Add(c.Id, c.Nome);
+            }
+        }
     }
 }

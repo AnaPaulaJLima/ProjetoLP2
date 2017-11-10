@@ -35,6 +35,8 @@
             this.buttonSair = new System.Windows.Forms.Button();
             this.checkBoxNome = new System.Windows.Forms.CheckBox();
             this.checkBoxCPF = new System.Windows.Forms.CheckBox();
+            this.colunaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +58,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colunaId,
+            this.ColunaNome});
             this.dgvCliente.Location = new System.Drawing.Point(12, 54);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
@@ -113,6 +118,20 @@
             this.checkBoxCPF.Text = "CPF";
             this.checkBoxCPF.UseVisualStyleBackColor = true;
             // 
+            // colunaId
+            // 
+            this.colunaId.FillWeight = 50F;
+            this.colunaId.HeaderText = "ID";
+            this.colunaId.Name = "colunaId";
+            this.colunaId.ReadOnly = true;
+            // 
+            // ColunaNome
+            // 
+            this.ColunaNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColunaNome.HeaderText = "Nome";
+            this.ColunaNome.Name = "ColunaNome";
+            this.ColunaNome.ReadOnly = true;
+            // 
             // BuscaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,5 +163,7 @@
         private System.Windows.Forms.Button buttonSair;
         private System.Windows.Forms.CheckBox checkBoxNome;
         private System.Windows.Forms.CheckBox checkBoxCPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaNome;
     }
 }
