@@ -11,6 +11,7 @@ namespace ImobiliariaLP2.DAO
 {
     public class ClienteDAO
     { 
+        // Usa para passar do banco para um objeto
         public Cliente SetDTO(DataRow dr)
         {
             Cliente c = new Cliente();
@@ -25,13 +26,10 @@ namespace ImobiliariaLP2.DAO
             return c;
         }
 
-        public void Salvar(Cliente c) // Salvar no banco
+        // Usa para passar um objeto para o banco
+        public void GetDTO(string query, Cliente c)
         {
             Database bd = Database.GetInstance();
-
-            string query = "INSERT INTO cliente(nome, cpf, rg, telefone, email) VALUES(@nome, @cpf, @rg, @telefone, @email)";
-            // essa string recebe o comando sql.
-
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 
             // Especificações, colocando tipos em cada aroba
@@ -50,39 +48,13 @@ namespace ImobiliariaLP2.DAO
 
             bd.ExecuteNonQuery(comando);
         }
-        /*
-        public List<Cliente> BuscarTodos() // busca todos do banco
+
+        public void Salvar(Cliente c) // Salvar no banco
         {
-            Database bd = Database.GetInstance();
-            List<Cliente> lista = new List<Cliente>();
-            DataRow dr = null;
-            int linhas;
-
-            string query = "SELECT * FROM cliente"; // é o comando sql 
-
-            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
-            DataSet ds = bd.ExecuteQuery(comando);
-
-            // Conta quantas linhas tem a tabela que o comando retornou do banco
-            linhas = ds.Tables[0].Rows.Count;
-
-            for(int i=0; i < linhas; i++)
-            {
-                Cliente c = new Cliente();
-
-                dr = ds.Tables[0].Rows[i];
-                c.Id = int.Parse(dr["id"].ToString());
-                c.Nome = dr["nome"].ToString();
-                c.Cpf = dr["cpf"].ToString();
-                c.Rg = dr["rg"].ToString();
-                c.Telefone = dr["telefone"].ToString();
-                c.Email = dr["email"].ToString();
-
-                lista.Add(c);
-            }
-
-            return lista;
-        }*/
+            string query = "INSERT INTO cliente(nome, cpf, rg, telefone, email) VALUES(@nome, @cpf, @rg, @telefone, @email)";
+            // Usando GetDTO
+            GetDTO(query, c);
+        }
 
         public List<Cliente> Buscar(string chave) // busca todos do banco
         {
@@ -94,10 +66,12 @@ namespace ImobiliariaLP2.DAO
             string query = "SELECT * FROM cliente"; // é o comando sql 
 
             if (chave != "")
-                //query += " WHERE nome LIKE '%@nome%' OR cpf LIKE '@nome%'";
-                query += " WHERE nome LIKE '%" +chave+ "%' OR cpf LIKE '"+chave+"%'";
+                query += " WHERE nome LIKE '%" + @chave + "%' OR cpf LIKE '" + @chave + "%'";
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            comando.Parameters.Add("@chave", MySqlDbType.VarChar);
+            comando.Parameters["@chave"].Value = chave;
+
             DataSet ds = bd.ExecuteQuery(comando);
 
             // Conta quantas linhas tem a tabela que o comando retornou do banco
@@ -106,7 +80,7 @@ namespace ImobiliariaLP2.DAO
             for (int i = 0; i < linhas; i++)
             {
                 dr = ds.Tables[0].Rows[i];
-
+                // Usa SetDTO 
                 Cliente c = SetDTO(dr);
 
                 lista.Add(c);
@@ -115,82 +89,33 @@ namespace ImobiliariaLP2.DAO
             return lista;
         }
 
-
-        public DataTable BuscarPorNome(string nome) // é para ver um cliente com um determinado no
+        public Cliente BuscarPorId(int id)
         {
-            Database bd = Database.GetInstance();
-            MySqlDataAdapter da = new MySqlDataAdapter();
-            DataTable dt = new DataTable();
-
-            string query = "SELECT id, nome FROM cliente WHERE nome LIKE '%' + @nome + '%'"; // é o comando sql 
-
-            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
-
-            // Especificações
-            comando.Parameters.Add("@nome", MySqlDbType.VarChar);
-
-            // Atribuição de valores
-            comando.Parameters["@nome"].Value = nome;
-
-            da.SelectCommand = comando;
-            da.Fill(dt);
-
-            return dt;
-        }
-
-        /*public Cliente Buscar(string cpf) // é para ver um cliente com um determinado cpf 
-        {
-            Database bd = Database.GetInstance();
-
-            string query = "SELECT * FROM cliente WHERE cpf = @cpf"; // é o comando sql 
-
-            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
-
-            // Especificações
-            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
-
-            // Atribuição de valores
-            comando.Parameters["@cpf"].Value = cpf;
-
-            DataSet ds = bd.ExecuteQuery(comando);
             Cliente c = new Cliente();
+            Database db = Database.GetInstance();
+            DataRow dr = null;
 
-            DataRow dr = ds.Tables[0].Rows[0];
-            c.Id = int.Parse(dr["id"].ToString());
-            c.Nome = dr["nome"].ToString();
-            c.Cpf = dr["cpf"].ToString();
-            c.Rg = dr["rg"].ToString();
-            c.Telefone = dr["telefone"].ToString();
-            c.Email = dr["email"].ToString();
+            string query = "SELECT * FROM cliente WHERE id = " + id;
+
+            MySqlCommand comando = new MySqlCommand(query, db.GetConnection());
+            DataSet ds = db.ExecuteQuery(comando);
+
+            int linhas = ds.Tables[0].Rows.Count;
+
+            for (int i = 0; i < linhas; i++)
+            {
+                dr = ds.Tables[0].Rows[i];
+                // Usa SetDTO 
+                c = SetDTO(dr);
+            }
 
             return c;
-        }*/
+        }
 
         public void Atualizar(Cliente c)
         {
-            Database bd = Database.GetInstance();
-
-            string query = "UPDATE cliente SET id = @id, nome = @nome, cpf = @cpf, rg = @rg, telefone = @telefone, email = @email WHERE id = @id;";
-
-            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
-
-            // Especificando que tipo de dado é cada @
-            comando.Parameters.Add("@id", MySqlDbType.Int32);
-            comando.Parameters.Add("@nome", MySqlDbType.VarChar);
-            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
-            comando.Parameters.Add("@rg", MySqlDbType.VarChar);
-            comando.Parameters.Add("@telefone", MySqlDbType.VarChar);
-            comando.Parameters.Add("@email", MySqlDbType.VarChar);
-
-            /// Atribuindo os valores aos @
-            comando.Parameters["@id"].Value = c.Id;
-            comando.Parameters["@nome"].Value = c.Nome;
-            comando.Parameters["@cpf"].Value = c.Cpf;
-            comando.Parameters["@rg"].Value = c.Rg;
-            comando.Parameters["@telefone"].Value = c.Telefone;
-            comando.Parameters["@email"].Value = c.Email;
-
-            bd.ExecuteNonQuery(comando);
+            string query = "UPDATE cliente SET id = " + c.Id + ", nome = @nome, cpf = @cpf, rg = @rg, telefone = @telefone, email = @email WHERE id = "+ c.Id;
+            GetDTO(query, c);
         }
 
         public void Excluir(string cpf)

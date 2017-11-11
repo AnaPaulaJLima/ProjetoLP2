@@ -54,7 +54,10 @@ namespace ImobiliariaLP2.Visão
 
         private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            ClienteDAO cDAO = new ClienteDAO();
+            Cliente c = new Cliente();
+
+            c = cDAO.BuscarPorId(Convert.ToInt32(dgvCliente.Rows[0]));
         }
 
         private void textBoxNome_TextChanged(object sender, EventArgs e)
