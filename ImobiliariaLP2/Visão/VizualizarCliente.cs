@@ -22,7 +22,7 @@ namespace ImobiliariaLP2.Visão
         public VizualizarCliente(Cliente c )
         {
             InitializeComponent();
-            SetDTO(c);
+            //SetDTO(c);
         }
 
         private void btnSair_Click(object sender, EventArgs e)

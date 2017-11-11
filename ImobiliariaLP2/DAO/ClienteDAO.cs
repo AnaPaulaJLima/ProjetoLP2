@@ -10,7 +10,21 @@ using System.Data;
 namespace ImobiliariaLP2.DAO
 {
     public class ClienteDAO
-    {
+    { 
+        public Cliente SetDTO(DataRow dr)
+        {
+            Cliente c = new Cliente();
+
+            c.Id = int.Parse(dr["id"].ToString());
+            c.Nome = dr["nome"].ToString();
+            c.Cpf = dr["cpf"].ToString();
+            c.Rg = dr["rg"].ToString();
+            c.Telefone = dr["telefone"].ToString();
+            c.Email = dr["email"].ToString();
+
+            return c;
+        }
+
         public void Salvar(Cliente c) // Salvar no banco
         {
             Database bd = Database.GetInstance();
@@ -36,7 +50,7 @@ namespace ImobiliariaLP2.DAO
 
             bd.ExecuteNonQuery(comando);
         }
-
+        /*
         public List<Cliente> BuscarTodos() // busca todos do banco
         {
             Database bd = Database.GetInstance();
@@ -68,7 +82,7 @@ namespace ImobiliariaLP2.DAO
             }
 
             return lista;
-        }
+        }*/
 
         public List<Cliente> Buscar(string chave) // busca todos do banco
         {
@@ -81,11 +95,7 @@ namespace ImobiliariaLP2.DAO
 
             if (chave != "")
                 //query += " WHERE nome LIKE '%@nome%' OR cpf LIKE '@nome%'";
-            query += " WHERE nome LIKE '%" +chave+ "%' OR cpf LIKE '"+chave+"%'";
-
-            Console.WriteLine(">> " + query);
-
-
+                query += " WHERE nome LIKE '%" +chave+ "%' OR cpf LIKE '"+chave+"%'";
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
             DataSet ds = bd.ExecuteQuery(comando);
@@ -95,15 +105,9 @@ namespace ImobiliariaLP2.DAO
 
             for (int i = 0; i < linhas; i++)
             {
-                Cliente c = new Cliente();
-
                 dr = ds.Tables[0].Rows[i];
-                c.Id = int.Parse(dr["id"].ToString());
-                c.Nome = dr["nome"].ToString();
-                c.Cpf = dr["cpf"].ToString();
-                c.Rg = dr["rg"].ToString();
-                c.Telefone = dr["telefone"].ToString();
-                c.Email = dr["email"].ToString();
+
+                Cliente c = SetDTO(dr);
 
                 lista.Add(c);
             }

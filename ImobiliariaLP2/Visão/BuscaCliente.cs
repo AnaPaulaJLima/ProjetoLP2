@@ -32,11 +32,11 @@ namespace ImobiliariaLP2.Visão
             b.ShowDialog();
         }
 
-        //private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
-        //{
-        //   ClienteDAO c = new ClienteDAO();
-          //  dgvCliente.DataSource = c.BuscarPorNome(textBoxNome.Text);
-        //}
+        private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
+        {
+           ClienteDAO c = new ClienteDAO();
+           dgvCliente.DataSource = c.Buscar(textBoxNome.Text);
+        }
 
         private void BuscaCliente_Load(object sender, EventArgs e)
         {
@@ -48,7 +48,7 @@ namespace ImobiliariaLP2.Visão
             dgvCliente.Rows.Clear();
             foreach(Cliente c in lista)
             {
-                dgvCliente.Rows.Add(c.Id, c.Nome);
+                dgvCliente.Rows.Add(c.Id, c.Nome, c.Cpf);
             }
         }
 
@@ -65,7 +65,7 @@ namespace ImobiliariaLP2.Visão
             dgvCliente.Rows.Clear();
             foreach (Cliente c in lista)
             {
-                dgvCliente.Rows.Add(c.Id, c.Nome);
+                dgvCliente.Rows.Add(c.Id, c.Nome, c.Cpf);
             }
         }
     }
