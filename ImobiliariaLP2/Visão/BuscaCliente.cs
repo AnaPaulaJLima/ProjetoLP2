@@ -64,7 +64,7 @@ namespace ImobiliariaLP2.Visão
 
         // Método Fill() busca cliente no banco por nome
         // e popula o DataGrid com a lista retornada do DAO
-        private void Fill(string s)
+        public void Fill(string s)
         {
             ClienteDAO cDAO = new ClienteDAO();
             List<Cliente> lista = cDAO.Buscar(s);

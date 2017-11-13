@@ -298,3 +298,5 @@ C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\CrystalDe
 C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\stdole.dll
 C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\MySql.Data.xml
+C:\Users\IFSP\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.aula13_11.resources
+C:\Users\IFSP\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.ResolveComReference.cache

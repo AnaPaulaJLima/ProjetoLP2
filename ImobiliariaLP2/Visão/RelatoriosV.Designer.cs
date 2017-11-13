@@ -32,6 +32,7 @@
             this.btnRltVendasF = new System.Windows.Forms.Button();
             this.RltVendasP = new System.Windows.Forms.Button();
             this.btn_voltarMenu = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRltImoveisDisp
@@ -93,6 +94,16 @@
             this.btn_voltarMenu.UseVisualStyleBackColor = true;
             this.btn_voltarMenu.Click += new System.EventHandler(this.btn_voltarMenu_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(173, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "teste aula 13";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // RelatoriosV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,6 +111,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::ImobiliariaLP2.Properties.Resources._2e5c24508a096ca6510d07e3f0190adf;
             this.ClientSize = new System.Drawing.Size(418, 296);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_voltarMenu);
             this.Controls.Add(this.btnRltImoveisDisp);
             this.Controls.Add(this.btnRltVendasF);
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Button btnRltVendasF;
         private System.Windows.Forms.Button RltVendasP;
         private System.Windows.Forms.Button btn_voltarMenu;
+        private System.Windows.Forms.Button button1;
     }
 }
