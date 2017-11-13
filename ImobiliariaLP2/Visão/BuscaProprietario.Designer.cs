@@ -33,8 +33,6 @@
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
-            this.checkBoxNome = new System.Windows.Forms.CheckBox();
-            this.checkBoxCPF = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,10 +54,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 38);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(525, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(525, 419);
             this.dataGridView1.TabIndex = 11;
             // 
             // textBoxNome
@@ -90,35 +88,11 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // checkBoxNome
-            // 
-            this.checkBoxNome.AutoSize = true;
-            this.checkBoxNome.Checked = true;
-            this.checkBoxNome.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNome.Location = new System.Drawing.Point(74, 38);
-            this.checkBoxNome.Name = "checkBoxNome";
-            this.checkBoxNome.Size = new System.Drawing.Size(54, 17);
-            this.checkBoxNome.TabIndex = 14;
-            this.checkBoxNome.Text = "Nome";
-            this.checkBoxNome.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCPF
-            // 
-            this.checkBoxCPF.AutoSize = true;
-            this.checkBoxCPF.Location = new System.Drawing.Point(221, 38);
-            this.checkBoxCPF.Name = "checkBoxCPF";
-            this.checkBoxCPF.Size = new System.Drawing.Size(46, 17);
-            this.checkBoxCPF.TabIndex = 15;
-            this.checkBoxCPF.Text = "CPF";
-            this.checkBoxCPF.UseVisualStyleBackColor = true;
-            // 
             // BuscaProprietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 467);
-            this.Controls.Add(this.checkBoxCPF);
-            this.Controls.Add(this.checkBoxNome);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAlterarDeletar);
             this.Controls.Add(this.dataGridView1);
@@ -141,7 +115,5 @@
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.CheckBox checkBoxNome;
-        private System.Windows.Forms.CheckBox checkBoxCPF;
     }
 }

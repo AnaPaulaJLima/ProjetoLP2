@@ -21,8 +21,17 @@ namespace ImobiliariaLP2.Visão
 
         private void btnAlterarDeletar_Click(object sender, EventArgs e)
         {
-            VizualizarCliente v = new VizualizarCliente();
-            v.ShowDialog();
+            if (dgvCliente.CurrentRow != null)
+            {
+                int key = int.Parse(dgvCliente.CurrentRow.Cells[0].Value.ToString());
+                ClienteDAO cDAO = new ClienteDAO();
+                VizualizarCliente v = new VizualizarCliente(cDAO.BuscarPorId(key));
+                v.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma linha para vizualizar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonSair_Click(object sender, EventArgs e)
@@ -41,7 +50,6 @@ namespace ImobiliariaLP2.Visão
         private void BuscaCliente_Load(object sender, EventArgs e)
         {
             ClienteDAO cDAO = new ClienteDAO();
-            //List<Cliente> lista = cDAO.BuscarTodos();
             List<Cliente> lista = cDAO.Buscar("");
 
 

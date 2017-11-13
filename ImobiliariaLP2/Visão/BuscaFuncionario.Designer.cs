@@ -33,6 +33,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
+            this.colunaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +67,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colunaID,
+            this.colunaNome,
+            this.colunaCPF});
             this.dataGridView1.Location = new System.Drawing.Point(15, 38);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -87,6 +94,25 @@
             this.lbNome.Size = new System.Drawing.Size(41, 13);
             this.lbNome.TabIndex = 15;
             this.lbNome.Text = "Nome: ";
+            // 
+            // colunaID
+            // 
+            this.colunaID.HeaderText = "ID";
+            this.colunaID.Name = "colunaID";
+            this.colunaID.ReadOnly = true;
+            // 
+            // colunaNome
+            // 
+            this.colunaNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colunaNome.HeaderText = "Nome";
+            this.colunaNome.Name = "colunaNome";
+            this.colunaNome.ReadOnly = true;
+            // 
+            // colunaCPF
+            // 
+            this.colunaCPF.HeaderText = "CPF";
+            this.colunaCPF.Name = "colunaCPF";
+            this.colunaCPF.ReadOnly = true;
             // 
             // BuscaFuncionario
             // 
@@ -115,5 +141,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label lbNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaCPF;
     }
 }

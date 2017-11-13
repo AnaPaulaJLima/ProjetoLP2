@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ImobiliariaLP2.Modelo;
 using ImobiliariaLP2.DAO;
+using ImobiliariaLP2.Visão;
 
 namespace ImobiliariaLP2.Visão
 {
@@ -19,10 +20,10 @@ namespace ImobiliariaLP2.Visão
             InitializeComponent();
         }
 
-        public VizualizarCliente(Cliente c )
+        public VizualizarCliente(Cliente c)
         {
             InitializeComponent();
-            //SetDTO(c);
+            SetDTO(c);
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -32,16 +33,8 @@ namespace ImobiliariaLP2.Visão
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Cliente c = new Cliente();
             ClienteDAO cDAO = new ClienteDAO();
-
-            c.Nome = textBoxNome.Text;
-            c.Cpf = maskedTextBoxCpf.Text;
-            c.Rg = textBoxRg.Text;
-            c.Email = textBoxEmail.Text;
-            c.Telefone = maskedTextBoxTelefone.Text;
-
-            cDAO.Atualizar(c);
+            cDAO.Atualizar(GetDTO());
 
             MessageBox.Show("Cadastro atualizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -51,6 +44,29 @@ namespace ImobiliariaLP2.Visão
             textBoxEmail.Clear();
             maskedTextBoxTelefone.Clear();
 
+        }
+
+        private Cliente GetDTO()
+        {
+            Cliente c = new Cliente();
+            c.Id = int.Parse(textBoxID.Text);
+            c.Nome = textBoxNome.Text;
+            c.Cpf = maskedTextBoxCpf.Text;
+            c.Rg = textBoxRg.Text;
+            c.Email = textBoxEmail.Text;
+            c.Telefone = maskedTextBoxTelefone.Text;
+
+            return c;
+        }
+
+        private void SetDTO(Cliente c)
+        {
+            textBoxID.Text = c.Id.ToString();
+            textBoxNome.Text = c.Nome;
+            maskedTextBoxCpf.Text = c.Cpf;
+            textBoxRg.Text = c.Rg;
+            textBoxEmail.Text = c.Email;
+            maskedTextBoxTelefone.Text = c.Telefone; 
         }
     }
 }
