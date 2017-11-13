@@ -38,6 +38,7 @@ namespace ImobiliariaLP2.Visão
 
             MessageBox.Show("Cadastro atualizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            textBoxID.Clear();
             textBoxNome.Clear();
             maskedTextBoxCpf.Clear();
             textBoxRg.Clear();
