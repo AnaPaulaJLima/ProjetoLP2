@@ -32,6 +32,7 @@ namespace ImobiliariaLP2.Visão
             {
                 MessageBox.Show("Selecione uma linha para vizualizar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Fill("");
         }
 
         private void buttonSair_Click(object sender, EventArgs e)
