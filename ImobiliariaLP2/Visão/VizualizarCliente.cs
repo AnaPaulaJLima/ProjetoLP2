@@ -36,15 +36,8 @@ namespace ImobiliariaLP2.Visão
             ClienteDAO cDAO = new ClienteDAO();
             cDAO.Atualizar(GetDTO());
 
-            MessageBox.Show("Cadastro atualizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            textBoxID.Clear();
-            textBoxNome.Clear();
-            maskedTextBoxCpf.Clear();
-            textBoxRg.Clear();
-            textBoxEmail.Clear();
-            maskedTextBoxTelefone.Clear();
-
+            if (MessageBox.Show("Cadastro atualizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                this.Dispose();
         }
 
         private Cliente GetDTO()

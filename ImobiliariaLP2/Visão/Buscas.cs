@@ -19,14 +19,14 @@ namespace ImobiliariaLP2.Visão
 
         private void RltVendasP_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
             BuscaCliente bc = new BuscaCliente();
             bc.ShowDialog();
         }
 
         private void btnBImovel_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
             BuscaImovel bi = new BuscaImovel();
             bi.ShowDialog();
 
@@ -34,7 +34,7 @@ namespace ImobiliariaLP2.Visão
 
         private void btnRltVendasF_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
             BuscaFuncionario bf = new BuscaFuncionario();
             bf.ShowDialog();
 
@@ -42,7 +42,7 @@ namespace ImobiliariaLP2.Visão
 
         private void btnBProprietario_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
             BuscaProprietario bp = new BuscaProprietario();
             bp.ShowDialog();
         }

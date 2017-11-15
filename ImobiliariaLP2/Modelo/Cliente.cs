@@ -15,6 +15,10 @@ namespace ImobiliariaLP2.Modelo
         private string telefone;
         private string email;
 
+        public override string ToString()
+        {
+            return id + "\t" + nome + "\t" + cpf + "\t" + rg + "\t" + telefone + "\t" + email+"\n\n";
+        }
         public int Id
         {
             get { return id; }

@@ -42,5 +42,11 @@ namespace ImobiliariaLP2.Visão
         {
             this.Dispose();        
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            aula13_11 a = new aula13_11();
+            a.ShowDialog();
+        }
     }
 }
