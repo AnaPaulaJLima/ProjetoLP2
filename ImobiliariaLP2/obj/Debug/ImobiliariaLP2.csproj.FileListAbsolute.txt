@@ -300,3 +300,5 @@ C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\stdole.dl
 C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\MySql.Data.xml
 C:\Users\IFSP\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.aula13_11.resources
 C:\Users\IFSP\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.ResolveComReference.cache
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.ResolveComReference.cache
+C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.aula13_11.resources

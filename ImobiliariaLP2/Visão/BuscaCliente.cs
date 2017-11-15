@@ -70,7 +70,6 @@ namespace ImobiliariaLP2.Visão
             ClienteDAO cDAO = new ClienteDAO();
             List<Cliente> lista = cDAO.Buscar(s);
 
-
             dgvCliente.Rows.Clear();
             foreach (Cliente c in lista)
             {

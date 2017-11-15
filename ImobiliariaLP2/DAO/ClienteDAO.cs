@@ -22,6 +22,7 @@ namespace ImobiliariaLP2.DAO
             c.Rg = dr["rg"].ToString();
             c.Telefone = dr["telefone"].ToString();
             c.Email = dr["email"].ToString();
+            c.Ativo = int.Parse(dr["ativo"].ToString());
 
             return c;
         }
@@ -51,7 +52,7 @@ namespace ImobiliariaLP2.DAO
 
         public void Salvar(Cliente c) // Salvar no banco
         {
-            string query = "INSERT INTO cliente(nome, cpf, rg, telefone, email) VALUES(@nome, @cpf, @rg, @telefone, @email)";
+            string query = "INSERT INTO cliente(nome, cpf, rg, telefone, email, ativo) VALUES(@nome, @cpf, @rg, @telefone, @email, 1)";
             // Usando GetDTO
             GetDTO(query, c);
         }
@@ -63,10 +64,10 @@ namespace ImobiliariaLP2.DAO
             DataRow dr = null;
             int linhas;
 
-            string query = "SELECT * FROM cliente"; // é o comando sql 
+            string query = "SELECT * FROM cliente WHERE ativo = 1"; // é o comando sql 
 
             if (chave != "")
-                query += " WHERE nome LIKE '%" + @chave + "%' OR cpf LIKE '" + @chave + "%'";
+                query += " AND nome LIKE '%" + @chave + "%' OR cpf LIKE '" + @chave + "%' ";
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
             comando.Parameters.Add("@chave", MySqlDbType.VarChar);
@@ -114,23 +115,16 @@ namespace ImobiliariaLP2.DAO
 
         public void Atualizar(Cliente c)
         {
-            string query = "UPDATE cliente SET id = " + c.Id + ", nome = @nome, cpf = @cpf, rg = @rg, telefone = @telefone, email = @email WHERE id = "+ c.Id;
+            string query = "UPDATE cliente SET id = " + c.Id + ", nome = @nome, cpf = @cpf, rg = @rg, telefone = @telefone, email = @email, ativo = " + c.Ativo + " WHERE id = " + c.Id;
             GetDTO(query, c);
         }
 
-        public void Excluir(string cpf)
+        public void Excluir(int id)
         {
             Database bd = Database.GetInstance();
-
-            string query = "DELETE FROM cliente WHERE cpf = @cpf;";
+            string query = "UPDATE cliente SET ativo = 0 WHERE id = " + id;
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
-
-            //Especificação
-            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
-
-            //Atribuição
-            comando.Parameters["@cpf"].Value = cpf;
 
             bd.ExecuteNonQuery(comando);
         }   

@@ -54,6 +54,7 @@
             this.btnDeletar.TabIndex = 54;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnAlterar
             // 

@@ -14,6 +14,7 @@ namespace ImobiliariaLP2.Modelo
         private string rg;
         private string telefone;
         private string email;
+        private int ativo; // 1 para ATIVADO e 0 para DESATIVADO
 
         public override string ToString()
         {
@@ -53,6 +54,12 @@ namespace ImobiliariaLP2.Modelo
         {
             get { return email; }
             set { email = value; }
+        }
+
+        public int Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
         }
     }
 }

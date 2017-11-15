@@ -26,6 +26,30 @@ namespace ImobiliariaLP2.Visão
             SetDTO(c);
         }
 
+        private Cliente GetDTO()
+        {
+            Cliente c = new Cliente();
+            c.Id = int.Parse(textBoxID.Text);
+            c.Nome = textBoxNome.Text;
+            c.Cpf = maskedTextBoxCpf.Text;
+            c.Rg = textBoxRg.Text;
+            c.Email = textBoxEmail.Text;
+            c.Telefone = maskedTextBoxTelefone.Text;
+            c.Ativo = 1;
+
+            return c;
+        }
+
+        private void SetDTO(Cliente c)
+        {
+            textBoxID.Text = c.Id.ToString();
+            textBoxNome.Text = c.Nome;
+            maskedTextBoxCpf.Text = c.Cpf;
+            textBoxRg.Text = c.Rg;
+            textBoxEmail.Text = c.Email;
+            maskedTextBoxTelefone.Text = c.Telefone;
+        }
+
         private void btnSair_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -40,27 +64,12 @@ namespace ImobiliariaLP2.Visão
                 this.Dispose();
         }
 
-        private Cliente GetDTO()
+        private void btnDeletar_Click(object sender, EventArgs e)
         {
-            Cliente c = new Cliente();
-            c.Id = int.Parse(textBoxID.Text);
-            c.Nome = textBoxNome.Text;
-            c.Cpf = maskedTextBoxCpf.Text;
-            c.Rg = textBoxRg.Text;
-            c.Email = textBoxEmail.Text;
-            c.Telefone = maskedTextBoxTelefone.Text;
-
-            return c;
-        }
-
-        private void SetDTO(Cliente c)
-        {
-            textBoxID.Text = c.Id.ToString();
-            textBoxNome.Text = c.Nome;
-            maskedTextBoxCpf.Text = c.Cpf;
-            textBoxRg.Text = c.Rg;
-            textBoxEmail.Text = c.Email;
-            maskedTextBoxTelefone.Text = c.Telefone; 
+            ClienteDAO cDAO = new ClienteDAO();
+            cDAO.Excluir(int.Parse(textBoxID.Text));
+            if (MessageBox.Show("Cliente excluído!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                this.Dispose();
         }
     }
 }
