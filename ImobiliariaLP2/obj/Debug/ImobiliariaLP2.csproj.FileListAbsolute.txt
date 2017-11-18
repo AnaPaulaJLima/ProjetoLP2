@@ -302,3 +302,5 @@ C:\Users\IFSP\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.V
 C:\Users\IFSP\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.ResolveComReference.cache
 C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.ResolveComReference.cache
 C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.aula13_11.resources
+C:\Users\Ana Paula\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.ResolveComReference.cache
+C:\Users\Ana Paula\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.aula13_11.resources

@@ -46,6 +46,17 @@ namespace ImobiliariaLP2.Visão
             maskedTextBoxTelefone.Clear();
         }
 
-      
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxNome.Text.Trim() == "")
+                btnSalvar.Enabled = false;
+            else
+                btnSalvar.Enabled = true;
+        }
+
+        private void maskedTextBoxCpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

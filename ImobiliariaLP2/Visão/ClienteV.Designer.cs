@@ -47,7 +47,7 @@
             // textBoxID
             // 
             this.textBoxID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxID.Location = new System.Drawing.Point(85, 32);
+            this.textBoxID.Location = new System.Drawing.Point(85, 36);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(25, 20);
@@ -66,50 +66,52 @@
             // textBoxRg
             // 
             this.textBoxRg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxRg.Location = new System.Drawing.Point(348, 82);
+            this.textBoxRg.Location = new System.Drawing.Point(319, 83);
             this.textBoxRg.Name = "textBoxRg";
-            this.textBoxRg.Size = new System.Drawing.Size(168, 20);
+            this.textBoxRg.Size = new System.Drawing.Size(196, 20);
             this.textBoxRg.TabIndex = 30;
             // 
             // maskedTextBoxTelefone
             // 
             this.maskedTextBoxTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(127, 120);
+            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(108, 124);
             this.maskedTextBoxTelefone.Mask = "(00) 0000-00000";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
-            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(143, 20);
+            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(98, 20);
             this.maskedTextBoxTelefone.TabIndex = 29;
             // 
             // maskedTextBoxCpf
             // 
             this.maskedTextBoxCpf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.maskedTextBoxCpf.Location = new System.Drawing.Point(105, 82);
-            this.maskedTextBoxCpf.Mask = "000.000.000-00";
+            this.maskedTextBoxCpf.Location = new System.Drawing.Point(85, 83);
+            this.maskedTextBoxCpf.Mask = "999.999.999-99";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
             this.maskedTextBoxCpf.Size = new System.Drawing.Size(166, 20);
             this.maskedTextBoxCpf.TabIndex = 28;
+            this.maskedTextBoxCpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCpf_MaskInputRejected);
             // 
             // textBoxNome
             // 
             this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxNome.Location = new System.Drawing.Point(169, 32);
+            this.textBoxNome.Location = new System.Drawing.Point(151, 36);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(346, 20);
+            this.textBoxNome.Size = new System.Drawing.Size(364, 20);
             this.textBoxNome.TabIndex = 27;
+            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxEmail.Location = new System.Drawing.Point(360, 120);
+            this.textBoxEmail.Location = new System.Drawing.Point(248, 124);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(156, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(267, 20);
             this.textBoxEmail.TabIndex = 26;
             // 
             // lbEmail
             // 
             this.lbEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(317, 127);
+            this.lbEmail.Location = new System.Drawing.Point(213, 127);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(38, 13);
             this.lbEmail.TabIndex = 25;
@@ -119,7 +121,7 @@
             // 
             this.lbTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbTelefone.AutoSize = true;
-            this.lbTelefone.Location = new System.Drawing.Point(70, 127);
+            this.lbTelefone.Location = new System.Drawing.Point(58, 127);
             this.lbTelefone.Name = "lbTelefone";
             this.lbTelefone.Size = new System.Drawing.Size(52, 13);
             this.lbTelefone.TabIndex = 24;
@@ -129,7 +131,7 @@
             // 
             this.lbRg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbRg.AutoSize = true;
-            this.lbRg.Location = new System.Drawing.Point(317, 90);
+            this.lbRg.Location = new System.Drawing.Point(287, 85);
             this.lbRg.Name = "lbRg";
             this.lbRg.Size = new System.Drawing.Size(26, 13);
             this.lbRg.TabIndex = 23;
@@ -139,7 +141,7 @@
             // 
             this.lbCpf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbCpf.AutoSize = true;
-            this.lbCpf.Location = new System.Drawing.Point(70, 89);
+            this.lbCpf.Location = new System.Drawing.Point(58, 85);
             this.lbCpf.Name = "lbCpf";
             this.lbCpf.Size = new System.Drawing.Size(30, 13);
             this.lbCpf.TabIndex = 22;
@@ -149,7 +151,7 @@
             // 
             this.lbNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(125, 39);
+            this.lbNome.Location = new System.Drawing.Point(116, 39);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(38, 13);
             this.lbNome.TabIndex = 21;
@@ -158,6 +160,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnSalvar.Enabled = false;
             this.btnSalvar.Location = new System.Drawing.Point(440, 181);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
