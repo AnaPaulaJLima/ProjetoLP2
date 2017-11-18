@@ -56,7 +56,8 @@ namespace ImobiliariaLP2.Visão
 
         private void maskedTextBoxCpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-
+            while (maskedTextBoxCpf.Text.Length < 11)
+                MessageBox.Show("CPF deve conter 11 números!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
