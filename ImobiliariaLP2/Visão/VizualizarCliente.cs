@@ -26,6 +26,13 @@ namespace ImobiliariaLP2.Visão
             SetDTO(c);
         }
 
+        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) /// só deixa digitar letras no textBox 
+                e.Handled = true;
+        }
+
         private Cliente GetDTO()
         {
             Cliente c = new Cliente();
@@ -71,5 +78,7 @@ namespace ImobiliariaLP2.Visão
             if (MessageBox.Show("Cliente excluído!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 this.Dispose();
         }
+
+        
     }
 }

@@ -79,6 +79,7 @@
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(98, 20);
             this.maskedTextBoxTelefone.TabIndex = 29;
+            this.maskedTextBoxTelefone.TextChanged += new System.EventHandler(this.maskedTextBoxCpf_TextChanged);
             // 
             // maskedTextBoxCpf
             // 
@@ -89,7 +90,7 @@
             this.maskedTextBoxCpf.Size = new System.Drawing.Size(166, 20);
             this.maskedTextBoxCpf.TabIndex = 28;
             this.maskedTextBoxCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.maskedTextBoxCpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCpf_MaskInputRejected);
+            this.maskedTextBoxCpf.TextChanged += new System.EventHandler(this.maskedTextBoxCpf_TextChanged);
             // 
             // textBoxNome
             // 
@@ -98,12 +99,13 @@
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(364, 20);
             this.textBoxNome.TabIndex = 27;
-            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
+            this.textBoxNome.TextChanged += new System.EventHandler(this.maskedTextBoxCpf_TextChanged);
+            this.textBoxNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxEmail.Location = new System.Drawing.Point(248, 124);
+            this.textBoxEmail.Location = new System.Drawing.Point(248, 123);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(267, 20);
             this.textBoxEmail.TabIndex = 26;

@@ -24,6 +24,12 @@ namespace ImobiliariaLP2.Visão
             Dispose();
         }
 
+        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) /// só deixa digitar letras no textBox 
+                e.Handled = true;
+        }
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente();
@@ -44,20 +50,18 @@ namespace ImobiliariaLP2.Visão
             textBoxRg.Clear();
             textBoxEmail.Clear();
             maskedTextBoxTelefone.Clear();
+
+            
         }
 
-        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        private void maskedTextBoxCpf_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxNome.Text.Trim() == "")
+            if (maskedTextBoxTelefone.Text.Trim() == "" || maskedTextBoxCpf.Text.Trim() == "" || textBoxNome.Text.Trim() == "")
                 btnSalvar.Enabled = false;
             else
                 btnSalvar.Enabled = true;
         }
 
-        private void maskedTextBoxCpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            while (maskedTextBoxCpf.Text.Length < 11)
-                MessageBox.Show("CPF deve conter 11 números!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+        
     }
 }

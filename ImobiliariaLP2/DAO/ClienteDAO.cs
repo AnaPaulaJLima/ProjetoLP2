@@ -39,7 +39,7 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters.Add("@rg", MySqlDbType.VarChar);
             comando.Parameters.Add("@telefone", MySqlDbType.VarChar);
             comando.Parameters.Add("@email", MySqlDbType.VarChar);
-
+            
             // Atribuição de valores
             comando.Parameters["@nome"].Value = c.Nome;
             comando.Parameters["@cpf"].Value = c.Cpf;
