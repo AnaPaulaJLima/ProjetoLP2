@@ -52,6 +52,7 @@
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(25, 20);
             this.textBoxID.TabIndex = 32;
+            this.textBoxID.TabStop = false;
             // 
             // lbID
             // 
@@ -69,16 +70,16 @@
             this.textBoxRg.Location = new System.Drawing.Point(319, 83);
             this.textBoxRg.Name = "textBoxRg";
             this.textBoxRg.Size = new System.Drawing.Size(196, 20);
-            this.textBoxRg.TabIndex = 30;
+            this.textBoxRg.TabIndex = 2;
             // 
             // maskedTextBoxTelefone
             // 
             this.maskedTextBoxTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.maskedTextBoxTelefone.Location = new System.Drawing.Point(108, 124);
-            this.maskedTextBoxTelefone.Mask = "(00) 90000-0000";
+            this.maskedTextBoxTelefone.Mask = "(00) 0000-00009";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(98, 20);
-            this.maskedTextBoxTelefone.TabIndex = 29;
+            this.maskedTextBoxTelefone.TabIndex = 3;
             this.maskedTextBoxTelefone.TextChanged += new System.EventHandler(this.maskedTextBoxCpf_TextChanged);
             // 
             // maskedTextBoxCpf
@@ -88,7 +89,7 @@
             this.maskedTextBoxCpf.Mask = "000.000.000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
             this.maskedTextBoxCpf.Size = new System.Drawing.Size(166, 20);
-            this.maskedTextBoxCpf.TabIndex = 28;
+            this.maskedTextBoxCpf.TabIndex = 1;
             this.maskedTextBoxCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.maskedTextBoxCpf.TextChanged += new System.EventHandler(this.maskedTextBoxCpf_TextChanged);
             // 
@@ -98,7 +99,7 @@
             this.textBoxNome.Location = new System.Drawing.Point(151, 36);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(364, 20);
-            this.textBoxNome.TabIndex = 27;
+            this.textBoxNome.TabIndex = 0;
             this.textBoxNome.TextChanged += new System.EventHandler(this.maskedTextBoxCpf_TextChanged);
             this.textBoxNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
             // 
@@ -108,7 +109,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(248, 123);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(267, 20);
-            this.textBoxEmail.TabIndex = 26;
+            this.textBoxEmail.TabIndex = 4;
             // 
             // lbEmail
             // 
@@ -168,6 +169,7 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 19;
+            this.btnSalvar.TabStop = false;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -178,6 +180,7 @@
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 33;
+            this.btnSair.TabStop = false;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -202,9 +205,11 @@
             this.Controls.Add(this.lbNome);
             this.Controls.Add(this.btnSalvar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Name = "ClienteV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClienteV";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ClienteV_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -27,7 +27,7 @@ namespace ImobiliariaLP2.Visão
         private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) /// só deixa digitar letras no textBox 
-                e.Handled = true;
+                e.Handled = true; // isSeparador é para consegui usar o espaça e o iscontrol é para conseguir apagar 
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -73,8 +73,8 @@ namespace ImobiliariaLP2.Visão
 
         private void maskedTextBoxCpf_TextChanged(object sender, EventArgs e)
         {
-            if (maskedTextBoxTelefone.Text.Trim() == "" || maskedTextBoxCpf.Text.Trim() == "" || textBoxNome.Text.Trim() == "")
-                btnSalvar.Enabled = false;
+            if (!maskedTextBoxTelefone.MaskCompleted || !maskedTextBoxCpf.MaskCompleted || textBoxNome.Text.Trim() == "") 
+                btnSalvar.Enabled = false; /// se não estiver completa ele não aparece o botão
             else
                 btnSalvar.Enabled = true;
         }
@@ -99,6 +99,12 @@ namespace ImobiliariaLP2.Visão
             textBoxRg.Clear();
             textBoxEmail.Clear();
             maskedTextBoxTelefone.Clear();
+        }
+
+        private void ClienteV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                this.SelectNextControl(this.ActiveControl,true, true, true, true);
         }
     }
 }
