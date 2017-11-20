@@ -73,7 +73,8 @@ namespace ImobiliariaLP2.Visão
             dgvCliente.Rows.Clear();
             foreach (Cliente c in lista)
             {
-                dgvCliente.Rows.Add(c.Id, c.Nome, c.Cpf);
+                if (c.Ativo == 1)
+                    dgvCliente.Rows.Add(c.Id, c.Nome, c.Cpf);
             }
         }
     }

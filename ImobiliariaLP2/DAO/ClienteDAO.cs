@@ -112,27 +112,6 @@ namespace ImobiliariaLP2.DAO
             return c;
         }
 
-        public Cliente BuscarExiste(string cpf)
-        {
-            Cliente c = new Cliente();
-            Database db = Database.GetInstance();
-            DataRow dr = null;
-            string query = "SELECT * FROM cliente WHERE cpf = " + @cpf;
-
-            MySqlCommand comando = new MySqlCommand(query, db.GetConnection());
-            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
-            comando.Parameters["@cpf"].Value = cpf;
-
-            DataSet ds = db.ExecuteQuery(comando);
-            int linhas = ds.Tables[0].Rows.Count;
-            for(int i = 0; i < linhas; i++)
-            {
-                dr = ds.Tables[0].Rows[i];
-                c = SetDTO(dr);
-            }
-            return c;
-        }
-
         public void Atualizar(Cliente c)
         {
             string query = "UPDATE cliente SET id = " + c.Id + ", nome = @nome, cpf = @cpf, rg = @rg, telefone = @telefone, email = @email, ativo = " + c.Ativo + " WHERE id = " + c.Id;

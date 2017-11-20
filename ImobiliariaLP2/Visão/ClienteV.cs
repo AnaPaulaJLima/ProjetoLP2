@@ -32,26 +32,43 @@ namespace ImobiliariaLP2.Visão
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Cliente c = new Cliente();
             ClienteDAO cDAO = new ClienteDAO();
-
-            c.Nome = textBoxNome.Text;
-            c.Cpf = maskedTextBoxCpf.Text;
-            c.Rg = textBoxRg.Text;
-            c.Email = textBoxEmail.Text;
-            c.Telefone = maskedTextBoxTelefone.Text;
-
-            cDAO.Salvar(c);
-
+            List<Cliente> lista = cDAO.Buscar(maskedTextBoxCpf.Text);
+            foreach (Cliente c in lista)
+            {
+                if (c.Cpf == maskedTextBoxCpf.Text)
+                {
+                    if (c.Ativo == 1)
+                    {
+                        DialogResult resultado = MessageBox.Show("CPF já cadastrado! Ver informações do cliente?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            Dispose();
+                            VizualizarCliente vc = new VizualizarCliente(c);
+                            vc.Show();
+                            return;
+                        }
+                        else
+                        {
+                            LimpaCampos();
+                            return;
+                        }
+                    }
+                    if (c.Ativo == 0)
+                    {
+                        DialogResult resultado = MessageBox.Show("Cliente desativado! Ver informações do cliente?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            VizualizarCliente vc = new VizualizarCliente(c);
+                            vc.Show();
+                            return;
+                        }
+                    }
+                }
+            }
+            cDAO.Salvar(SetDTO());
             MessageBox.Show("Cadastro realizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            textBoxNome.Clear();
-            maskedTextBoxCpf.Clear();
-            textBoxRg.Clear();
-            textBoxEmail.Clear();
-            maskedTextBoxTelefone.Clear();
-
-            
+            LimpaCampos();
         }
 
         private void maskedTextBoxCpf_TextChanged(object sender, EventArgs e)
@@ -62,6 +79,26 @@ namespace ImobiliariaLP2.Visão
                 btnSalvar.Enabled = true;
         }
 
-        
+        private Cliente SetDTO()
+        {
+            Cliente c = new Cliente();
+
+            c.Nome = textBoxNome.Text;
+            c.Cpf = maskedTextBoxCpf.Text;
+            c.Rg = textBoxRg.Text;
+            c.Email = textBoxEmail.Text;
+            c.Telefone = maskedTextBoxTelefone.Text;
+
+            return c;
+        }
+
+        private void LimpaCampos()
+        {
+            textBoxNome.Clear();
+            maskedTextBoxCpf.Clear();
+            textBoxRg.Clear();
+            textBoxEmail.Clear();
+            maskedTextBoxTelefone.Clear();
+        }
     }
 }

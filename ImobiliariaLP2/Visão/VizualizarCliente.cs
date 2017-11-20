@@ -23,7 +23,7 @@ namespace ImobiliariaLP2.Visão
         public VizualizarCliente(Cliente c)
         {
             InitializeComponent();
-            SetDTO(c);
+            GetDTO(c);
         }
 
         private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e)
@@ -33,7 +33,7 @@ namespace ImobiliariaLP2.Visão
                 e.Handled = true;
         }
 
-        private Cliente GetDTO()
+        private Cliente SetDTO()
         {
             Cliente c = new Cliente();
             c.Id = int.Parse(textBoxID.Text);
@@ -47,7 +47,7 @@ namespace ImobiliariaLP2.Visão
             return c;
         }
 
-        private void SetDTO(Cliente c)
+        private void GetDTO(Cliente c)
         {
             textBoxID.Text = c.Id.ToString();
             textBoxNome.Text = c.Nome;
@@ -65,7 +65,7 @@ namespace ImobiliariaLP2.Visão
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             ClienteDAO cDAO = new ClienteDAO();
-            cDAO.Atualizar(GetDTO());
+            cDAO.Atualizar(SetDTO());
 
             if (MessageBox.Show("Cadastro atualizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 this.Dispose();
@@ -78,7 +78,5 @@ namespace ImobiliariaLP2.Visão
             if (MessageBox.Show("Cliente excluído!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 this.Dispose();
         }
-
-        
     }
 }

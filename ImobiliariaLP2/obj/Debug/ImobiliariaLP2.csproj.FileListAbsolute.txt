@@ -304,3 +304,7 @@ C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\Imobiliar
 C:\Users\João Pedro\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.aula13_11.resources
 C:\Users\Ana Paula\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.ResolveComReference.cache
 C:\Users\Ana Paula\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.aula13_11.resources
+C:\Users\João Pedro\Documents\ProjetoLP2\TrabalhoLP2\ImobiliariaLP2\bin\Debug\ImobiliariaLP2.exe.config
+C:\Users\João Pedro\Documents\ProjetoLP2\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.ResolveComReference.cache
+C:\Users\João Pedro\Documents\ProjetoLP2\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.exe
+C:\Users\João Pedro\Documents\ProjetoLP2\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.pdb
