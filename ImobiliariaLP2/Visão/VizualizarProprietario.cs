@@ -18,6 +18,11 @@ namespace ImobiliariaLP2.Visão
         {
             InitializeComponent();
         }
+        public VizualizarProprietario(Proprietario p)
+        {
+            InitializeComponent();
+            GetDTO(p);
+        }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
@@ -26,9 +31,10 @@ namespace ImobiliariaLP2.Visão
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Proprietario p = new Proprietario();
-            ProprietarioDao pDAO = new ProprietarioDao();
 
+        }
+        public void GetDTO(Proprietario p)
+        {
             // Criando DTO
             p.Nome = textBoxNome.Text;
             p.Cpf = maskedTextBoxCpf.Text;
@@ -39,12 +45,9 @@ namespace ImobiliariaLP2.Visão
             p.Numero = int.Parse(textBoxNumero.Text);
             p.Bairro = textBoxBairro.Text;
             p.Cidade = textBoxCidade.Text;
-
-            // Passando DTO para o DAO
-            pDAO.Atualizar(p);
-
-            MessageBox.Show("Cadastro atualizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+        }
+        public void LimpaCampos()
+        {
             textBoxNome.Clear();
             textBoxEmail.Clear();
             textBoxRg.Clear();

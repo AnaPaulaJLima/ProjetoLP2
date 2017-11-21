@@ -18,6 +18,13 @@ namespace ImobiliariaLP2.Modelo
         private int numero;
         private string bairro;
         private string cidade;
+        private int ativo; //1 para ativado e 0 para desativado
+
+        public int Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
 
         public int Id
         {

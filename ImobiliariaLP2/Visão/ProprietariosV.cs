@@ -19,48 +19,61 @@ namespace ImobiliariaLP2.Visão
             InitializeComponent();
         }
 
+        private Proprietario SetDTO()
+        {
+            Proprietario p = new Proprietario();
+            // Criando DTO
+            p.Nome = textBoxNome.Text;
+            p.Cpf = maskedTextBoxCpf.Text;
+            p.Rg = textBoxRg.Text;
+            p.Telefone = maskedTextBoxTelefone.Text;
+            p.Email = textBoxEmail.Text;
+            p.Rua = textBoxRua.Text;
+            p.Numero = int.Parse(textBoxNumero.Text);
+            p.Bairro = textBoxBairro.Text;
+            p.Cidade = textBoxCidade.Text;
+            return p;
+        }
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            try
+            ProprietarioDao pDAO = new ProprietarioDao();
+            List<Proprietario> lista = pDAO.Buscar(maskedTextBoxCpf.Text);
+            foreach (Proprietario p in lista)
             {
-                Proprietario p = new Proprietario();
-                ProprietarioDao pDAO = new ProprietarioDao();
-
-                // Criando DTO
-                p.Nome = textBoxNome.Text;
-                p.Cpf = maskedTextBoxCpf.Text;
-                p.Rg = textBoxRg.Text;
-                p.Telefone = maskedTextBoxTelefone.Text;
-                p.Email = textBoxEmail.Text;
-                p.Rua = textBoxRua.Text;
-                p.Numero = int.Parse(textBoxNumero.Text);
-                p.Bairro = textBoxBairro.Text;
-                p.Cidade = textBoxCidade.Text;
-
-                // Passando DTO para o DAO
-                pDAO.Salvar(p);
-
-                // Janela de aviso
-                MessageBox.Show("Cadastro realizado!","", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (p.Cpf == maskedTextBoxCpf.Text)
+                {
+                    if (p.Ativo == 1)
+                    {
+                        DialogResult resultado = MessageBox.Show("CPF já cadastrado! Ver informações do proprietário?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            Dispose();
+                            VizualizarProprietario vp = new VizualizarProprietario(p);
+                            vp.Show();
+                            return;
+                        }
+                        else
+                        {
+                            LimpaCampos();
+                            return;
+                        }
+                    }
+                    if (p.Ativo == 0)
+                    {
+                        DialogResult resultado = MessageBox.Show("Proprietário desativado! Ver informações do proprietário?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            VizualizarProprietario vp = new VizualizarProprietario(p);
+                            vp.Show();
+                            return;
+                        }
+                    }
+                }
             }
-            catch
-            {
-                MessageBox.Show("Erro no cadastro!","", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                // Limpando os campos
-                textBoxNome.Clear();
-                textBoxEmail.Clear();
-                textBoxRg.Clear();
-                maskedTextBoxTelefone.Clear();
-                maskedTextBoxCpf.Clear();
-                textBoxRua.Clear();
-                textBoxNumero.Clear();
-                textBoxBairro.Clear();
-                textBoxCidade.Clear();
-
-            }
+            pDAO.Salvar(SetDTO());
+            MessageBox.Show("Cadastro realizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LimpaCampos();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -72,6 +85,20 @@ namespace ImobiliariaLP2.Visão
         private void btnSair_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void LimpaCampos()
+        {
+            // Limpando os campos
+            textBoxNome.Clear();
+            textBoxEmail.Clear();
+            textBoxRg.Clear();
+            maskedTextBoxTelefone.Clear();
+            maskedTextBoxCpf.Clear();
+            textBoxRua.Clear();
+            textBoxNumero.Clear();
+            textBoxBairro.Clear();
+            textBoxCidade.Clear();
         }
     }
 }
