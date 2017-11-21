@@ -110,6 +110,9 @@ namespace ImobiliariaLP2.Visão
             maskedTextBoxDataN.Clear();
         }
 
-       
+        private void ClienteV_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

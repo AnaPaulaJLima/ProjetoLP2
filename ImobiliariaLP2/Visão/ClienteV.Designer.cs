@@ -231,6 +231,7 @@
             this.Name = "ClienteV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClienteV";
+            this.Load += new System.EventHandler(this.ClienteV_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ClienteV_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();

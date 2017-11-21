@@ -312,6 +312,7 @@
             this.Controls.Add(this.lbCpf);
             this.Controls.Add(this.lbNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Name = "VizualizarProprietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VizualizarProprietario";
