@@ -50,61 +50,66 @@
             this.lbRg = new System.Windows.Forms.Label();
             this.lbCpf = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
+            this.lblDataNasc = new System.Windows.Forms.Label();
+            this.maskedTextBoxDataN = new System.Windows.Forms.MaskedTextBox();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.SuspendLayout();
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnSalvar.Location = new System.Drawing.Point(470, 191);
+            this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSalvar.Location = new System.Drawing.Point(470, 202);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(75, 26);
             this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.TabStop = false;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(26, 191);
+            this.btnSair.Location = new System.Drawing.Point(24, 204);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 19;
+            this.btnSair.TabStop = false;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // textBoxCidade
             // 
-            this.textBoxCidade.Location = new System.Drawing.Point(342, 121);
+            this.textBoxCidade.Location = new System.Drawing.Point(342, 124);
             this.textBoxCidade.Name = "textBoxCidade";
             this.textBoxCidade.Size = new System.Drawing.Size(203, 20);
-            this.textBoxCidade.TabIndex = 64;
+            this.textBoxCidade.TabIndex = 7;
             // 
             // textBoxBairro
             // 
-            this.textBoxBairro.Location = new System.Drawing.Point(66, 121);
+            this.textBoxBairro.Location = new System.Drawing.Point(64, 124);
             this.textBoxBairro.Name = "textBoxBairro";
             this.textBoxBairro.Size = new System.Drawing.Size(182, 20);
-            this.textBoxBairro.TabIndex = 63;
+            this.textBoxBairro.TabIndex = 6;
             // 
             // textBoxNumero
             // 
             this.textBoxNumero.Location = new System.Drawing.Point(480, 89);
             this.textBoxNumero.Name = "textBoxNumero";
             this.textBoxNumero.Size = new System.Drawing.Size(65, 20);
-            this.textBoxNumero.TabIndex = 62;
+            this.textBoxNumero.TabIndex = 5;
             // 
             // textBoxRua
             // 
             this.textBoxRua.Location = new System.Drawing.Point(58, 88);
             this.textBoxRua.Name = "textBoxRua";
             this.textBoxRua.Size = new System.Drawing.Size(372, 20);
-            this.textBoxRua.TabIndex = 61;
+            this.textBoxRua.TabIndex = 4;
             // 
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(285, 124);
+            this.lblCidade.Location = new System.Drawing.Point(290, 127);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(46, 13);
             this.lblCidade.TabIndex = 60;
@@ -113,7 +118,7 @@
             // lblBairro
             // 
             this.lblBairro.AutoSize = true;
-            this.lblBairro.Location = new System.Drawing.Point(23, 124);
+            this.lblBairro.Location = new System.Drawing.Point(21, 128);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(37, 13);
             this.lblBairro.TabIndex = 59;
@@ -144,6 +149,7 @@
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(41, 20);
             this.textBoxID.TabIndex = 56;
+            this.textBoxID.TabStop = false;
             // 
             // lbID
             // 
@@ -156,45 +162,49 @@
             // 
             // textBoxRg
             // 
-            this.textBoxRg.Location = new System.Drawing.Point(330, 51);
+            this.textBoxRg.Location = new System.Drawing.Point(189, 51);
             this.textBoxRg.Name = "textBoxRg";
-            this.textBoxRg.Size = new System.Drawing.Size(215, 20);
-            this.textBoxRg.TabIndex = 54;
+            this.textBoxRg.Size = new System.Drawing.Size(127, 20);
+            this.textBoxRg.TabIndex = 2;
             // 
             // maskedTextBoxTelefone
             // 
-            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(81, 156);
-            this.maskedTextBoxTelefone.Mask = "(00) 0000-0000";
+            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(79, 159);
+            this.maskedTextBoxTelefone.Mask = "(00) 90000-0000";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
-            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(98, 20);
-            this.maskedTextBoxTelefone.TabIndex = 53;
+            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(86, 20);
+            this.maskedTextBoxTelefone.TabIndex = 8;
+            this.maskedTextBoxTelefone.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // maskedTextBoxCpf
             // 
             this.maskedTextBoxCpf.Location = new System.Drawing.Point(58, 51);
             this.maskedTextBoxCpf.Mask = "000.000.000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
-            this.maskedTextBoxCpf.Size = new System.Drawing.Size(200, 20);
-            this.maskedTextBoxCpf.TabIndex = 52;
+            this.maskedTextBoxCpf.Size = new System.Drawing.Size(93, 20);
+            this.maskedTextBoxCpf.TabIndex = 1;
+            this.maskedTextBoxCpf.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // textBoxNome
             // 
             this.textBoxNome.Location = new System.Drawing.Point(150, 17);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(395, 20);
-            this.textBoxNome.TabIndex = 51;
+            this.textBoxNome.TabIndex = 0;
+            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
+            this.textBoxNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(229, 156);
+            this.textBoxEmail.Location = new System.Drawing.Point(206, 159);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(316, 20);
-            this.textBoxEmail.TabIndex = 50;
+            this.textBoxEmail.Size = new System.Drawing.Size(339, 20);
+            this.textBoxEmail.TabIndex = 9;
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(185, 159);
+            this.lbEmail.Location = new System.Drawing.Point(171, 162);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(38, 13);
             this.lbEmail.TabIndex = 49;
@@ -203,7 +213,7 @@
             // lbTelefone
             // 
             this.lbTelefone.AutoSize = true;
-            this.lbTelefone.Location = new System.Drawing.Point(23, 159);
+            this.lbTelefone.Location = new System.Drawing.Point(23, 162);
             this.lbTelefone.Name = "lbTelefone";
             this.lbTelefone.Size = new System.Drawing.Size(52, 13);
             this.lbTelefone.TabIndex = 48;
@@ -212,7 +222,7 @@
             // lbRg
             // 
             this.lbRg.AutoSize = true;
-            this.lbRg.Location = new System.Drawing.Point(285, 54);
+            this.lbRg.Location = new System.Drawing.Point(157, 54);
             this.lbRg.Name = "lbRg";
             this.lbRg.Size = new System.Drawing.Size(26, 13);
             this.lbRg.TabIndex = 47;
@@ -236,11 +246,32 @@
             this.lbNome.TabIndex = 45;
             this.lbNome.Text = "Nome:";
             // 
+            // lblDataNasc
+            // 
+            this.lblDataNasc.AutoSize = true;
+            this.lblDataNasc.Location = new System.Drawing.Point(331, 54);
+            this.lblDataNasc.Name = "lblDataNasc";
+            this.lblDataNasc.Size = new System.Drawing.Size(108, 13);
+            this.lblDataNasc.TabIndex = 65;
+            this.lblDataNasc.Text = "Data de nascimento: ";
+            // 
+            // maskedTextBoxDataN
+            // 
+            this.maskedTextBoxDataN.Location = new System.Drawing.Point(445, 51);
+            this.maskedTextBoxDataN.Mask = "00/00/0000";
+            this.maskedTextBoxDataN.Name = "maskedTextBoxDataN";
+            this.maskedTextBoxDataN.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBoxDataN.TabIndex = 3;
+            this.maskedTextBoxDataN.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxDataN.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
+            // 
             // ProprietariosV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 237);
+            this.ClientSize = new System.Drawing.Size(574, 245);
+            this.Controls.Add(this.maskedTextBoxDataN);
+            this.Controls.Add(this.lblDataNasc);
             this.Controls.Add(this.textBoxCidade);
             this.Controls.Add(this.textBoxBairro);
             this.Controls.Add(this.textBoxNumero);
@@ -264,9 +295,11 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnSalvar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Name = "ProprietariosV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProprietariosV";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ProprietariosV_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +329,8 @@
         private System.Windows.Forms.Label lbRg;
         private System.Windows.Forms.Label lbCpf;
         private System.Windows.Forms.Label lbNome;
+        private System.Windows.Forms.Label lblDataNasc;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxDataN;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }

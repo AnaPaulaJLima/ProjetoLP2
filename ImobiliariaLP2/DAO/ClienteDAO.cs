@@ -20,6 +20,7 @@ namespace ImobiliariaLP2.DAO
             c.Nome = dr["nome"].ToString();
             c.Cpf = dr["cpf"].ToString();
             c.Rg = dr["rg"].ToString();
+            c.DataNasc = dr["dataNasc"].ToString();
             c.Telefone = dr["telefone"].ToString();
             c.Email = dr["email"].ToString();
             c.Ativo = int.Parse(dr["ativo"].ToString());
@@ -37,6 +38,7 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters.Add("@nome", MySqlDbType.VarChar);
             comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
             comando.Parameters.Add("@rg", MySqlDbType.VarChar);
+            comando.Parameters.Add("@dataNasc", MySqlDbType.VarChar);
             comando.Parameters.Add("@telefone", MySqlDbType.VarChar);
             comando.Parameters.Add("@email", MySqlDbType.VarChar);
             
@@ -44,6 +46,7 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters["@nome"].Value = c.Nome;
             comando.Parameters["@cpf"].Value = c.Cpf;
             comando.Parameters["@rg"].Value = c.Rg;
+            comando.Parameters["@dataNasc"].Value = c.DataNasc;
             comando.Parameters["@telefone"].Value = c.Telefone;
             comando.Parameters["@email"].Value = c.Email;
 
@@ -52,7 +55,7 @@ namespace ImobiliariaLP2.DAO
 
         public void Salvar(Cliente c) // Salvar no banco
         {
-            string query = "INSERT INTO cliente(nome, cpf, rg, telefone, email, ativo) VALUES(@nome, @cpf, @rg, @telefone, @email, 1)";
+            string query = "INSERT INTO cliente(nome, cpf, rg, dataNasc, telefone, email, ativo) VALUES(@nome, @cpf, @rg, @dataNasc, @telefone, @email, 1)";
             // Usando GetDTO
             GetDTO(query, c);
         }
@@ -114,7 +117,7 @@ namespace ImobiliariaLP2.DAO
 
         public void Atualizar(Cliente c)
         {
-            string query = "UPDATE cliente SET id = " + c.Id + ", nome = @nome, cpf = @cpf, rg = @rg, telefone = @telefone, email = @email, ativo = " + c.Ativo + " WHERE id = " + c.Id;
+            string query = "UPDATE cliente SET id = " + c.Id + ", nome = @nome, cpf = @cpf, rg = @rg, dataNasc = @dataNasc, telefone = @telefone, email = @email, ativo = " + c.Ativo + " WHERE id = " + c.Id;
             GetDTO(query, c);
         }
 

@@ -24,10 +24,24 @@ namespace ImobiliariaLP2.Visão
             Dispose();
         }
 
-        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e)
+        private void ClienteV_KeyDown(object sender, KeyEventArgs e) // para fazer o ENTER funiconar, e passar por cada texBox
+        {
+            if (e.KeyCode == Keys.Enter)
+                this.SelectNextControl(this.ActiveControl, true, true, true, true);
+        }
+
+        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e) // validando só com letras o textBox no nome 
         {
             if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) /// só deixa digitar letras no textBox 
                 e.Handled = true; // isSeparador é para consegui usar o espaça e o iscontrol é para conseguir apagar 
+        }
+
+        private void textBoxNome_TextChanged(object sender, EventArgs e)// para habilitar o botão somento com o preenchimento dos campos obrigatorios
+        {
+            if (textBoxNome.Text.Trim() == "" || !maskedTextBoxTelefone.MaskCompleted || !maskedTextBoxCpf.MaskCompleted || !maskedTextBoxDataN.MaskCompleted)
+                btnSalvar.Enabled = false; /// se não estiver completa ele não aparece o botão
+            else
+                btnSalvar.Enabled = true;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -66,17 +80,10 @@ namespace ImobiliariaLP2.Visão
                     }
                 }
             }
+
             cDAO.Salvar(SetDTO());
             MessageBox.Show("Cadastro realizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpaCampos();
-        }
-
-        private void maskedTextBoxCpf_TextChanged(object sender, EventArgs e)
-        {
-            if (!maskedTextBoxTelefone.MaskCompleted || !maskedTextBoxCpf.MaskCompleted || textBoxNome.Text.Trim() == "") 
-                btnSalvar.Enabled = false; /// se não estiver completa ele não aparece o botão
-            else
-                btnSalvar.Enabled = true;
         }
 
         private Cliente SetDTO()
@@ -86,6 +93,7 @@ namespace ImobiliariaLP2.Visão
             c.Nome = textBoxNome.Text;
             c.Cpf = maskedTextBoxCpf.Text;
             c.Rg = textBoxRg.Text;
+            c.DataNasc = maskedTextBoxDataN.Text;
             c.Email = textBoxEmail.Text;
             c.Telefone = maskedTextBoxTelefone.Text;
 
@@ -99,12 +107,9 @@ namespace ImobiliariaLP2.Visão
             textBoxRg.Clear();
             textBoxEmail.Clear();
             maskedTextBoxTelefone.Clear();
+            maskedTextBoxDataN.Clear();
         }
 
-        private void ClienteV_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                this.SelectNextControl(this.ActiveControl,true, true, true, true);
-        }
+       
     }
 }

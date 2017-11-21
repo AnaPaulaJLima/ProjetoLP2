@@ -42,12 +42,14 @@
             this.lbNome = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.lblDataNasc = new System.Windows.Forms.Label();
+            this.maskedTextBoxDataN = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // textBoxID
             // 
             this.textBoxID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxID.Location = new System.Drawing.Point(85, 36);
+            this.textBoxID.Location = new System.Drawing.Point(51, 36);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(25, 20);
@@ -58,7 +60,7 @@
             // 
             this.lbID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(58, 39);
+            this.lbID.Location = new System.Drawing.Point(24, 39);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(21, 13);
             this.lbID.TabIndex = 31;
@@ -67,55 +69,54 @@
             // textBoxRg
             // 
             this.textBoxRg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxRg.Location = new System.Drawing.Point(319, 83);
+            this.textBoxRg.Location = new System.Drawing.Point(197, 80);
             this.textBoxRg.Name = "textBoxRg";
-            this.textBoxRg.Size = new System.Drawing.Size(196, 20);
+            this.textBoxRg.Size = new System.Drawing.Size(118, 20);
             this.textBoxRg.TabIndex = 2;
             // 
             // maskedTextBoxTelefone
             // 
             this.maskedTextBoxTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(108, 124);
+            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(82, 124);
             this.maskedTextBoxTelefone.Mask = "(00) 0000-00009";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(98, 20);
-            this.maskedTextBoxTelefone.TabIndex = 3;
-            this.maskedTextBoxTelefone.TextChanged += new System.EventHandler(this.maskedTextBoxCpf_TextChanged);
+            this.maskedTextBoxTelefone.TabIndex = 4;
+            this.maskedTextBoxTelefone.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // maskedTextBoxCpf
             // 
             this.maskedTextBoxCpf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.maskedTextBoxCpf.Location = new System.Drawing.Point(85, 83);
+            this.maskedTextBoxCpf.Location = new System.Drawing.Point(59, 80);
             this.maskedTextBoxCpf.Mask = "000.000.000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
-            this.maskedTextBoxCpf.Size = new System.Drawing.Size(166, 20);
+            this.maskedTextBoxCpf.Size = new System.Drawing.Size(89, 20);
             this.maskedTextBoxCpf.TabIndex = 1;
-            this.maskedTextBoxCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.maskedTextBoxCpf.TextChanged += new System.EventHandler(this.maskedTextBoxCpf_TextChanged);
+            this.maskedTextBoxCpf.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // textBoxNome
             // 
             this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxNome.Location = new System.Drawing.Point(151, 36);
+            this.textBoxNome.Location = new System.Drawing.Point(135, 36);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(364, 20);
+            this.textBoxNome.Size = new System.Drawing.Size(400, 20);
             this.textBoxNome.TabIndex = 0;
-            this.textBoxNome.TextChanged += new System.EventHandler(this.maskedTextBoxCpf_TextChanged);
+            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             this.textBoxNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxEmail.Location = new System.Drawing.Point(248, 123);
+            this.textBoxEmail.Location = new System.Drawing.Point(222, 124);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(267, 20);
-            this.textBoxEmail.TabIndex = 4;
+            this.textBoxEmail.Size = new System.Drawing.Size(313, 20);
+            this.textBoxEmail.TabIndex = 5;
             // 
             // lbEmail
             // 
             this.lbEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(213, 127);
+            this.lbEmail.Location = new System.Drawing.Point(186, 127);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(38, 13);
             this.lbEmail.TabIndex = 25;
@@ -125,7 +126,7 @@
             // 
             this.lbTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbTelefone.AutoSize = true;
-            this.lbTelefone.Location = new System.Drawing.Point(58, 127);
+            this.lbTelefone.Location = new System.Drawing.Point(24, 127);
             this.lbTelefone.Name = "lbTelefone";
             this.lbTelefone.Size = new System.Drawing.Size(52, 13);
             this.lbTelefone.TabIndex = 24;
@@ -135,7 +136,7 @@
             // 
             this.lbRg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbRg.AutoSize = true;
-            this.lbRg.Location = new System.Drawing.Point(287, 85);
+            this.lbRg.Location = new System.Drawing.Point(165, 83);
             this.lbRg.Name = "lbRg";
             this.lbRg.Size = new System.Drawing.Size(26, 13);
             this.lbRg.TabIndex = 23;
@@ -145,7 +146,7 @@
             // 
             this.lbCpf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbCpf.AutoSize = true;
-            this.lbCpf.Location = new System.Drawing.Point(58, 85);
+            this.lbCpf.Location = new System.Drawing.Point(24, 83);
             this.lbCpf.Name = "lbCpf";
             this.lbCpf.Size = new System.Drawing.Size(30, 13);
             this.lbCpf.TabIndex = 22;
@@ -155,7 +156,7 @@
             // 
             this.lbNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(116, 39);
+            this.lbNome.Location = new System.Drawing.Point(91, 39);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(38, 13);
             this.lbNome.TabIndex = 21;
@@ -163,9 +164,9 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSalvar.Enabled = false;
-            this.btnSalvar.Location = new System.Drawing.Point(440, 181);
+            this.btnSalvar.Location = new System.Drawing.Point(460, 172);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 19;
@@ -176,7 +177,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(73, 181);
+            this.btnSair.Location = new System.Drawing.Point(27, 172);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 33;
@@ -185,11 +186,32 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // lblDataNasc
+            // 
+            this.lblDataNasc.AutoSize = true;
+            this.lblDataNasc.Location = new System.Drawing.Point(332, 83);
+            this.lblDataNasc.Name = "lblDataNasc";
+            this.lblDataNasc.Size = new System.Drawing.Size(108, 13);
+            this.lblDataNasc.TabIndex = 34;
+            this.lblDataNasc.Text = "Data de nascimento: ";
+            // 
+            // maskedTextBoxDataN
+            // 
+            this.maskedTextBoxDataN.Location = new System.Drawing.Point(449, 80);
+            this.maskedTextBoxDataN.Mask = "00/00/0000";
+            this.maskedTextBoxDataN.Name = "maskedTextBoxDataN";
+            this.maskedTextBoxDataN.Size = new System.Drawing.Size(86, 20);
+            this.maskedTextBoxDataN.TabIndex = 3;
+            this.maskedTextBoxDataN.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxDataN.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
+            // 
             // ClienteV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 237);
+            this.ClientSize = new System.Drawing.Size(574, 213);
+            this.Controls.Add(this.maskedTextBoxDataN);
+            this.Controls.Add(this.lblDataNasc);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.lbID);
@@ -231,5 +253,7 @@
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblDataNasc;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxDataN;
     }
 }

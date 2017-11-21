@@ -14,11 +14,12 @@ namespace ImobiliariaLP2.Modelo
         private string rg;
         private string telefone;
         private string email;
+        private string dataNasc;
         private int ativo; // 1 para ATIVADO e 0 para DESATIVADO
 
         public override string ToString()
         {
-            return id + "\t" + nome + "\t" + cpf + "\t" + rg + "\t" + telefone + "\t" + email+"\n\n";
+            return id + "\t" + nome + "\t" + cpf + "\t" + rg + "\t" + telefone + "\t" + email+ "\t" + dataNasc+ "\n\n";
         }
         public int Id
         {
@@ -54,6 +55,12 @@ namespace ImobiliariaLP2.Modelo
         {
             get { return email; }
             set { email = value; }
+        }
+
+        public string DataNasc
+        {
+            get { return dataNasc; }
+            set { dataNasc = value; }
         }
 
         public int Ativo

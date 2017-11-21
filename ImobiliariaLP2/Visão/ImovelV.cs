@@ -26,7 +26,7 @@ namespace ImobiliariaLP2.Visão
             ProprietarioDao pDAO = new ProprietarioDao();
 
             // buscando proprietario
-            i.P = pDAO.Buscar(maskedTextBoxCpf.Text);
+            //i.P = pDAO.Buscar(maskedTextBoxCpf.Text);
 
             // criando DTO
             i.Tipo = comboBoxTipo.Text;

@@ -19,6 +19,29 @@ namespace ImobiliariaLP2.Visão
             InitializeComponent();
         }
 
+        // para fazer o ENTER funcionar passando por cada texBox
+        private void ProprietariosV_KeyDown(object sender, KeyEventArgs e) 
+        {
+            if (e.KeyCode == Keys.Enter) // verifica se o keys que é o lugar onde esta é igual ou enter 
+                this.SelectNextControl(this.ActiveControl, true, true, true, true);
+        }
+
+        // valida o textBox nome para nao digitar letra 
+        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e) 
+        {
+            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) // se oque foi digitado for diferente de letra ele entra
+                e.Handled = true; // Separador para poder colocar espaço e Control para poder apagar 
+        }
+
+        //valçidação do campos obrigatorios, se não preenxer todos o botao salvar não é habilitado
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxNome.Text.Trim() == "" || !maskedTextBoxCpf.MaskCompleted || !maskedTextBoxDataN.MaskCompleted || !maskedTextBoxTelefone.MaskCompleted)
+                btnSalvar.Enabled = false; // se não tiver nada no nome e as masked não estiver completa, o botão continua desabilitado
+            else
+                btnSalvar.Enabled = true; // caso contrario, habilita o botão 
+        }
+
         private Proprietario SetDTO()
         {
             Proprietario p = new Proprietario();
@@ -71,10 +94,13 @@ namespace ImobiliariaLP2.Visão
                     }
                 }
             }
+
             pDAO.Salvar(SetDTO());
             MessageBox.Show("Cadastro realizado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpaCampos();
         }
+
+       
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
