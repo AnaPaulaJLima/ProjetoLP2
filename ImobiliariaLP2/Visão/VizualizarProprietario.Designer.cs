@@ -51,6 +51,8 @@
             this.textBoxNumero = new System.Windows.Forms.TextBox();
             this.textBoxBairro = new System.Windows.Forms.TextBox();
             this.textBoxCidade = new System.Windows.Forms.TextBox();
+            this.lblDataNasc = new System.Windows.Forms.Label();
+            this.maskedTextBoxDataN = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // textBoxID
@@ -60,6 +62,7 @@
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(41, 20);
             this.textBoxID.TabIndex = 30;
+            this.textBoxID.TabStop = false;
             // 
             // lbID
             // 
@@ -72,10 +75,10 @@
             // 
             // textBoxRg
             // 
-            this.textBoxRg.Location = new System.Drawing.Point(329, 53);
+            this.textBoxRg.Location = new System.Drawing.Point(196, 53);
             this.textBoxRg.Name = "textBoxRg";
-            this.textBoxRg.Size = new System.Drawing.Size(215, 20);
-            this.textBoxRg.TabIndex = 28;
+            this.textBoxRg.Size = new System.Drawing.Size(107, 20);
+            this.textBoxRg.TabIndex = 2;
             // 
             // maskedTextBoxTelefone
             // 
@@ -83,29 +86,33 @@
             this.maskedTextBoxTelefone.Mask = "(00) 0000-0000";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(98, 20);
-            this.maskedTextBoxTelefone.TabIndex = 27;
+            this.maskedTextBoxTelefone.TabIndex = 8;
+            this.maskedTextBoxTelefone.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // maskedTextBoxCpf
             // 
             this.maskedTextBoxCpf.Location = new System.Drawing.Point(57, 53);
             this.maskedTextBoxCpf.Mask = "000.000.000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
-            this.maskedTextBoxCpf.Size = new System.Drawing.Size(200, 20);
-            this.maskedTextBoxCpf.TabIndex = 26;
+            this.maskedTextBoxCpf.Size = new System.Drawing.Size(103, 20);
+            this.maskedTextBoxCpf.TabIndex = 1;
+            this.maskedTextBoxCpf.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // textBoxNome
             // 
             this.textBoxNome.Location = new System.Drawing.Point(149, 19);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(395, 20);
-            this.textBoxNome.TabIndex = 25;
+            this.textBoxNome.TabIndex = 0;
+            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
+            this.textBoxNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(228, 158);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(316, 20);
-            this.textBoxEmail.TabIndex = 24;
+            this.textBoxEmail.TabIndex = 9;
             // 
             // lbEmail
             // 
@@ -128,7 +135,7 @@
             // lbRg
             // 
             this.lbRg.AutoSize = true;
-            this.lbRg.Location = new System.Drawing.Point(284, 56);
+            this.lbRg.Location = new System.Drawing.Point(164, 56);
             this.lbRg.Name = "lbRg";
             this.lbRg.Size = new System.Drawing.Size(26, 13);
             this.lbRg.TabIndex = 21;
@@ -154,35 +161,40 @@
             // 
             // btnSair
             // 
-            this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSair.Location = new System.Drawing.Point(25, 201);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 24);
+            this.btnSair.Size = new System.Drawing.Size(75, 22);
             this.btnSair.TabIndex = 31;
+            this.btnSair.TabStop = false;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.Location = new System.Drawing.Point(245, 201);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 24);
+            this.btnAlterar.Size = new System.Drawing.Size(75, 22);
             this.btnAlterar.TabIndex = 35;
+            this.btnAlterar.TabStop = false;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnDeletar
             // 
-            this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnDeletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeletar.Location = new System.Drawing.Point(469, 201);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(75, 24);
+            this.btnDeletar.Size = new System.Drawing.Size(75, 22);
             this.btnDeletar.TabIndex = 36;
+            this.btnDeletar.TabStop = false;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click_1);
             // 
             // lblRua
             // 
@@ -225,34 +237,57 @@
             this.textBoxRua.Location = new System.Drawing.Point(57, 90);
             this.textBoxRua.Name = "textBoxRua";
             this.textBoxRua.Size = new System.Drawing.Size(372, 20);
-            this.textBoxRua.TabIndex = 41;
+            this.textBoxRua.TabIndex = 4;
+            this.textBoxRua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
             // 
             // textBoxNumero
             // 
             this.textBoxNumero.Location = new System.Drawing.Point(479, 91);
             this.textBoxNumero.Name = "textBoxNumero";
             this.textBoxNumero.Size = new System.Drawing.Size(65, 20);
-            this.textBoxNumero.TabIndex = 42;
+            this.textBoxNumero.TabIndex = 5;
             // 
             // textBoxBairro
             // 
             this.textBoxBairro.Location = new System.Drawing.Point(65, 123);
             this.textBoxBairro.Name = "textBoxBairro";
             this.textBoxBairro.Size = new System.Drawing.Size(182, 20);
-            this.textBoxBairro.TabIndex = 43;
+            this.textBoxBairro.TabIndex = 6;
             // 
             // textBoxCidade
             // 
             this.textBoxCidade.Location = new System.Drawing.Point(341, 123);
             this.textBoxCidade.Name = "textBoxCidade";
             this.textBoxCidade.Size = new System.Drawing.Size(203, 20);
-            this.textBoxCidade.TabIndex = 44;
+            this.textBoxCidade.TabIndex = 7;
+            this.textBoxCidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
+            // 
+            // lblDataNasc
+            // 
+            this.lblDataNasc.AutoSize = true;
+            this.lblDataNasc.Location = new System.Drawing.Point(319, 56);
+            this.lblDataNasc.Name = "lblDataNasc";
+            this.lblDataNasc.Size = new System.Drawing.Size(110, 13);
+            this.lblDataNasc.TabIndex = 45;
+            this.lblDataNasc.Text = "Data de Nascimento: ";
+            // 
+            // maskedTextBoxDataN
+            // 
+            this.maskedTextBoxDataN.Location = new System.Drawing.Point(441, 53);
+            this.maskedTextBoxDataN.Mask = "00/00/0000";
+            this.maskedTextBoxDataN.Name = "maskedTextBoxDataN";
+            this.maskedTextBoxDataN.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBoxDataN.TabIndex = 3;
+            this.maskedTextBoxDataN.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxDataN.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // VizualizarProprietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 237);
+            this.ClientSize = new System.Drawing.Size(574, 235);
+            this.Controls.Add(this.maskedTextBoxDataN);
+            this.Controls.Add(this.lblDataNasc);
             this.Controls.Add(this.textBoxCidade);
             this.Controls.Add(this.textBoxBairro);
             this.Controls.Add(this.textBoxNumero);
@@ -280,6 +315,7 @@
             this.Name = "VizualizarProprietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VizualizarProprietario";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.VizualizarProprietario_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +346,7 @@
         private System.Windows.Forms.TextBox textBoxNumero;
         private System.Windows.Forms.TextBox textBoxBairro;
         private System.Windows.Forms.TextBox textBoxCidade;
+        private System.Windows.Forms.Label lblDataNasc;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxDataN;
     }
 }

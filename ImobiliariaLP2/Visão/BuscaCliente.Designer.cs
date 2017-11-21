@@ -66,7 +66,6 @@
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.Size = new System.Drawing.Size(525, 418);
             this.dgvCliente.TabIndex = 7;
-            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
             // colunaId
             // 

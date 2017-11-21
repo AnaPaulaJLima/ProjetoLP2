@@ -26,10 +26,10 @@ namespace ImobiliariaLP2.Visão
                 this.SelectNextControl(this.ActiveControl, true, true, true, true);
         }
 
-        // valida o textBox nome para nao digitar letra 
-        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e) 
+        // valida o textBox nome, rua e cidade para nao digitar letra 
+        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) // se oque foi digitado for diferente de letra ele entra
+            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar)))
                 e.Handled = true; // Separador para poder colocar espaço e Control para poder apagar 
         }
 
@@ -49,12 +49,14 @@ namespace ImobiliariaLP2.Visão
             p.Nome = textBoxNome.Text;
             p.Cpf = maskedTextBoxCpf.Text;
             p.Rg = textBoxRg.Text;
+            p.DataNasc = maskedTextBoxDataN.Text;
             p.Telefone = maskedTextBoxTelefone.Text;
             p.Email = textBoxEmail.Text;
             p.Rua = textBoxRua.Text;
             p.Numero = int.Parse(textBoxNumero.Text);
             p.Bairro = textBoxBairro.Text;
             p.Cidade = textBoxCidade.Text;
+
             return p;
         }
 
@@ -100,14 +102,6 @@ namespace ImobiliariaLP2.Visão
             LimpaCampos();
         }
 
-       
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            VizualizarProprietario vp = new VizualizarProprietario();
-            vp.ShowDialog();
-        }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -126,5 +120,7 @@ namespace ImobiliariaLP2.Visão
             textBoxBairro.Clear();
             textBoxCidade.Clear();
         }
+
+       
     }
 }

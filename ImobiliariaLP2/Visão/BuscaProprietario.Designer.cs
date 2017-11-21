@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.btnAlterarDeletar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProprietario = new System.Windows.Forms.DataGridView();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.columnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProprietario)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAlterarDeletar
@@ -46,19 +49,23 @@
             this.btnAlterarDeletar.UseVisualStyleBackColor = true;
             this.btnAlterarDeletar.Click += new System.EventHandler(this.btnAlterarDeletar_Click);
             // 
-            // dataGridView1
+            // dgvProprietario
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvProprietario.AllowUserToAddRows = false;
+            this.dgvProprietario.AllowUserToDeleteRows = false;
+            this.dgvProprietario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(525, 419);
-            this.dataGridView1.TabIndex = 11;
+            this.dgvProprietario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProprietario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnID,
+            this.columnNome,
+            this.columnCPF});
+            this.dgvProprietario.Location = new System.Drawing.Point(15, 38);
+            this.dgvProprietario.Name = "dgvProprietario";
+            this.dgvProprietario.ReadOnly = true;
+            this.dgvProprietario.Size = new System.Drawing.Size(525, 419);
+            this.dgvProprietario.TabIndex = 11;
             // 
             // textBoxNome
             // 
@@ -88,6 +95,28 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // columnID
+            // 
+            this.columnID.FillWeight = 50F;
+            this.columnID.HeaderText = "ID";
+            this.columnID.Name = "columnID";
+            this.columnID.ReadOnly = true;
+            // 
+            // columnNome
+            // 
+            this.columnNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columnNome.HeaderText = "Nome";
+            this.columnNome.Name = "columnNome";
+            this.columnNome.ReadOnly = true;
+            // 
+            // columnCPF
+            // 
+            this.columnCPF.FillWeight = 80F;
+            this.columnCPF.HeaderText = "CPF";
+            this.columnCPF.Name = "columnCPF";
+            this.columnCPF.ReadOnly = true;
+            this.columnCPF.Width = 191;
+            // 
             // BuscaProprietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,14 +124,15 @@
             this.ClientSize = new System.Drawing.Size(552, 467);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAlterarDeletar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProprietario);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.lbNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BuscaProprietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuscaProprietario";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.BuscaProprietario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProprietario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,9 +141,12 @@
         #endregion
 
         private System.Windows.Forms.Button btnAlterarDeletar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProprietario;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnCPF;
     }
 }

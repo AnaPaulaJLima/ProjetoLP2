@@ -18,6 +18,7 @@ namespace ImobiliariaLP2.DAO
             p.Nome = dr["nome"].ToString();
             p.Cpf = dr["cpf"].ToString();
             p.Rg = dr["rg"].ToString();
+            p.DataNasc = dr["dataNasc"].ToString();
             p.Telefone = dr["telefone"].ToString();
             p.Email = dr["email"].ToString();
             p.Rua = dr["rua"].ToString();
@@ -34,6 +35,7 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters.Add("@nome", MySqlDbType.VarChar);
             comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
             comando.Parameters.Add("@rg", MySqlDbType.VarChar);
+            comando.Parameters.Add("@dataNasc", MySqlDbType.VarChar);
             comando.Parameters.Add("@telefone", MySqlDbType.VarChar);
             comando.Parameters.Add("@email", MySqlDbType.VarChar);
             comando.Parameters.Add("@rua", MySqlDbType.VarChar);
@@ -44,6 +46,7 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters["@nome"].Value = p.Nome;
             comando.Parameters["@cpf"].Value = p.Cpf;
             comando.Parameters["@rg"].Value = p.Rg;
+            comando.Parameters["@dataNasc"].Value = p.DataNasc;
             comando.Parameters["@telefone"].Value = p.Telefone;
             comando.Parameters["@email"].Value = p.Email;
             comando.Parameters["@rua"].Value = p.Rua;
@@ -55,7 +58,7 @@ namespace ImobiliariaLP2.DAO
         }
         public void Salvar(Proprietario p) // Salvar no banco
         {
-            string query = "INSERT INTO proprietario(nome, cpf, rg, telefone, email, rua, numero, bairro, cidade, ativo) VALUES(@nome, @cpf, @rg, @telefone, @email, @rua, @numero, @bairro, @cidade, 1)";
+            string query = "INSERT INTO proprietario(nome, cpf, rg, dataNasc, telefone, email, rua, numero, bairro, cidade, ativo) VALUES(@nome, @cpf, @rg, @dataNasc, @telefone, @email, @rua, @numero, @bairro, @cidade, 1)";
             //Usando GetDTO()
             GetDTO(query, p);
         }
@@ -90,55 +93,42 @@ namespace ImobiliariaLP2.DAO
             return lista;
         }
 
-        public void Atualizar (Proprietario p)
+        public Proprietario BuscarPorId(int id)
         {
-            Database bd = Database.GetInstance();
+            Proprietario p = new Proprietario();
+            Database db = Database.GetInstance();
+            DataRow dr = null; // vai receber a tabela do banco 
 
-            string query = "UPDATE proprietario SET id = @id, nome = @nome, cpf = @cpf, rg = @rg, telefone = @telefone, email = @email, rua = @rua, numero = @numero, bairro = @bairro, cidade = @cidade WHERE id = @id;";
+            string query = "SELECT * FROM proprietario WHERE id = " + id;
 
-            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            MySqlCommand comando = new MySqlCommand(query, db.GetConnection());
+            DataSet ds = db.ExecuteQuery(comando); // recebe a tabela do banco direto 
 
-            // Especificando que tipo de dado é cada @
-            comando.Parameters.Add("@id", MySqlDbType.Int32);
-            comando.Parameters.Add("@nome", MySqlDbType.VarChar);
-            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
-            comando.Parameters.Add("@rg", MySqlDbType.VarChar);
-            comando.Parameters.Add("@telefone", MySqlDbType.VarChar);
-            comando.Parameters.Add("@email", MySqlDbType.VarChar);
-            comando.Parameters.Add("@rua", MySqlDbType.VarChar);
-            comando.Parameters.Add("@numero", MySqlDbType.Int32);
-            comando.Parameters.Add("@bairro", MySqlDbType.VarChar);
-            comando.Parameters.Add("@cidade", MySqlDbType.VarChar);
+            int linhas = ds.Tables[0].Rows.Count; // contando quantas linhas tem na ' tabela'
 
-            /// Atribuindo os valores aos @
-            comando.Parameters["@id"].Value = p.Id;
-            comando.Parameters["@nome"].Value = p.Nome;
-            comando.Parameters["@cpf"].Value = p.Cpf;
-            comando.Parameters["@rg"].Value = p.Rg;
-            comando.Parameters["@telefone"].Value = p.Telefone;
-            comando.Parameters["@email"].Value = p.Email;
-            comando.Parameters["@rua"].Value = p.Rua;
-            comando.Parameters["@numero"].Value = p.Numero;
-            comando.Parameters["@bairro"].Value = p.Bairro;
-            comando.Parameters["@cidade"].Value = p.Cidade;
+            for(int i = 0;  i <linhas; i++ )
+            {
+                dr = ds.Tables[0].Rows[i]; // joga cada linha do dataSet para o dataRow, pois é oque vai ficar no dataGrid
+                //Usa SetDTO
+                p = SetDTO(dr); // passa para o proprietario
+            }
 
-            bd.ExecuteNonQuery(comando);
+            return p;
         }
 
-        public void Excluir (string cpf )
+        public void Atualizar (Proprietario p)
         {
-            Database bd = Database.GetInstance();
+            string query = "UPDATE proprietario SET id = " + p.Id + ", nome = @nome, cpf = @cpf, rg = @rg, dataNasc = @dataNasc telefone = @telefone, email = @email, rua = @rua, numero = @numero, bairro = @bairro, cidade = @cidade WHERE id = @id;";
+            GetDTO(query, p); // o ID não esta com aroba pois não tratamos no get ou set esse campo pois não temos 'acesso' só o banco tem
+        }
 
-            string query = "DELETE FROM proprietario WHERE cpf = @cpf;";
+        public void Excluir (int id)
+        {
+            Database bd = Database.GetInstance(); // instancia o banco para realizar a conecção
 
-            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
+            string query = "UPDATE proprietario SET ativo = 0 WHERE id = " + id;
 
-            //Especificação
-            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
-
-            //Atribuição
-            comando.Parameters["@cpf"].Value = cpf;
-
+            MySqlCommand comando = new MySqlCommand(query, bd.GetConnection()); // banco o comando e a conecxao
             bd.ExecuteNonQuery(comando);
         }
     }

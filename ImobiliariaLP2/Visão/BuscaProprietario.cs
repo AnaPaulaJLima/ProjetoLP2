@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ImobiliariaLP2.DAO;
+using ImobiliariaLP2.Modelo;
 
 namespace ImobiliariaLP2.Visão
 {
@@ -19,16 +21,58 @@ namespace ImobiliariaLP2.Visão
 
         private void btnAlterarDeletar_Click(object sender, EventArgs e)
         {
-            VizualizarProprietario v = new VizualizarProprietario();
-            v.ShowDialog();
+            if (dgvProprietario.CurrentRow != null)
+            {
+                int key = int.Parse(dgvProprietario.CurrentRow.Cells[0].Value.ToString());
+                ProprietarioDao pDAO = new ProprietarioDao();
+                VizualizarProprietario v = new VizualizarProprietario(pDAO.BuscarPorId(key));
+                v.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma linha para vizualizar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Fill("");  
+        }
+
+        private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
+        {
+            ProprietarioDao pDAO = new ProprietarioDao();
+            dgvProprietario.DataSource = pDAO.Buscar(textBoxNome.Text);
+        }
+
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        {
+            Fill(textBoxNome.Text);
+        }
+
+        private void BuscaProprietario_Load(object sender, EventArgs e)
+        {
+            Fill("");
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Dispose();
             Buscas b = new Buscas();
-            b.ShowDialog ();
- 
+            b.ShowDialog();
+
         }
+
+        // Método Fill() busca cliente no banco por nome
+        // e popula o DataGrid com a lista retornada do DAO
+        public void Fill(string s)
+        {
+            ProprietarioDao pDAO = new ProprietarioDao();
+            List<Proprietario> lista = pDAO.Buscar(s);
+
+            dgvProprietario.Rows.Clear();
+            foreach (Proprietario p in lista)
+            {
+                if (p.Ativo == 1)
+                    dgvProprietario.Rows.Add(p.Id, p.Nome, p.Cpf);
+            }
+        }
+
     }
 }

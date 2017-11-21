@@ -58,6 +58,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSalvar.Enabled = false;
             this.btnSalvar.Location = new System.Drawing.Point(470, 202);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 26);
@@ -84,6 +85,7 @@
             this.textBoxCidade.Name = "textBoxCidade";
             this.textBoxCidade.Size = new System.Drawing.Size(203, 20);
             this.textBoxCidade.TabIndex = 7;
+            this.textBoxCidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
             // 
             // textBoxBairro
             // 
@@ -105,6 +107,7 @@
             this.textBoxRua.Name = "textBoxRua";
             this.textBoxRua.Size = new System.Drawing.Size(372, 20);
             this.textBoxRua.TabIndex = 4;
+            this.textBoxRua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
             // 
             // lblCidade
             // 
@@ -170,7 +173,7 @@
             // maskedTextBoxTelefone
             // 
             this.maskedTextBoxTelefone.Location = new System.Drawing.Point(79, 159);
-            this.maskedTextBoxTelefone.Mask = "(00) 90000-0000";
+            this.maskedTextBoxTelefone.Mask = "(00) 0000-00009";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(86, 20);
             this.maskedTextBoxTelefone.TabIndex = 8;

@@ -12,6 +12,7 @@ namespace ImobiliariaLP2.Modelo
         private string nome;
         private string cpf;
         private string rg;
+        private string dataNasc;
         private string telefone;
         private string email;
         private string rua;
@@ -19,6 +20,11 @@ namespace ImobiliariaLP2.Modelo
         private string bairro;
         private string cidade;
         private int ativo; //1 para ativado e 0 para desativado
+
+        public override string ToString()
+        {
+            return id + "\t" + nome + "\t" + cpf + "\t" + rg + "\t" + dataNasc +  "\t" + telefone + "\t" + email + "\t" + rua + "\t" + numero + "\t" + bairro + "\t" + cidade + "\n\n";
+        }
 
         public int Ativo
         {
@@ -48,6 +54,12 @@ namespace ImobiliariaLP2.Modelo
         {
             get { return rg; }
             set { rg = value; }
+        }
+
+        public string DataNasc
+        {
+            get { return dataNasc; }
+            set { dataNasc = value; }
         }
 
         public string Telefone

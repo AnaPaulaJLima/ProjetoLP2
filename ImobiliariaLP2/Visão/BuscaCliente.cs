@@ -53,11 +53,6 @@ namespace ImobiliariaLP2.Visão
             Fill("");
         }
 
-        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void textBoxNome_TextChanged(object sender, EventArgs e)
         {
             Fill(textBoxNome.Text);
