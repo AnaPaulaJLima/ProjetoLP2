@@ -25,6 +25,8 @@ namespace ImobiliariaLP2.DAO
             p.Numero = int.Parse(dr["numero"].ToString());
             p.Bairro = dr["bairro"].ToString();
             p.Cidade = dr["cidade"].ToString();
+            p.Ativo = int.Parse(dr["ativo"].ToString());
+
             return p;
         }
         public void GetDTO(string query, Proprietario p)
