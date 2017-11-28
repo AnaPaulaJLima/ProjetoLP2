@@ -16,6 +16,13 @@ namespace ImobiliariaLP2.Modelo
         private string creci;
         private string login;
         private string senha;
+        private int ativo;
+
+        public int Ativo
+        {
+            get { return ativo; }
+            set { ativo = value; }
+        }
 
         public string Login
         {

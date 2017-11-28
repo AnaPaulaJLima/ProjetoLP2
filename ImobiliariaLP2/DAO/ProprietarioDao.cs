@@ -77,9 +77,9 @@ namespace ImobiliariaLP2.DAO
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
             // Especificações
-            comando.Parameters.Add("@cpf", MySqlDbType.VarChar);
+            comando.Parameters.Add("@chave", MySqlDbType.VarChar);
             // Atribuição de valores
-            comando.Parameters["@cpf"].Value = chave;
+            comando.Parameters["@chave"].Value = chave;
             DataSet ds = bd.ExecuteQuery(comando);
 
             // Conta quantas linhas tem a tabela que o comando retornou do banco
