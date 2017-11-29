@@ -73,6 +73,5 @@ namespace ImobiliariaLP2.Visão
                     dgvProprietario.Rows.Add(p.Id, p.Nome, p.Cpf);
             }
         }
-
     }
 }

@@ -30,12 +30,12 @@
         {
             this.btnAlterarDeletar = new System.Windows.Forms.Button();
             this.dgvProprietario = new System.Windows.Forms.DataGridView();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.lbNome = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
             this.columnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.lbNome = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProprietario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +67,28 @@
             this.dgvProprietario.Size = new System.Drawing.Size(525, 419);
             this.dgvProprietario.TabIndex = 11;
             // 
+            // columnID
+            // 
+            this.columnID.FillWeight = 50F;
+            this.columnID.HeaderText = "ID";
+            this.columnID.Name = "columnID";
+            this.columnID.ReadOnly = true;
+            // 
+            // columnNome
+            // 
+            this.columnNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columnNome.HeaderText = "Nome";
+            this.columnNome.Name = "columnNome";
+            this.columnNome.ReadOnly = true;
+            // 
+            // columnCPF
+            // 
+            this.columnCPF.FillWeight = 80F;
+            this.columnCPF.HeaderText = "CPF";
+            this.columnCPF.Name = "columnCPF";
+            this.columnCPF.ReadOnly = true;
+            this.columnCPF.Width = 191;
+            // 
             // textBoxNome
             // 
             this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -94,28 +116,6 @@
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // columnID
-            // 
-            this.columnID.FillWeight = 50F;
-            this.columnID.HeaderText = "ID";
-            this.columnID.Name = "columnID";
-            this.columnID.ReadOnly = true;
-            // 
-            // columnNome
-            // 
-            this.columnNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columnNome.HeaderText = "Nome";
-            this.columnNome.Name = "columnNome";
-            this.columnNome.ReadOnly = true;
-            // 
-            // columnCPF
-            // 
-            this.columnCPF.FillWeight = 80F;
-            this.columnCPF.HeaderText = "CPF";
-            this.columnCPF.Name = "columnCPF";
-            this.columnCPF.ReadOnly = true;
-            this.columnCPF.Width = 191;
             // 
             // BuscaProprietario
             // 
