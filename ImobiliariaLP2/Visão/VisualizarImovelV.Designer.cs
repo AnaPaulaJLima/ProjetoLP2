@@ -189,8 +189,9 @@
             // 
             this.textBoxID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxID.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxID.Location = new System.Drawing.Point(76, 23);
+            this.textBoxID.Location = new System.Drawing.Point(67, 19);
             this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(58, 20);
             this.textBoxID.TabIndex = 41;
             // 

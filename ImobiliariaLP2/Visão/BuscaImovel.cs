@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ImobiliariaLP2.DAO;
+using ImobiliariaLP2.Modelo;
 
 namespace ImobiliariaLP2.Visão
 {
@@ -17,10 +19,25 @@ namespace ImobiliariaLP2.Visão
             InitializeComponent();
         }
 
+        private void BuscaImovel_Load(object sender, EventArgs e)
+        {
+            Fill("");
+        }
+
         private void btnAlterarDeletar_Click(object sender, EventArgs e)
         {
-            VisualizarImovelV v = new VisualizarImovelV();
-            v.ShowDialog();
+            if (dgvImovel.CurrentRow != null)
+            {
+                int key = int.Parse(dgvImovel.CurrentRow.Cells[0].Value.ToString());
+                ImovelDAO iDAO = new ImovelDAO();
+                VisualizarImovelV v = new VisualizarImovelV(iDAO.BuscaPorId(key));
+                v.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma linha para vizualizar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Fill("");
         }
 
         private void buttonSair_Click(object sender, EventArgs e)
@@ -28,6 +45,29 @@ namespace ImobiliariaLP2.Visão
             this.Dispose();
             Buscas b = new Buscas();
             b.ShowDialog();
+        }
+
+        public void Fill(string s)
+        {
+            ImovelDAO iDAO = new ImovelDAO();
+            List<Imovel> lista = iDAO.Buscar(s);
+
+            dgvImovel.Rows.Clear();
+            foreach (Imovel i in lista)
+            {
+                dgvImovel.Rows.Add(i.Id, i.Bairro, i.Metragem, i.Valor);
+            }
+        }
+
+        private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
+        {
+            ImovelDAO iDAO = new ImovelDAO();
+            dgvImovel.DataSource = iDAO.Buscar(textBoxNome.Text);
+        }
+
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        {
+            Fill(textBoxNome.Text);
         }
     }
 }
