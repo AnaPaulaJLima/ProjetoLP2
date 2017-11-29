@@ -71,7 +71,9 @@ namespace ImobiliariaLP2.DAO
             List<Proprietario> lista = new List<Proprietario>();
             DataRow dr = null;
             int linhas;
+
             string query = "SELECT * FROM proprietario WHERE ativo = 1"; // é o comando sql 
+
             if (chave != "")
                 query += " AND nome LIKE '%" + @chave + "%' OR cpf LIKE '" + @chave + "%' ";
 
@@ -120,8 +122,9 @@ namespace ImobiliariaLP2.DAO
 
         public void Atualizar (Proprietario p)
         {
-            string query = "UPDATE proprietario SET id = " + p.Id + ", nome = @nome, cpf = @cpf, rg = @rg, dataNasc = @dataNasc telefone = @telefone, email = @email, rua = @rua, numero = @numero, bairro = @bairro, cidade = @cidade WHERE id = @id;";
+            string query = "UPDATE proprietario SET id = " + p.Id + ", nome = @nome, cpf = @cpf, rg = @rg, dataNasc = @dataNasc, telefone = @telefone, email = @email, rua = @rua, numero = @numero, bairro = @bairro, cidade = @cidade, ativo = " + p.Ativo + " WHERE id = " + p.Id;
             GetDTO(query, p); // o ID não esta com aroba pois não tratamos no get ou set esse campo pois não temos 'acesso' só o banco tem
+            
         }
 
         public void Excluir (int id)

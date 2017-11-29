@@ -61,14 +61,18 @@ namespace ImobiliariaLP2.DAO
             List<Funcionario> lista = new List<Funcionario>();
             DataRow dr = null;
             int linhas;
+
             string query = "SELECT * FROM funcionario WHERE ativo = 1";
+
             if (chave != "")
                 query += " AND nome LIKE '%" + @chave + "%' ";
             MySqlCommand cmd = new MySqlCommand(query, db.GetConnection());
             cmd.Parameters.Add("@chave", MySqlDbType.VarChar);
             cmd.Parameters["@chave"].Value = chave;
+
             DataSet ds = db.ExecuteQuery(query);
             linhas = ds.Tables[0].Rows.Count;
+
             for(int i = 0; i < linhas; i++)
             {
                 dr = ds.Tables[0].Rows[i];
@@ -76,6 +80,28 @@ namespace ImobiliariaLP2.DAO
                 lista.Add(f);
             }
             return lista;
+        }
+
+        public Funcionario BuscarPorId(int id) // É USADO PARA COLOCAR NA TELA DE VISUALIZAR FUNCIOANRIO O FUNCIONARIO SELECIONADO NO DATAGRID
+        {
+            Funcionario f = new Funcionario();
+            Database db = Database.GetInstance();
+            DataRow dr = null;
+
+            string query = "SELECT * FROM funcionario WHERE id = " + id;
+
+            MySqlCommand comando = new MySqlCommand(query, db.GetConnection());
+            DataSet ds = db.ExecuteQuery(comando);
+
+            int linhas = ds.Tables[0].Rows.Count;
+
+            for (int i = 0; i < linhas; i++)
+            {
+                dr = ds.Tables[0].Rows[i];
+                // Usa SetDTO 
+                f = SetDTO(dr);
+            }
+            return f;
         }
 
         public void Atualizar(Funcionario f)

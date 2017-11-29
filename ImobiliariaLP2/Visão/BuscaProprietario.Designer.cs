@@ -97,6 +97,7 @@
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(302, 20);
             this.textBoxNome.TabIndex = 10;
+            this.textBoxNome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxNome_KeyUp);
             // 
             // lbNome
             // 

@@ -71,6 +71,7 @@ namespace ImobiliariaLP2.Visão
         {
             Funcionario f = new Funcionario();
 
+            f.Id = int.Parse(textBoxID.Text);
             f.Nome = textBoxNome.Text;
             f.Funcao = textBoxFuncao.Text;
             f.Creci = maskedTextBoxCRECI.Text;

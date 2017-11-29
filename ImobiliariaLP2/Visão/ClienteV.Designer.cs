@@ -30,7 +30,6 @@
         {
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.lbID = new System.Windows.Forms.Label();
-            this.textBoxRg = new System.Windows.Forms.TextBox();
             this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.lblDataNasc = new System.Windows.Forms.Label();
             this.maskedTextBoxDataN = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxRg = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxID
@@ -65,14 +65,6 @@
             this.lbID.Size = new System.Drawing.Size(21, 13);
             this.lbID.TabIndex = 31;
             this.lbID.Text = "ID:";
-            // 
-            // textBoxRg
-            // 
-            this.textBoxRg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxRg.Location = new System.Drawing.Point(197, 80);
-            this.textBoxRg.Name = "textBoxRg";
-            this.textBoxRg.Size = new System.Drawing.Size(118, 20);
-            this.textBoxRg.TabIndex = 2;
             // 
             // maskedTextBoxTelefone
             // 
@@ -205,6 +197,14 @@
             this.maskedTextBoxDataN.ValidatingType = typeof(System.DateTime);
             this.maskedTextBoxDataN.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
+            // textBoxRg
+            // 
+            this.textBoxRg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxRg.Location = new System.Drawing.Point(197, 80);
+            this.textBoxRg.Name = "textBoxRg";
+            this.textBoxRg.Size = new System.Drawing.Size(118, 20);
+            this.textBoxRg.TabIndex = 2;
+            // 
             // ClienteV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,7 +242,6 @@
 
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label lbID;
-        private System.Windows.Forms.TextBox textBoxRg;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxTelefone;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCpf;
         private System.Windows.Forms.TextBox textBoxNome;
@@ -256,5 +255,6 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblDataNasc;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxDataN;
+        private System.Windows.Forms.TextBox textBoxRg;
     }
 }

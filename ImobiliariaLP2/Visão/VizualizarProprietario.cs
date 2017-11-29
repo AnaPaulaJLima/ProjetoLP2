@@ -51,6 +51,7 @@ namespace ImobiliariaLP2.Visão
         {
             Proprietario p = new Proprietario();
             // Criando DTO
+            p.Id = int.Parse(textBoxID.Text);
             p.Nome = textBoxNome.Text;
             p.Cpf = maskedTextBoxCpf.Text;
             p.Rg = textBoxRg.Text;
@@ -61,6 +62,7 @@ namespace ImobiliariaLP2.Visão
             p.Numero = int.Parse(textBoxNumero.Text);
             p.Bairro = textBoxBairro.Text;
             p.Cidade = textBoxCidade.Text;
+            p.Ativo = 1;
 
             return p;
         }
