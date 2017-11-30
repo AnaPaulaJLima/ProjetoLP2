@@ -33,6 +33,12 @@ namespace ImobiliariaLP2.Visão
                 e.Handled = true; // Separador para poder colocar espaço e Control para poder apagar 
         }
 
+        private void textBoxNumero_KeyPress(object sender, KeyPressEventArgs e) // só aceitar numero 
+        {
+            if (!(char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar)))
+                e.Handled = true;
+        }
+
         //valçidação do campos obrigatorios, se não preenxer todos o botao salvar não é habilitado
         private void textBoxNome_TextChanged(object sender, EventArgs e)
         {
@@ -121,6 +127,6 @@ namespace ImobiliariaLP2.Visão
             textBoxCidade.Clear();
         }
 
-       
+        
     }
 }

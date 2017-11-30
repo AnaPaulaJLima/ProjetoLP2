@@ -93,10 +93,12 @@
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(42, 20);
             this.textBoxID.TabIndex = 18;
+            this.textBoxID.TabStop = false;
             // 
             // comboBoxTipo
             // 
             this.comboBoxTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBoxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipo.FormattingEnabled = true;
             this.comboBoxTipo.Items.AddRange(new object[] {
             "Casa",
@@ -105,11 +107,13 @@
             this.comboBoxTipo.Location = new System.Drawing.Point(81, 60);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(187, 21);
-            this.comboBoxTipo.TabIndex = 4;
+            this.comboBoxTipo.TabIndex = 2;
+            this.comboBoxTipo.TextChanged += new System.EventHandler(this.comboBoxTipo_TextChanged);
             // 
             // comboBoxCategoria
             // 
             this.comboBoxCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategoria.FormattingEnabled = true;
             this.comboBoxCategoria.Items.AddRange(new object[] {
             "Venda",
@@ -117,7 +121,7 @@
             this.comboBoxCategoria.Location = new System.Drawing.Point(358, 20);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(151, 21);
-            this.comboBoxCategoria.TabIndex = 5;
+            this.comboBoxCategoria.TabIndex = 1;
             // 
             // lblMetragem
             // 
@@ -135,7 +139,8 @@
             this.textBoxMetragem.Location = new System.Drawing.Point(388, 63);
             this.textBoxMetragem.Name = "textBoxMetragem";
             this.textBoxMetragem.Size = new System.Drawing.Size(121, 20);
-            this.textBoxMetragem.TabIndex = 20;
+            this.textBoxMetragem.TabIndex = 3;
+            this.textBoxMetragem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMetragem_KeyPress);
             // 
             // lbValor
             // 
@@ -153,7 +158,8 @@
             this.textBoxValor.Location = new System.Drawing.Point(398, 97);
             this.textBoxValor.Name = "textBoxValor";
             this.textBoxValor.Size = new System.Drawing.Size(111, 20);
-            this.textBoxValor.TabIndex = 22;
+            this.textBoxValor.TabIndex = 6;
+            this.textBoxValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMetragem_KeyPress);
             // 
             // label1
             // 
@@ -181,7 +187,8 @@
             this.textBoxRua.Location = new System.Drawing.Point(81, 134);
             this.textBoxRua.Name = "textBoxRua";
             this.textBoxRua.Size = new System.Drawing.Size(428, 20);
-            this.textBoxRua.TabIndex = 26;
+            this.textBoxRua.TabIndex = 7;
+            this.textBoxRua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRua_KeyPress);
             // 
             // lbNumero
             // 
@@ -199,7 +206,8 @@
             this.textBoxNumero.Location = new System.Drawing.Point(94, 170);
             this.textBoxNumero.Name = "textBoxNumero";
             this.textBoxNumero.Size = new System.Drawing.Size(90, 20);
-            this.textBoxNumero.TabIndex = 28;
+            this.textBoxNumero.TabIndex = 8;
+            this.textBoxNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMetragem_KeyPress);
             // 
             // lbBairro
             // 
@@ -217,15 +225,18 @@
             this.textBoxBairro.Location = new System.Drawing.Point(244, 170);
             this.textBoxBairro.Name = "textBoxBairro";
             this.textBoxBairro.Size = new System.Drawing.Size(265, 20);
-            this.textBoxBairro.TabIndex = 30;
+            this.textBoxBairro.TabIndex = 9;
+            this.textBoxBairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRua_KeyPress);
             // 
             // btnSalvar
             // 
             this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnSalvar.Enabled = false;
             this.btnSalvar.Location = new System.Drawing.Point(434, 214);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 31;
+            this.btnSalvar.TabStop = false;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -237,7 +248,7 @@
             this.maskedTextBoxCpf.Mask = "000.000.000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
             this.maskedTextBoxCpf.Size = new System.Drawing.Size(97, 20);
-            this.maskedTextBoxCpf.TabIndex = 35;
+            this.maskedTextBoxCpf.TabIndex = 0;
             // 
             // btnSair
             // 
@@ -246,6 +257,7 @@
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 36;
+            this.btnSair.TabStop = false;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -273,14 +285,16 @@
             this.textBoxFrente.Location = new System.Drawing.Point(128, 97);
             this.textBoxFrente.Name = "textBoxFrente";
             this.textBoxFrente.Size = new System.Drawing.Size(57, 20);
-            this.textBoxFrente.TabIndex = 39;
+            this.textBoxFrente.TabIndex = 4;
+            this.textBoxFrente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMetragem_KeyPress);
             // 
             // textBoxFundo
             // 
             this.textBoxFundo.Location = new System.Drawing.Point(287, 97);
             this.textBoxFundo.Name = "textBoxFundo";
             this.textBoxFundo.Size = new System.Drawing.Size(58, 20);
-            this.textBoxFundo.TabIndex = 40;
+            this.textBoxFundo.TabIndex = 5;
+            this.textBoxFundo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMetragem_KeyPress);
             // 
             // ImovelV
             // 
@@ -312,10 +326,12 @@
             this.Controls.Add(this.lbTipo);
             this.Controls.Add(this.lbID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Name = "ImovelV";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ImovelV";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ImovelV_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

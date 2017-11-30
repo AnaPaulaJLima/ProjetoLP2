@@ -37,14 +37,14 @@ namespace ImobiliariaLP2.Visão
                 e.Handled = true; // isSeparador é para consegui usar o espaça e o iscontrol é para conseguir apagar 
         }
 
-        private void textBoxNome_TextChanged(object sender, EventArgs e) /// HABILITANDO OS BOTÕES SOMENTO COM O PREENCHIMENTO DOS CAMPOS OBRIGATORIOS
+        private void textBoxNome_TextChanged(object sender, EventArgs e) /// validando os campos obrigatorios 
         {
-            if (textBoxNome.Text.Trim() == "" || textBoxFuncao.Text.Trim() == "" || textBoxLogin.Text.Trim() == "" || textBoxSenha.Text.Trim() == "" || !maskedTextBoxTelefone.MaskCompleted)
+            if (textBoxNome.Text.Trim() == "" || textBoxFuncao.Text.Trim() == "" || textBoxLogin.Text.Trim() == "" || textBoxSenha.Text.Trim() == "" || !maskedTextBoxTelefone.MaskCompleted || !maskedTextBoxCRECI.MaskCompleted)
                 btnAlterar.Enabled = false; /// se não estiver completa ele não aparece o botão
             else
                 btnAlterar.Enabled = true;
         }
-
+       
         private void btnSair_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -61,9 +61,14 @@ namespace ImobiliariaLP2.Visão
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            FuncionarioDAO fDAO = new FuncionarioDAO();
-            fDAO.Excluir(int.Parse(textBoxID.Text));
-            if (MessageBox.Show("Funcionario excluído!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            if (MessageBox.Show("Deseja realmente EXCLUIR o funcionario? ", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                FuncionarioDAO fDAO = new FuncionarioDAO();
+                fDAO.Excluir(int.Parse(textBoxID.Text));
+                this.Dispose();
+            }
+
+            else
                 this.Dispose();
         }
 

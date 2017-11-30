@@ -207,10 +207,11 @@
             // maskedTextBoxCRECI
             // 
             this.maskedTextBoxCRECI.Location = new System.Drawing.Point(341, 63);
-            this.maskedTextBoxCRECI.Mask = "0000000";
+            this.maskedTextBoxCRECI.Mask = "0000999";
             this.maskedTextBoxCRECI.Name = "maskedTextBoxCRECI";
             this.maskedTextBoxCRECI.Size = new System.Drawing.Size(163, 20);
             this.maskedTextBoxCRECI.TabIndex = 2;
+            this.maskedTextBoxCRECI.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // FuncionarioV
             // 

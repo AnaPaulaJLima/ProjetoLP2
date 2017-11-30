@@ -98,11 +98,16 @@ namespace ImobiliariaLP2.Visão
         
         private void btnDeletar_Click_1(object sender, EventArgs e)
         {
-            ProprietarioDao pDAO = new ProprietarioDao();
-            pDAO.Excluir(int.Parse(textBoxID.Text));
-
-            if (MessageBox.Show("Cliente excluído!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            if (MessageBox.Show("Deseja realmente EXCLUIR o proprietario? ", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                ProprietarioDao pDAO = new ProprietarioDao();
+                pDAO.Excluir(int.Parse(textBoxID.Text));
                 this.Dispose();
+            }
+
+            else
+                this.Dispose();
+
         }
     }
 }

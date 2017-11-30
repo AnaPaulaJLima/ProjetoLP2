@@ -100,6 +100,7 @@
             this.textBoxNumero.Name = "textBoxNumero";
             this.textBoxNumero.Size = new System.Drawing.Size(65, 20);
             this.textBoxNumero.TabIndex = 5;
+            this.textBoxNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumero_KeyPress);
             // 
             // textBoxRua
             // 

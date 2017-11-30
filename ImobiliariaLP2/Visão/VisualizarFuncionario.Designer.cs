@@ -88,6 +88,7 @@
             this.textBoxID.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxID.Location = new System.Drawing.Point(63, 21);
             this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(49, 20);
             this.textBoxID.TabIndex = 18;
             this.textBoxID.TabStop = false;
@@ -218,10 +219,11 @@
             // maskedTextBoxCRECI
             // 
             this.maskedTextBoxCRECI.Location = new System.Drawing.Point(337, 90);
-            this.maskedTextBoxCRECI.Mask = "0000000";
+            this.maskedTextBoxCRECI.Mask = "0000999";
             this.maskedTextBoxCRECI.Name = "maskedTextBoxCRECI";
             this.maskedTextBoxCRECI.Size = new System.Drawing.Size(167, 20);
             this.maskedTextBoxCRECI.TabIndex = 2;
+            this.maskedTextBoxCRECI.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
             // VisualizarFuncionario
             // 

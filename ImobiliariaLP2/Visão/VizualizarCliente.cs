@@ -90,9 +90,14 @@ namespace ImobiliariaLP2.Visão
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            ClienteDAO cDAO = new ClienteDAO();
-            cDAO.Excluir(int.Parse(textBoxID.Text));
-            if (MessageBox.Show("Cliente excluído!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            if (MessageBox.Show("Deseja realmente EXCLUIR o cliente? ", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                ClienteDAO cDAO = new ClienteDAO();
+                cDAO.Excluir(int.Parse(textBoxID.Text));
+                this.Dispose();
+            }
+
+            else
                 this.Dispose();
         }
 

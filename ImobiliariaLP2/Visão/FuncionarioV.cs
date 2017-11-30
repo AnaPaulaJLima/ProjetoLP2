@@ -36,14 +36,14 @@ namespace ImobiliariaLP2.Visão
                 e.Handled = true; // isSeparador é para consegui usar o espaça e o iscontrol é para conseguir apagar 
         }
 
-        private void textBoxNome_TextChanged(object sender, EventArgs e) // para habilitar o botão somento com o preenchimento dos campos obrigatorios
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxNome.Text.Trim() == "" || textBoxFuncao.Text.Trim() == "" || textBoxLogin.Text.Trim() == "" || textBoxSenha.Text.Trim() == "" || !maskedTextBoxTelefone.MaskCompleted)
+            if (textBoxNome.Text.Trim() == "" || textBoxFuncao.Text.Trim() == "" || textBoxLogin.Text.Trim() == "" || textBoxSenha.Text.Trim() == "" || !maskedTextBoxTelefone.MaskCompleted || ! maskedTextBoxCRECI.MaskCompleted)
                 btnSalvar.Enabled = false; /// se não estiver completa ele não aparece o botão
             else
-                btnSalvar.Enabled = true;
+               btnSalvar.Enabled = true;
         }
-
+       
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             FuncionarioDAO fDAO = new FuncionarioDAO();
@@ -112,5 +112,6 @@ namespace ImobiliariaLP2.Visão
             textBoxSenha.Clear();
         }
 
+       
     }
 }

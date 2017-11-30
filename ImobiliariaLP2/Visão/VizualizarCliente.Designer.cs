@@ -108,7 +108,7 @@
             this.textBoxID.Location = new System.Drawing.Point(39, 30);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(25, 20);
+            this.textBoxID.Size = new System.Drawing.Size(34, 20);
             this.textBoxID.TabIndex = 67;
             this.textBoxID.TabStop = false;
             // 
