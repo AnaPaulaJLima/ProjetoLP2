@@ -25,6 +25,7 @@ namespace ImobiliariaLP2.DAO
             i.Bairro = dr["bairro"].ToString();
             i.Rua = dr["rua"].ToString();
             i.Numero = int.Parse(dr["numero"].ToString());
+            i.IdProprietario = int.Parse(dr["id_proprietario"].ToString());
 
             return i;
         }
@@ -56,14 +57,14 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters["@bairro"].Value = i.Bairro;
             comando.Parameters["@rua"].Value = i.Rua;
             comando.Parameters["@numero"].Value = i.Rua;
-            comando.Parameters["@id_proprietario"].Value = i.P.Id;
+            comando.Parameters["@id_proprietario"].Value = i.IdProprietario;
 
             db.ExecuteNonQuery(comando);
         }
 
         public void  Salvar (Imovel i)
         {
-            string query = "INSERT INTO imovel(tipo, categoria, metragem, frente, fundo, valor, bairro, rua, numero, id_proprietario) VALUES(@tipo, @categoria, @metragem, @frente, @fundo, @valor, @bairro, @rua, @numero, @id_proprietario)";
+            string query = "INSERT INTO imovel(tipo, categoria, metragem, frente, fundo, valor, bairro, rua, numero, id_proprietario, vendido, alugado) VALUES(@tipo, @categoria, @metragem, @frente, @fundo, @valor, @bairro, @rua, @numero, " + i.IdProprietario + ", 0, 0)";
             GetDTO(query, i);
         }
 
@@ -79,7 +80,7 @@ namespace ImobiliariaLP2.DAO
 
             string query = "SELECT * FROM imovel";
             if (chave != "")
-                query += " i JOIN proprietario p ON i.id_proprietario = p.id AND p.cpf = @chave OR p.nome = @chave";
+                query += " i JOIN proprietario p ON i.id_proprietario = p.id AND p.nome LIKE '%" + @chave + "%' ";
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 

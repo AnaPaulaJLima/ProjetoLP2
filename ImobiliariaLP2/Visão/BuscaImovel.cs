@@ -30,7 +30,12 @@ namespace ImobiliariaLP2.Visão
             {
                 int key = int.Parse(dgvImovel.CurrentRow.Cells[0].Value.ToString());
                 ImovelDAO iDAO = new ImovelDAO();
-                VisualizarImovelV v = new VisualizarImovelV(iDAO.BuscaPorId(key));
+                ProprietarioDao pDAO = new ProprietarioDao();
+                Proprietario p = new Proprietario();
+                Imovel i = iDAO.BuscaPorId(key);
+                i.P = pDAO.BuscarPorId(i.IdProprietario);
+
+                VisualizarImovelV v = new VisualizarImovelV(i);
                 v.ShowDialog();
             }
             else

@@ -58,8 +58,8 @@ namespace ImobiliariaLP2.Visão
                         if (resultado == DialogResult.Yes)
                         {
                             Dispose();
-                           // VisualizarFuncionario vf = new VisualizarFuncionario(f);
-                            //vf.Show();
+                            VisualizarFuncionario vf = new VisualizarFuncionario(f);
+                            vf.Show();
                             return;
                         }
                         else
@@ -73,8 +73,8 @@ namespace ImobiliariaLP2.Visão
                         DialogResult resultado = MessageBox.Show("Funcionario desativado! Ver informações do funcionario?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (resultado == DialogResult.Yes)
                         {
-                            //VisualizarFuncionario vf = new VisualizarFuncionario(f);
-                            //vf.Show();
+                            VisualizarFuncionario vf = new VisualizarFuncionario(f);
+                            vf.Show();
                             return;
                         }
                     }

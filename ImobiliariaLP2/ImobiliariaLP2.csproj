@@ -67,6 +67,7 @@
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\ImovelDAO.cs" />
     <Compile Include="DAO\ProprietarioDao.cs" />
+    <Compile Include="DAO\VendaDAO.cs" />
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Imovel.cs" />

@@ -32,7 +32,7 @@ namespace ImobiliariaLP2.Visão
         public void GetDTO(Imovel i)
         {
             textBoxID.Text = i.Id.ToString();
-            //maskedTextBoxCpf.Text = i.P.Cpf;
+            maskedTextBoxCpf.Text = i.P.Cpf;
             comboBoxCategoria.Text = i.Categoria;
             comboBoxTipo.Text = i.Tipo;
             textBoxMetragem.Text = i.Metragem.ToString();

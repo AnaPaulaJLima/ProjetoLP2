@@ -28,9 +28,10 @@ namespace ImobiliariaLP2.Visão
 
             // buscando proprietario
             lista = pDAO.Buscar(maskedTextBoxCpf.Text);
-            i.P = lista[0];
+            i.P = pDAO.BuscarPorId(lista[0].Id);
 
             // criando DTO
+            
             i.Tipo = comboBoxTipo.Text;
             i.Categoria = comboBoxCategoria.Text;
             i.Metragem = float.Parse(textBoxMetragem.Text);
@@ -38,6 +39,9 @@ namespace ImobiliariaLP2.Visão
             i.Bairro = textBoxBairro.Text;
             i.Rua = textBoxRua.Text;
             i.Numero = int.Parse(textBoxNumero.Text);
+            i.Vendido = 0;
+            i.Alugado = 0;
+            i.IdProprietario = i.P.Id;
 
             // Salvando
             iDAO.Salvar(i);

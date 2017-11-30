@@ -10,11 +10,15 @@ namespace ImobiliariaLP2.Modelo
     {
         private int id;
         private string tipo; //é pra saber se vai ser aluguel ou venda (combo box)
-        private DateTime data;
+        private DateTime dataVenda;
         private Imovel i; 
         private Proprietario p;
         private Cliente c;
         private Funcionario f;
+        private int idImovel;
+        private int idProprietario;
+        private int idCliente;
+        private int idFuncionario;
 
         public int Id
         {
@@ -41,16 +45,16 @@ namespace ImobiliariaLP2.Modelo
             }
         }
 
-        public DateTime Data
+        public DateTime DataVenda
         {
             get
             {
-                return data;
+                return dataVenda;
             }
 
             set
             {
-                data = value;
+                dataVenda = value;
             }
         }
 
@@ -103,6 +107,58 @@ namespace ImobiliariaLP2.Modelo
             set
             {
                 f = value;
+            }
+        }
+
+        public int IdImovel
+        {
+            get
+            {
+                return idImovel;
+            }
+
+            set
+            {
+                idImovel = value;
+            }
+        }
+
+        public int IdProprietario
+        {
+            get
+            {
+                return idProprietario;
+            }
+
+            set
+            {
+                idProprietario = value;
+            }
+        }
+
+        public int IdCliente
+        {
+            get
+            {
+                return idCliente;
+            }
+
+            set
+            {
+                idCliente = value;
+            }
+        }
+
+        public int IdFuncionario
+        {
+            get
+            {
+                return idFuncionario;
+            }
+
+            set
+            {
+                idFuncionario = value;
             }
         }
     }

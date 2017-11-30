@@ -91,6 +91,7 @@
             this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxNome.Location = new System.Drawing.Point(135, 36);
             this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.ShortcutsEnabled = false;
             this.textBoxNome.Size = new System.Drawing.Size(400, 20);
             this.textBoxNome.TabIndex = 0;
             this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);

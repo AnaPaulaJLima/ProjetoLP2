@@ -18,7 +18,10 @@ namespace ImobiliariaLP2.Modelo
         private string bairro;
         private string rua;
         private int numero;
+        private int idProprietario;
         private Proprietario p;
+        private int vendido;
+        private int alugado;
 
         public int Id
         {
@@ -84,6 +87,45 @@ namespace ImobiliariaLP2.Modelo
         {
             get { return p; }
             set { p = value; }
+        }
+
+        public int IdProprietario
+        {
+            get
+            {
+                return idProprietario;
+            }
+
+            set
+            {
+                idProprietario = value;
+            }
+        }
+
+        public int Alugado
+        {
+            get
+            {
+                return alugado;
+            }
+
+            set
+            {
+                alugado = value;
+            }
+        }
+
+        public int Vendido
+        {
+            get
+            {
+                return vendido;
+            }
+
+            set
+            {
+                vendido = value;
+            }
         }
     }
 }
