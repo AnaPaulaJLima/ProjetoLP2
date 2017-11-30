@@ -21,5 +21,7 @@ namespace ImobiliariaLP2.Visão
         {
             Dispose();
         }
+
+      
     }
 }

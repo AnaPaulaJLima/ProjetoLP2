@@ -27,5 +27,7 @@ namespace ImobiliariaLP2.Visão
             VisualizarVenda vv = new VisualizarVenda();
             vv.ShowDialog();
         }
+
+       
     }
 }
