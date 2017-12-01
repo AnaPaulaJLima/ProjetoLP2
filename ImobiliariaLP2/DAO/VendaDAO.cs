@@ -15,15 +15,13 @@ namespace ImobiliariaLP2.DAO
         {
             Database db = Database.GetInstance();
             MySqlCommand cmd = new MySqlCommand(query, db.GetConnection());
-            cmd.Parameters.Add("@tipo", MySqlDbType.VarChar);
-            cmd.Parameters["@tipo"].Value = v.Tipo;
             db.ExecuteNonQuery(cmd);
         }
 
         public void Salvar(Venda v)
         {
             string dt = v.DataVenda.ToString("dd/M/yyyy");
-            string query = "INSERT INTO vendas(id, id_proprietario, id_cliente, id_imovel, id_funcionario, dataVenda, tipo) VALUES(" + v.Id + ", " + v.IdProprietario + ", " + v.IdCliente + ", " + v.IdImovel + ", " + v.IdFuncionario + ", " + dt + ", @tipo)";
+            string query = "INSERT INTO vendas(id_proprietario, id_cliente, id_imovel, id_funcionario, dataVenda, tipo) VALUES(" + v.IdProprietario + ", " + v.IdCliente + ", " + v.IdImovel + ", " + v.IdFuncionario + ", " + dt + ", '" + v.Tipo + "')";
             GetDTO(query, v);
         }
 

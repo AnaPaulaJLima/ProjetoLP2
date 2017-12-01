@@ -47,33 +47,55 @@ namespace ImobiliariaLP2.Visão
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Imovel i = new Imovel();
-            ImovelDAO iDAO = new ImovelDAO();
-            ProprietarioDao pDAO = new ProprietarioDao();
-            List<Proprietario> lista = new List<Proprietario>();
+            try
+            {
+                Imovel i = new Imovel();
+                ImovelDAO iDAO = new ImovelDAO();
+                ProprietarioDao pDAO = new ProprietarioDao();
+                List<Proprietario> lista = new List<Proprietario>();
 
-            // buscando proprietario
-            lista = pDAO.Buscar(maskedTextBoxCpf.Text);
-            i.P = pDAO.BuscarPorId(lista[0].Id);
+                // buscando proprietario
+                lista = pDAO.Buscar(maskedTextBoxCpf.Text);
+                foreach (Proprietario p in lista)
+                {
+                    i.P = p;
+                }
 
-            // criando DTO
-            
-            i.Tipo = comboBoxTipo.Text;
-            i.Categoria = comboBoxCategoria.Text;
-            i.Metragem = float.Parse(textBoxMetragem.Text);
-            i.Frente = float.Parse(textBoxFrente.Text);
-            i.Fundo = float.Parse(textBoxFundo.Text);
-            i.Valor = float.Parse(textBoxValor.Text);
-            i.Bairro = textBoxBairro.Text;
-            i.Rua = textBoxRua.Text;
-            i.Numero = int.Parse(textBoxNumero.Text);
-            i.Vendido = 0;
-            i.Alugado = 0;
-            i.IdProprietario = i.P.Id;
+                // criando DTO
 
-            // Salvando
-            iDAO.Salvar(i);
+                i.Tipo = comboBoxTipo.Text;
+                i.Categoria = comboBoxCategoria.Text;
+                i.Metragem = float.Parse(textBoxMetragem.Text);
+                i.Frente = float.Parse(textBoxFrente.Text);
+                i.Fundo = float.Parse(textBoxFundo.Text);
+                i.Valor = float.Parse(textBoxValor.Text);
+                i.Bairro = textBoxBairro.Text;
+                i.Rua = textBoxRua.Text;
+                i.Numero = int.Parse(textBoxNumero.Text);
+                i.Vendido = 0;
+                i.Alugado = 0;
+                i.IdProprietario = i.P.Id;
 
+                // Salvando
+                iDAO.Salvar(i);
+            }
+            catch
+            {
+                MessageBox.Show("Erro!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                LimpaCampos();
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void LimpaCampos()
+        {
             // limpando os campos
             maskedTextBoxCpf.Clear();
             comboBoxCategoria.SelectedIndex = -1;
@@ -86,10 +108,5 @@ namespace ImobiliariaLP2.Visão
             textBoxNumero.Clear();
             textBoxBairro.Clear();
         }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        } 
     }
 }
