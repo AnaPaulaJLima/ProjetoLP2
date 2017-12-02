@@ -66,8 +66,9 @@ namespace ImobiliariaLP2.Visão
 
         private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
         {
-            ImovelDAO iDAO = new ImovelDAO();
-            dgvImovel.DataSource = iDAO.Buscar(textBoxNome.Text);
+            //ImovelDAO iDAO = new ImovelDAO();
+            //dgvImovel.DataSource = iDAO.Buscar(textBoxNome.Text);
+            Fill(textBoxNome.Text);
         }
 
         private void textBoxNome_TextChanged(object sender, EventArgs e)

@@ -26,6 +26,8 @@ namespace ImobiliariaLP2.DAO
             i.Rua = dr["rua"].ToString();
             i.Numero = int.Parse(dr["numero"].ToString());
             i.IdProprietario = int.Parse(dr["id_proprietario"].ToString());
+            i.Alugado = int.Parse(dr["alugado"].ToString());
+            i.Vendido = int.Parse(dr["vendido"].ToString());
 
             return i;
         }
@@ -45,7 +47,6 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters.Add("@bairro", MySqlDbType.VarChar);
             comando.Parameters.Add("@rua", MySqlDbType.VarChar);
             comando.Parameters.Add("@numero", MySqlDbType.Int32);
-            comando.Parameters.Add("@id_proprietario", MySqlDbType.Int32);
 
             // Atribuições de valores a cada aroba
             comando.Parameters["@tipo"].Value = i.Tipo;
@@ -57,7 +58,6 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters["@bairro"].Value = i.Bairro;
             comando.Parameters["@rua"].Value = i.Rua;
             comando.Parameters["@numero"].Value = i.Rua;
-            comando.Parameters["@id_proprietario"].Value = i.IdProprietario;
 
             db.ExecuteNonQuery(comando);
         }
@@ -71,16 +71,16 @@ namespace ImobiliariaLP2.DAO
         /*
          Busca um imovel pelo CPF ou NOME do proprietario
         */
-        public List<Imovel> Buscar (string chave)
+        public List<Imovel> Buscar(string chave)
         {
             Database bd = Database.GetInstance();
             List<Imovel> lista = new List<Imovel>();
             DataRow dr = null;
             int linhas;
 
-            string query = "SELECT * FROM imovel";
+            string query = "SELECT i.id, i.tipo, i.categoria, i.metragem, i.frente, i.fundo, i.valor, i.bairro, i.rua, i.numero, i.id_proprietario, i.vendido, i.alugado FROM imovel i";
             if (chave != "")
-                query += " i JOIN proprietario p ON i.id_proprietario = p.id AND p.nome LIKE '%" + @chave + "%' ";
+                query += " JOIN proprietario p ON p.nome LIKE '%" + @chave + "%' AND i.id_proprietario = p.id";
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 
@@ -118,7 +118,7 @@ namespace ImobiliariaLP2.DAO
 
         public void Atualizar (Imovel i)
         {
-            string query = "UPDATE imovel SET id = " + i.Id + ", tipo = @tipo, categoria = @categoria, metragem = @metragem, frente = @frente, fundo = @fundo, valor = @valor, bairro = @bairro, rua = @rua, numero = @numero id_proprietario = @id_proprietario WHERE id = " + i.Id;
+            string query = "UPDATE imovel SET id = " + i.Id + ", tipo = '@tipo', categoria = '@categoria', metragem = @metragem, frente = @frente, fundo = @fundo, valor = @valor, bairro = '@bairro', rua = '@rua', numero = @numero, id_proprietario = " + i.IdProprietario + ", vendido = " + i.Vendido + ", alugado = " + i.Alugado + " WHERE id = " + i.Id;
             GetDTO(query, i);
         }
 

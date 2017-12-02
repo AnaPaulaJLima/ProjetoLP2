@@ -76,9 +76,8 @@ namespace ImobiliariaLP2.Visão
 
         // Esse metodo de click não está sendo usado
         // Por isso comentei ele
-        /*
         private void btnBuscarP_Click(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 ProprietarioDao pDAO = new ProprietarioDao();
@@ -99,9 +98,8 @@ namespace ImobiliariaLP2.Visão
             finally
             {
                 maskedTextBoxCpfProprietario.Clear();
-            }
+            }*/
         }
-        */
 
         private void btnBuscarC_Click(object sender, EventArgs e)
         {
@@ -181,6 +179,20 @@ namespace ImobiliariaLP2.Visão
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             VendaDAO vDAO = new VendaDAO();
+            ImovelDAO iDAO = new ImovelDAO();
+            if (comboBox1.Text == "Venda")
+            {
+                // Se vender, não pode alugar
+                v.I.Vendido = 1;
+                v.I.Alugado = 1;
+            }
+            else
+            {
+                // Se alugar, pode vender
+                v.I.Alugado = 1;
+            }
+            // Mando atualizar o imovel no banco
+            iDAO.Atualizar(v.I);
             v.Tipo = comboBox1.Text;
             v.DataVenda = DateTime.Parse(dateTimePickerDATA.Text);
             vDAO.Salvar(v);
