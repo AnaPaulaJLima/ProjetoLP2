@@ -70,7 +70,7 @@ namespace ImobiliariaLP2.DAO
             string query = "SELECT * FROM cliente WHERE ativo = 1"; // é o comando sql 
 
             if (chave != "")
-                query += " AND nome LIKE '%" + @chave + "%' OR cpf LIKE '" + @chave + "%' ";
+                query += " AND nome LIKE '" + @chave + "%' OR cpf LIKE '" + @chave + "%' ";
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
             comando.Parameters.Add("@chave", MySqlDbType.VarChar);

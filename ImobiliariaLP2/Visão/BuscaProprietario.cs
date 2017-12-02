@@ -35,10 +35,17 @@ namespace ImobiliariaLP2.Visão
             Fill("");  
         }
 
-        private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
+        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ProprietarioDao pDAO = new ProprietarioDao();
-            dgvProprietario.DataSource = pDAO.Buscar(textBoxNome.Text);
+            if (!(char.IsLetter(e.KeyChar) || char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar)))
+                e.Handled = true;
+        }
+
+        private void textBoxNome_KeyUp(object sender, KeyEventArgs e) /// É PRA FAZER A PESQUISA DOQUE ESTA DIGITANDO, VAI OLHAR CADA LETRA DIGITADA 
+        {
+            //ProprietarioDao pDAO = new ProprietarioDao();
+            //dgvProprietario.DataSource = pDAO.Buscar(textBoxNome.Text);
+            Fill(textBoxNome.Text);
         }
 
         private void textBoxNome_TextChanged(object sender, EventArgs e)
@@ -72,8 +79,6 @@ namespace ImobiliariaLP2.Visão
                 if (p.Ativo == 1)
                     dgvProprietario.Rows.Add(p.Id, p.Nome, p.Cpf);
             }
-        }
-
-        
+        } 
     }
 }

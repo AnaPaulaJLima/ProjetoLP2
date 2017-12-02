@@ -24,6 +24,7 @@ namespace ImobiliariaLP2.DAO
             i.Valor = float.Parse(dr["valor"].ToString());
             i.Bairro = dr["bairro"].ToString();
             i.Rua = dr["rua"].ToString();
+            i.Cidade = dr["cidade"].ToString();
             i.Numero = int.Parse(dr["numero"].ToString());
             i.IdProprietario = int.Parse(dr["id_proprietario"].ToString());
             i.Alugado = int.Parse(dr["alugado"].ToString());
@@ -46,6 +47,7 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters.Add("@valor", MySqlDbType.Float);
             comando.Parameters.Add("@bairro", MySqlDbType.VarChar);
             comando.Parameters.Add("@rua", MySqlDbType.VarChar);
+            comando.Parameters.Add("@cidade", MySqlDbType.VarChar);
             comando.Parameters.Add("@numero", MySqlDbType.Int32);
 
             // Atribuições de valores a cada aroba
@@ -57,14 +59,15 @@ namespace ImobiliariaLP2.DAO
             comando.Parameters["@valor"].Value = i.Valor;
             comando.Parameters["@bairro"].Value = i.Bairro;
             comando.Parameters["@rua"].Value = i.Rua;
-            comando.Parameters["@numero"].Value = i.Rua;
+            comando.Parameters["@cidade"].Value = i.Cidade;
+            comando.Parameters["@numero"].Value = i.Numero;
 
             db.ExecuteNonQuery(comando);
         }
 
         public void  Salvar (Imovel i)
         {
-            string query = "INSERT INTO imovel(tipo, categoria, metragem, frente, fundo, valor, bairro, rua, numero, id_proprietario, vendido, alugado) VALUES(@tipo, @categoria, @metragem, @frente, @fundo, @valor, @bairro, @rua, @numero, " + i.IdProprietario + ", 0, 0)";
+            string query = "INSERT INTO imovel(tipo, categoria, metragem, frente, fundo, valor, bairro, rua, cidade, numero, id_proprietario, vendido, alugado) VALUES(@tipo, @categoria, @metragem, @frente, @fundo, @valor, @bairro, @rua, @cidade, @numero, " + i.IdProprietario + ", 0, 0)";
             GetDTO(query, i);
         }
 
@@ -78,9 +81,9 @@ namespace ImobiliariaLP2.DAO
             DataRow dr = null;
             int linhas;
 
-            string query = "SELECT i.id, i.tipo, i.categoria, i.metragem, i.frente, i.fundo, i.valor, i.bairro, i.rua, i.numero, i.id_proprietario, i.vendido, i.alugado FROM imovel i";
+            string query = "SELECT i.id, i.tipo, i.categoria, i.metragem, i.frente, i.fundo, i.valor, i.bairro, i.rua, i.cidade, i.numero, i.id_proprietario, i.vendido, i.alugado FROM imovel i";
             if (chave != "")
-                query += " JOIN proprietario p ON p.nome LIKE '%" + @chave + "%' AND i.id_proprietario = p.id";
+                query += " JOIN proprietario p ON p.nome LIKE '" + @chave + "%' AND i.id_proprietario = p.id ";
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 
@@ -111,14 +114,20 @@ namespace ImobiliariaLP2.DAO
             MySqlCommand comando = new MySqlCommand(query, db.GetConnection());
             DataSet ds = db.ExecuteQuery(comando);
 
-            dr = ds.Tables[0].Rows[0];
-            imovel = SetDTO(dr);
+            int linhas = ds.Tables[0].Rows.Count;
+
+            for (int i = 0; i < linhas; i++)
+            {
+                dr = ds.Tables[0].Rows[i];
+                imovel = SetDTO(dr);
+            }
+                
             return imovel;
         }
 
         public void Atualizar (Imovel i)
         {
-            string query = "UPDATE imovel SET id = " + i.Id + ", tipo = '@tipo', categoria = '@categoria', metragem = @metragem, frente = @frente, fundo = @fundo, valor = @valor, bairro = '@bairro', rua = '@rua', numero = @numero, id_proprietario = " + i.IdProprietario + ", vendido = " + i.Vendido + ", alugado = " + i.Alugado + " WHERE id = " + i.Id;
+            string query = "UPDATE imovel SET id = " + i.Id + ", tipo = @tipo, categoria = @categoria, metragem = @metragem, frente = @frente, fundo = @fundo, valor = @valor, bairro = @bairro, rua = @rua, cidade = @cidade, numero = @numero, id_proprietario = " + i.IdProprietario + ", vendido = " + i.Vendido + ", alugado = " + i.Alugado + " WHERE id = " + i.Id;
             GetDTO(query, i);
         }
 

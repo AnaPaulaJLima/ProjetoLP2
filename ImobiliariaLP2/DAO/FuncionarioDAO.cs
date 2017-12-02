@@ -65,7 +65,7 @@ namespace ImobiliariaLP2.DAO
             string query = "SELECT * FROM funcionario WHERE ativo = 1";
 
             if (chave != "")
-                query += " AND nome LIKE '%" + @chave + "%' ";
+                query += " AND nome LIKE '" + @chave + "%' ";
             MySqlCommand cmd = new MySqlCommand(query, db.GetConnection());
             cmd.Parameters.Add("@chave", MySqlDbType.VarChar);
             cmd.Parameters["@chave"].Value = chave;

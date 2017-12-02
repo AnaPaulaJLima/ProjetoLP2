@@ -44,10 +44,16 @@ namespace ImobiliariaLP2.Visão
 
         private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
         {
-            /*
-            FuncionarioDAO fDAO = new FuncionarioDAO();
-            dgvFuncioario.DataSource = fDAO.Buscar(textBoxNome.Text);
-            */
+
+            //FuncionarioDAO fDAO = new FuncionarioDAO();
+            //dgvFuncioario.DataSource = fDAO.Buscar(textBoxNome.Text);
+            Fill(textBoxNome.Text);
+        }
+
+        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e) // validando só letra no textBox 
+        {
+            if (!(char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar)))
+                e.Handled = true;
         }
 
         private void BuscaFuncionario_Load(object sender, EventArgs e)
@@ -72,5 +78,7 @@ namespace ImobiliariaLP2.Visão
                     dgvFuncioario.Rows.Add(f.Id, f.Nome, f.Funcao);
             }
         }
+
+       
     }
 }

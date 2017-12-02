@@ -52,6 +52,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxFrente = new System.Windows.Forms.TextBox();
             this.textBoxFundo = new System.Windows.Forms.TextBox();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.textBoxCidade = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbID
@@ -102,13 +104,12 @@
             this.comboBoxTipo.FormattingEnabled = true;
             this.comboBoxTipo.Items.AddRange(new object[] {
             "Casa",
-            "Apartemento",
+            "Apartamento",
             "Terreno"});
             this.comboBoxTipo.Location = new System.Drawing.Point(81, 60);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(187, 21);
             this.comboBoxTipo.TabIndex = 2;
-            this.comboBoxTipo.TextChanged += new System.EventHandler(this.comboBoxTipo_TextChanged);
             // 
             // comboBoxCategoria
             // 
@@ -118,7 +119,7 @@
             this.comboBoxCategoria.Items.AddRange(new object[] {
             "Venda",
             "Aluguel"});
-            this.comboBoxCategoria.Location = new System.Drawing.Point(358, 20);
+            this.comboBoxCategoria.Location = new System.Drawing.Point(358, 19);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(151, 21);
             this.comboBoxCategoria.TabIndex = 1;
@@ -203,9 +204,9 @@
             // textBoxNumero
             // 
             this.textBoxNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxNumero.Location = new System.Drawing.Point(94, 170);
+            this.textBoxNumero.Location = new System.Drawing.Point(84, 170);
             this.textBoxNumero.Name = "textBoxNumero";
-            this.textBoxNumero.Size = new System.Drawing.Size(90, 20);
+            this.textBoxNumero.Size = new System.Drawing.Size(61, 20);
             this.textBoxNumero.TabIndex = 8;
             this.textBoxNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMetragem_KeyPress);
             // 
@@ -213,7 +214,7 @@
             // 
             this.lbBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbBairro.AutoSize = true;
-            this.lbBairro.Location = new System.Drawing.Point(198, 173);
+            this.lbBairro.Location = new System.Drawing.Point(151, 173);
             this.lbBairro.Name = "lbBairro";
             this.lbBairro.Size = new System.Drawing.Size(40, 13);
             this.lbBairro.TabIndex = 29;
@@ -222,16 +223,15 @@
             // textBoxBairro
             // 
             this.textBoxBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxBairro.Location = new System.Drawing.Point(244, 170);
+            this.textBoxBairro.Location = new System.Drawing.Point(186, 170);
             this.textBoxBairro.Name = "textBoxBairro";
-            this.textBoxBairro.Size = new System.Drawing.Size(265, 20);
+            this.textBoxBairro.Size = new System.Drawing.Size(121, 20);
             this.textBoxBairro.TabIndex = 9;
             this.textBoxBairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRua_KeyPress);
             // 
             // btnSalvar
             // 
             this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnSalvar.Enabled = false;
             this.btnSalvar.Location = new System.Drawing.Point(434, 214);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
@@ -244,7 +244,7 @@
             // maskedTextBoxCpf
             // 
             this.maskedTextBoxCpf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.maskedTextBoxCpf.Location = new System.Drawing.Point(201, 21);
+            this.maskedTextBoxCpf.Location = new System.Drawing.Point(201, 20);
             this.maskedTextBoxCpf.Mask = "000.000.000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
             this.maskedTextBoxCpf.Size = new System.Drawing.Size(97, 20);
@@ -296,11 +296,30 @@
             this.textBoxFundo.TabIndex = 5;
             this.textBoxFundo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMetragem_KeyPress);
             // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Location = new System.Drawing.Point(309, 173);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(46, 13);
+            this.lblCidade.TabIndex = 39;
+            this.lblCidade.Text = "Cidade: ";
+            // 
+            // textBoxCidade
+            // 
+            this.textBoxCidade.Location = new System.Drawing.Point(348, 170);
+            this.textBoxCidade.Name = "textBoxCidade";
+            this.textBoxCidade.Size = new System.Drawing.Size(161, 20);
+            this.textBoxCidade.TabIndex = 40;
+            this.textBoxCidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRua_KeyPress);
+            // 
             // ImovelV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 263);
+            this.Controls.Add(this.textBoxCidade);
+            this.Controls.Add(this.lblCidade);
             this.Controls.Add(this.textBoxFundo);
             this.Controls.Add(this.textBoxFrente);
             this.Controls.Add(this.label3);
@@ -363,5 +382,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxFrente;
         private System.Windows.Forms.TextBox textBoxFundo;
+        private System.Windows.Forms.Label lblCidade;
+        private System.Windows.Forms.TextBox textBoxCidade;
     }
 }

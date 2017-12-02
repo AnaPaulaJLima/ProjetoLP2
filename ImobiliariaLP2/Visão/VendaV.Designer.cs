@@ -43,9 +43,6 @@
             this.lblBairroP = new System.Windows.Forms.Label();
             this.lblNumeroP = new System.Windows.Forms.Label();
             this.lblRuaP = new System.Windows.Forms.Label();
-            this.btnBuscarP = new System.Windows.Forms.Button();
-            this.maskedTextBoxCpfProprietario = new System.Windows.Forms.MaskedTextBox();
-            this.lbCpfProprietario = new System.Windows.Forms.Label();
             this.textBoxIDP = new System.Windows.Forms.TextBox();
             this.lbIDP = new System.Windows.Forms.Label();
             this.textBoxRgP = new System.Windows.Forms.TextBox();
@@ -109,6 +106,11 @@
             this.lblNomeF = new System.Windows.Forms.Label();
             this.lblIDFuncionario = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbCpfProprietario = new System.Windows.Forms.Label();
+            this.maskedTextBoxCpfProprietario = new System.Windows.Forms.MaskedTextBox();
+            this.btnBuscarP = new System.Windows.Forms.Button();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.textBoxCidade = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -199,9 +201,9 @@
             this.groupBox2.Controls.Add(this.lbRgP);
             this.groupBox2.Controls.Add(this.lbCpfP);
             this.groupBox2.Controls.Add(this.lbNomeP);
-            this.groupBox2.Location = new System.Drawing.Point(6, 292);
+            this.groupBox2.Location = new System.Drawing.Point(6, 297);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(719, 155);
+            this.groupBox2.Size = new System.Drawing.Size(719, 150);
             this.groupBox2.TabIndex = 185;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Proprietário:";
@@ -277,37 +279,6 @@
             this.lblRuaP.Size = new System.Drawing.Size(30, 13);
             this.lblRuaP.TabIndex = 158;
             this.lblRuaP.Text = "Rua:";
-            // 
-            // btnBuscarP
-            // 
-            this.btnBuscarP.Location = new System.Drawing.Point(170, 16);
-            this.btnBuscarP.Name = "btnBuscarP";
-            this.btnBuscarP.Size = new System.Drawing.Size(65, 22);
-            this.btnBuscarP.TabIndex = 157;
-            this.btnBuscarP.TabStop = false;
-            this.btnBuscarP.Text = "Buscar";
-            this.btnBuscarP.UseVisualStyleBackColor = true;
-            this.btnBuscarP.Visible = false;
-            this.btnBuscarP.Click += new System.EventHandler(this.btnBuscarP_Click);
-            // 
-            // maskedTextBoxCpfProprietario
-            // 
-            this.maskedTextBoxCpfProprietario.Location = new System.Drawing.Point(64, 18);
-            this.maskedTextBoxCpfProprietario.Mask = "000.000.000-00";
-            this.maskedTextBoxCpfProprietario.Name = "maskedTextBoxCpfProprietario";
-            this.maskedTextBoxCpfProprietario.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBoxCpfProprietario.TabIndex = 0;
-            this.maskedTextBoxCpfProprietario.Visible = false;
-            // 
-            // lbCpfProprietario
-            // 
-            this.lbCpfProprietario.AutoSize = true;
-            this.lbCpfProprietario.Location = new System.Drawing.Point(32, 25);
-            this.lbCpfProprietario.Name = "lbCpfProprietario";
-            this.lbCpfProprietario.Size = new System.Drawing.Size(30, 13);
-            this.lbCpfProprietario.TabIndex = 155;
-            this.lbCpfProprietario.Text = "CPF:";
-            this.lbCpfProprietario.Visible = false;
             // 
             // textBoxIDP
             // 
@@ -500,11 +471,11 @@
             // 
             // maskedTextBoxTelefoneC
             // 
-            this.maskedTextBoxTelefoneC.Location = new System.Drawing.Point(595, 47);
+            this.maskedTextBoxTelefoneC.Location = new System.Drawing.Point(588, 47);
             this.maskedTextBoxTelefoneC.Mask = "(00) 0000-00009";
             this.maskedTextBoxTelefoneC.Name = "maskedTextBoxTelefoneC";
             this.maskedTextBoxTelefoneC.ReadOnly = true;
-            this.maskedTextBoxTelefoneC.Size = new System.Drawing.Size(80, 20);
+            this.maskedTextBoxTelefoneC.Size = new System.Drawing.Size(87, 20);
             this.maskedTextBoxTelefoneC.TabIndex = 166;
             this.maskedTextBoxTelefoneC.TabStop = false;
             // 
@@ -590,7 +561,6 @@
             this.btnSair.TabStop = false;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click_1);
             // 
             // btnSalvar
             // 
@@ -605,6 +575,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.textBoxCidade);
+            this.groupBox4.Controls.Add(this.lblCidade);
             this.groupBox4.Controls.Add(this.textBoxTipo);
             this.groupBox4.Controls.Add(this.textBoxCategoria);
             this.groupBox4.Controls.Add(this.textBoxFundo);
@@ -630,7 +602,7 @@
             this.groupBox4.Controls.Add(this.lbIDImovel);
             this.groupBox4.Location = new System.Drawing.Point(6, 162);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(719, 126);
+            this.groupBox4.Size = new System.Drawing.Size(719, 129);
             this.groupBox4.TabIndex = 190;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Imovel:";
@@ -960,6 +932,55 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "VENDA ";
             // 
+            // lbCpfProprietario
+            // 
+            this.lbCpfProprietario.AutoSize = true;
+            this.lbCpfProprietario.Location = new System.Drawing.Point(32, 25);
+            this.lbCpfProprietario.Name = "lbCpfProprietario";
+            this.lbCpfProprietario.Size = new System.Drawing.Size(30, 13);
+            this.lbCpfProprietario.TabIndex = 155;
+            this.lbCpfProprietario.Text = "CPF:";
+            this.lbCpfProprietario.Visible = false;
+            // 
+            // maskedTextBoxCpfProprietario
+            // 
+            this.maskedTextBoxCpfProprietario.Location = new System.Drawing.Point(64, 18);
+            this.maskedTextBoxCpfProprietario.Mask = "000.000.000-00";
+            this.maskedTextBoxCpfProprietario.Name = "maskedTextBoxCpfProprietario";
+            this.maskedTextBoxCpfProprietario.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBoxCpfProprietario.TabIndex = 0;
+            this.maskedTextBoxCpfProprietario.Visible = false;
+            // 
+            // btnBuscarP
+            // 
+            this.btnBuscarP.Location = new System.Drawing.Point(167, 16);
+            this.btnBuscarP.Name = "btnBuscarP";
+            this.btnBuscarP.Size = new System.Drawing.Size(65, 22);
+            this.btnBuscarP.TabIndex = 157;
+            this.btnBuscarP.TabStop = false;
+            this.btnBuscarP.Text = "Buscar";
+            this.btnBuscarP.UseVisualStyleBackColor = true;
+            this.btnBuscarP.Visible = false;
+            this.btnBuscarP.Click += new System.EventHandler(this.btnBuscarP_Click);
+            // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Location = new System.Drawing.Point(217, 20);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(43, 13);
+            this.lblCidade.TabIndex = 202;
+            this.lblCidade.Text = "Cidade:";
+            // 
+            // textBoxCidade
+            // 
+            this.textBoxCidade.Location = new System.Drawing.Point(255, 17);
+            this.textBoxCidade.Name = "textBoxCidade";
+            this.textBoxCidade.ReadOnly = true;
+            this.textBoxCidade.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCidade.TabIndex = 203;
+            this.textBoxCidade.TabStop = false;
+            // 
             // VendaV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1002,9 +1023,6 @@
         private System.Windows.Forms.Label lblBairroP;
         private System.Windows.Forms.Label lblNumeroP;
         private System.Windows.Forms.Label lblRuaP;
-        private System.Windows.Forms.Button btnBuscarP;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxCpfProprietario;
-        private System.Windows.Forms.Label lbCpfProprietario;
         private System.Windows.Forms.TextBox textBoxIDP;
         private System.Windows.Forms.Label lbIDP;
         private System.Windows.Forms.TextBox textBoxRgP;
@@ -1068,5 +1086,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxTipo;
         private System.Windows.Forms.TextBox textBoxCategoria;
+        private System.Windows.Forms.Button btnBuscarP;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCpfProprietario;
+        private System.Windows.Forms.Label lbCpfProprietario;
+        private System.Windows.Forms.TextBox textBoxCidade;
+        private System.Windows.Forms.Label lblCidade;
     }
 }

@@ -31,11 +31,11 @@
             this.buttonSair = new System.Windows.Forms.Button();
             this.btnAlterarDeletar = new System.Windows.Forms.Button();
             this.dgvFuncioario = new System.Windows.Forms.DataGridView();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.lbNome = new System.Windows.Forms.Label();
             this.colunaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colunaFuncao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.lbNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncioario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,26 +77,6 @@
             this.dgvFuncioario.Size = new System.Drawing.Size(525, 419);
             this.dgvFuncioario.TabIndex = 17;
             // 
-            // textBoxNome
-            // 
-            this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNome.Location = new System.Drawing.Point(54, 12);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(302, 20);
-            this.textBoxNome.TabIndex = 16;
-            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
-            this.textBoxNome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxNome_KeyUp);
-            // 
-            // lbNome
-            // 
-            this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(12, 15);
-            this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(41, 13);
-            this.lbNome.TabIndex = 15;
-            this.lbNome.Text = "Nome: ";
-            // 
             // colunaID
             // 
             this.colunaID.HeaderText = "ID";
@@ -115,6 +95,27 @@
             this.colunaFuncao.HeaderText = "Função";
             this.colunaFuncao.Name = "colunaFuncao";
             this.colunaFuncao.ReadOnly = true;
+            // 
+            // textBoxNome
+            // 
+            this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxNome.Location = new System.Drawing.Point(54, 12);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(302, 20);
+            this.textBoxNome.TabIndex = 16;
+            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
+            this.textBoxNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNome_KeyPress);
+            this.textBoxNome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxNome_KeyUp);
+            // 
+            // lbNome
+            // 
+            this.lbNome.AutoSize = true;
+            this.lbNome.Location = new System.Drawing.Point(12, 15);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(41, 13);
+            this.lbNome.TabIndex = 15;
+            this.lbNome.Text = "Nome: ";
             // 
             // BuscaFuncionario
             // 

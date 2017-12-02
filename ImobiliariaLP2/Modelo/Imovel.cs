@@ -17,6 +17,7 @@ namespace ImobiliariaLP2.Modelo
         private float valor;
         private string bairro;
         private string rua;
+        private string cidade;
         private int numero;
         private int idProprietario;
         private Proprietario p;
@@ -125,6 +126,19 @@ namespace ImobiliariaLP2.Modelo
             set
             {
                 vendido = value;
+            }
+        }
+
+        public string Cidade
+        {
+            get
+            {
+                return cidade;
+            }
+
+            set
+            {
+                cidade = value;
             }
         }
     }

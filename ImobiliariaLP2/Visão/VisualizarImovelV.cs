@@ -31,7 +31,7 @@ namespace ImobiliariaLP2.Visão
                 this.SelectNextControl(this.ActiveControl, true, true, true, true);
         }
 
-        private void textBoxRua_KeyPress(object sender, KeyPressEventArgs e)// validando só LETRAS NO CAMPO RUA E BAIRRO 
+        private void textBoxRua_KeyPress(object sender, KeyPressEventArgs e)// validando só LETRAS NO CAMPO RUA, BAIRRO E CIDADE
         {
             if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar)))/// só deixa digitar letras no textBox 
                 e.Handled = true; // isSeparador é para consegui usar o espaça e o iscontrol é para conseguir apagar 
@@ -43,13 +43,7 @@ namespace ImobiliariaLP2.Visão
                 e.Handled = true; // o iscontrol é para conseguir apagar e o isnumber é para aaceitar letra 
         }
 
-        private void comboBoxTipo_TextChanged(object sender, EventArgs e)// esta faltando validar os comboBox
-        {
-            if (!maskedTextBoxCpf.MaskCompleted || textBoxMetragem.Text.Trim() == "" || textBoxFrente.Text.Trim() == "" || textBoxFundo.Text.Trim() == "" || textBoxRua.Text.Trim() == "" || textBoxNumero.Text.Trim() == "" || textBoxBairro.Text.Trim() == "")
-                btnAlterar.Enabled = false;
-            else
-                btnAlterar.Enabled = true;
-        }
+       // FALTA FAZER OS CAMPOS OBRIGATORIOS 
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
@@ -88,6 +82,7 @@ namespace ImobiliariaLP2.Visão
             textBoxFundo.Text = i.Fundo.ToString();
             textBoxValor.Text = i.Valor.ToString();
             textBoxRua.Text = i.Rua;
+            textBoxCidade.Text = i.Cidade;
             textBoxNumero.Text = i.Numero.ToString();
             textBoxBairro.Text = i.Bairro;
         }
@@ -112,14 +107,13 @@ namespace ImobiliariaLP2.Visão
             i.Valor = float.Parse(textBoxValor.Text);
             i.Bairro = textBoxBairro.Text;
             i.Rua = textBoxRua.Text;
+            i.Cidade = textBoxCidade.Text;
             i.Numero = int.Parse(textBoxNumero.Text);
             i.Vendido = 0;
             i.Alugado = 0;
             i.IdProprietario = i.P.Id;
 
             return i;
-        }
-
-        
+        }  
     }
 }

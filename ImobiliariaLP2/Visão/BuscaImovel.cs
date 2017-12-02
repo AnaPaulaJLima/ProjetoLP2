@@ -24,6 +24,18 @@ namespace ImobiliariaLP2.Visão
             Fill("");
         }
 
+        private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
+        {
+            //ImovelDAO iDAO = new ImovelDAO();
+            //dgvImovel.DataSource = iDAO.Buscar(textBoxNome.Text);
+            Fill(textBoxNome.Text);
+        }
+
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        {
+            Fill(textBoxNome.Text);
+        }
+
         private void btnAlterarDeletar_Click(object sender, EventArgs e)
         {
             if (dgvImovel.CurrentRow != null)
@@ -64,16 +76,5 @@ namespace ImobiliariaLP2.Visão
             }
         }
 
-        private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
-        {
-            //ImovelDAO iDAO = new ImovelDAO();
-            //dgvImovel.DataSource = iDAO.Buscar(textBoxNome.Text);
-            Fill(textBoxNome.Text);
-        }
-
-        private void textBoxNome_TextChanged(object sender, EventArgs e)
-        {
-            Fill(textBoxNome.Text);
-        }
     }
 }

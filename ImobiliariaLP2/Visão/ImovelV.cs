@@ -25,10 +25,10 @@ namespace ImobiliariaLP2.Visão
                 this.SelectNextControl(this.ActiveControl, true, true, true, true);
         }
 
-        private void textBoxRua_KeyPress(object sender, KeyPressEventArgs e) // validando só LETRAS NO CAMPO RUA E BAIRRO 
+        private void textBoxRua_KeyPress(object sender, KeyPressEventArgs e)// validando só LETRAS NO CAMPO RUA,BAIRRO e CIDADE
         {
-            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar)))/// só deixa digitar letras no textBox 
-                e.Handled = true; // isSeparador é para consegui usar o espaça e o iscontrol é para conseguir apagar 
+            if (!(char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar)))
+                e.Handled = true;
         }
 
         private void textBoxMetragem_KeyPress(object sender, KeyPressEventArgs e) /// validanndo os campos METRAGEM, METROS-FRENTE, METROS-FUNDO, VALOR E NUMERO só digitar numero
@@ -37,13 +37,7 @@ namespace ImobiliariaLP2.Visão
                 e.Handled = true; // o iscontrol é para conseguir apagar e o isnumber é para aaceitar letra 
         }
 
-        private void comboBoxTipo_TextChanged(object sender, EventArgs e) // esta faltando validar os comboBox
-        {
-            if (!maskedTextBoxCpf.MaskCompleted || textBoxMetragem.Text.Trim() == "" || textBoxFrente.Text.Trim() == "" || textBoxFundo.Text.Trim() == "" || textBoxRua.Text.Trim() == "" || textBoxNumero.Text.Trim() == "" || textBoxBairro.Text.Trim() == "")
-                btnSalvar.Enabled = false;
-            else
-                btnSalvar.Enabled = true;
-        }
+        // FALTA VALIDAR OS CAMPOS OBRIGATORIO 
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -70,6 +64,7 @@ namespace ImobiliariaLP2.Visão
                 i.Fundo = float.Parse(textBoxFundo.Text);
                 i.Valor = float.Parse(textBoxValor.Text);
                 i.Bairro = textBoxBairro.Text;
+                i.Cidade = textBoxCidade.Text;
                 i.Rua = textBoxRua.Text;
                 i.Numero = int.Parse(textBoxNumero.Text);
                 i.Vendido = 0;
@@ -105,8 +100,11 @@ namespace ImobiliariaLP2.Visão
             textBoxFundo.Clear();
             textBoxValor.Clear();
             textBoxRua.Clear();
+            textBoxCidade.Clear();
             textBoxNumero.Clear();
             textBoxBairro.Clear();
         }
+
+       
     }
 }

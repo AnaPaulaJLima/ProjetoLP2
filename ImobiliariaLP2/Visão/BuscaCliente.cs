@@ -48,6 +48,12 @@ namespace ImobiliariaLP2.Visão
            dgvCliente.DataSource = cDAO.Buscar(textBoxNome.Text);
         }
 
+        private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar) || char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar)))
+                e.Handled = true;
+        }
+
         private void BuscaCliente_Load(object sender, EventArgs e)
         {
             Fill("");
@@ -72,5 +78,7 @@ namespace ImobiliariaLP2.Visão
                     dgvCliente.Rows.Add(c.Id, c.Nome, c.Cpf);
             }
         }
+
+        
     }
 }

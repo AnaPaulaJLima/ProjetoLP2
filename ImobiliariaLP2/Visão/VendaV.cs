@@ -26,16 +26,6 @@ namespace ImobiliariaLP2.Visão
             Dispose();
         }
 
-        private void btnBuscarVenda_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSair_Click_1(object sender, EventArgs e)
-        {
-            Dispose();
-        }
-
         private void GetDtoP(Proprietario p)
         {
             textBoxIDP.Text = p.Id.ToString();
@@ -68,6 +58,7 @@ namespace ImobiliariaLP2.Visão
             textBoxValorI.Text = i.Valor.ToString(); ;
             textBoxRuaI.Text = i.Rua;
             textBoxBairroI.Text = i.Bairro;
+            textBoxCidade.Text = i.Cidade;
             textBoxNumeroI.Text = i.Numero.ToString();
             textBoxMetragemI.Text = i.Metragem.ToString();
             textBoxFrente.Text = i.Frente.ToString();
@@ -113,7 +104,7 @@ namespace ImobiliariaLP2.Visão
                     GetDtoC(x);
                     // Passa o cliente para a venda
                     v.C = x;
-                    v.IdCliente = x.Id;
+                    v.IdCliente = v.C.Id;
                 }
             }
             catch
@@ -139,7 +130,7 @@ namespace ImobiliariaLP2.Visão
                 GetDtoI(i);
                 // Passa o imovel para a venda
                 v.I = i;
-                v.IdImovel = i.Id;
+                v.IdImovel = v.I.Id;
                 // Passa o proprietario do imovel para a venda
                 v.P = i.P;
                 v.IdProprietario = i.P.Id;
@@ -160,11 +151,17 @@ namespace ImobiliariaLP2.Visão
             {
                 FuncionarioDAO fDAO = new FuncionarioDAO();
                 Funcionario f = fDAO.BuscarPorId(int.Parse(textBoxID.Text));
-                textBoxNomeF.Text = f.Nome;
-                textBoxCreci.Text = f.Creci;
-                // Passa o funcionario para a venda
-                v.F = f;
-                v.IdFuncionario = f.Id;
+
+                if(f == null)
+                    MessageBox.Show("Funcionario não encontrado!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    textBoxNomeF.Text = f.Nome;
+                    textBoxCreci.Text = f.Creci;
+                    // Passa o funcionario para a venda
+                    v.F = f;
+                    v.IdFuncionario = v.F.Id;
+                }      
             }
             catch
             {
@@ -178,24 +175,33 @@ namespace ImobiliariaLP2.Visão
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            VendaDAO vDAO = new VendaDAO();
-            ImovelDAO iDAO = new ImovelDAO();
-            if (comboBox1.Text == "Venda")
+            try
             {
-                // Se vender, não pode alugar
-                v.I.Vendido = 1;
-                v.I.Alugado = 1;
+                VendaDAO vDAO = new VendaDAO();
+                ImovelDAO iDAO = new ImovelDAO();
+                if (comboBox1.Text == "Venda")
+                {
+                    // Se vender, não pode alugar
+                    v.I.Vendido = 1;
+                    v.I.Alugado = 1;
+                }
+                else
+                {
+                    // Se alugar, pode vender
+                    v.I.Alugado = 1;
+                }
+                // Mando atualizar o imovel no banco
+                iDAO.Atualizar(v.I);
+                v.Tipo = comboBox1.Text;
+                v.DataVenda = DateTime.Parse(dateTimePickerDATA.Text);
+                vDAO.Salvar(v);
+                MessageBox.Show("cadastrado!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+            catch
             {
-                // Se alugar, pode vender
-                v.I.Alugado = 1;
+                MessageBox.Show("Erro!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            // Mando atualizar o imovel no banco
-            iDAO.Atualizar(v.I);
-            v.Tipo = comboBox1.Text;
-            v.DataVenda = DateTime.Parse(dateTimePickerDATA.Text);
-            vDAO.Salvar(v);
+
         }
     }
 }
