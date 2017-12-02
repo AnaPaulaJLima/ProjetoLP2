@@ -72,9 +72,9 @@ namespace ImobiliariaLP2.DAO
         }
 
         /*
-         Busca um imovel pelo CPF ou NOME do proprietario
+         Busca um imovel pelo Bairro e pela margem de valor
         */
-        public List<Imovel> Buscar(string chave)
+        public List<Imovel> Buscar(string chave, float vIni, float vFinal)
         {
             Database bd = Database.GetInstance();
             List<Imovel> lista = new List<Imovel>();
@@ -83,15 +83,19 @@ namespace ImobiliariaLP2.DAO
 
             string query = "SELECT i.id, i.tipo, i.categoria, i.metragem, i.frente, i.fundo, i.valor, i.bairro, i.rua, i.cidade, i.numero, i.id_proprietario, i.vendido, i.alugado FROM imovel i";
             if (chave != "")
-                query += " JOIN proprietario p ON p.nome LIKE '" + @chave + "%' AND i.id_proprietario = p.id ";
+                query += " WHERE i.bairro LIKE '%" + @chave + "%' ";
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 
             // Especificações do aroba , atribuindo tipo.
             comando.Parameters.Add("@chave", MySqlDbType.VarChar);
+            comando.Parameters.Add("@vIni", MySqlDbType.Float);
+            comando.Parameters.Add("@vFinal", MySqlDbType.Float);
 
             // Atribuindo valor ao aroba
             comando.Parameters["@chave"].Value = chave;
+            comando.Parameters["@vIni"].Value = vIni;
+            comando.Parameters["@vFinal"].Value = vFinal;
 
             DataSet ds = bd.ExecuteQuery(comando);
             linhas = ds.Tables[0].Rows.Count;
