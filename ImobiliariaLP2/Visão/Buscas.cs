@@ -51,5 +51,11 @@ namespace ImobiliariaLP2.Visão
         {
             this.Dispose();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            RelatorioContratoscs rcv = new RelatorioContratoscs();
+            rcv.Show();
+        }
     }
 }
