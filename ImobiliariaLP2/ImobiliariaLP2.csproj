@@ -153,6 +153,12 @@
     <Compile Include="Visão\ProprietariosV.Designer.cs">
       <DependentUpon>ProprietariosV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visão\RelatorioContratoscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visão\RelatorioContratoscs.Designer.cs">
+      <DependentUpon>RelatorioContratoscs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visão\RelatorioImoveisDisponivelV.cs">
       <SubType>Form</SubType>
     </Compile>
