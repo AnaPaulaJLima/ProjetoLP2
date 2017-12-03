@@ -37,19 +37,14 @@
             this.ColumnValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
-            this.labelValorIni = new System.Windows.Forms.Label();
-            this.tbValorIni = new System.Windows.Forms.TextBox();
-            this.labelValorFinal = new System.Windows.Forms.Label();
-            this.tbValorFinal = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImovel)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSair
             // 
-            this.buttonSair.Location = new System.Drawing.Point(443, 12);
+            this.buttonSair.Location = new System.Drawing.Point(443, 9);
             this.buttonSair.Name = "buttonSair";
-            this.buttonSair.Size = new System.Drawing.Size(97, 25);
+            this.buttonSair.Size = new System.Drawing.Size(97, 23);
             this.buttonSair.TabIndex = 14;
             this.buttonSair.Text = "Sair";
             this.buttonSair.UseVisualStyleBackColor = true;
@@ -57,9 +52,9 @@
             // 
             // btnAlterarDeletar
             // 
-            this.btnAlterarDeletar.Location = new System.Drawing.Point(443, 43);
+            this.btnAlterarDeletar.Location = new System.Drawing.Point(340, 9);
             this.btnAlterarDeletar.Name = "btnAlterarDeletar";
-            this.btnAlterarDeletar.Size = new System.Drawing.Size(97, 25);
+            this.btnAlterarDeletar.Size = new System.Drawing.Size(97, 23);
             this.btnAlterarDeletar.TabIndex = 13;
             this.btnAlterarDeletar.Text = "Vizualizar";
             this.btnAlterarDeletar.UseVisualStyleBackColor = true;
@@ -78,10 +73,10 @@
             this.ColumnBairro,
             this.ColumnMetragem,
             this.ColumnValor});
-            this.dgvImovel.Location = new System.Drawing.Point(15, 74);
+            this.dgvImovel.Location = new System.Drawing.Point(15, 43);
             this.dgvImovel.Name = "dgvImovel";
             this.dgvImovel.ReadOnly = true;
-            this.dgvImovel.Size = new System.Drawing.Size(525, 383);
+            this.dgvImovel.Size = new System.Drawing.Size(525, 414);
             this.dgvImovel.TabIndex = 12;
             // 
             // ColumnId
@@ -118,7 +113,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNome.Location = new System.Drawing.Point(55, 12);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(382, 20);
+            this.textBoxNome.Size = new System.Drawing.Size(279, 20);
             this.textBoxNome.TabIndex = 11;
             this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             this.textBoxNome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxNome_KeyUp);
@@ -132,58 +127,11 @@
             this.lbNome.TabIndex = 10;
             this.lbNome.Text = "Bairro:";
             // 
-            // labelValorIni
-            // 
-            this.labelValorIni.AutoSize = true;
-            this.labelValorIni.Location = new System.Drawing.Point(15, 43);
-            this.labelValorIni.Name = "labelValorIni";
-            this.labelValorIni.Size = new System.Drawing.Size(57, 13);
-            this.labelValorIni.TabIndex = 15;
-            this.labelValorIni.Text = "Valor - De:";
-            // 
-            // tbValorIni
-            // 
-            this.tbValorIni.Location = new System.Drawing.Point(79, 39);
-            this.tbValorIni.Name = "tbValorIni";
-            this.tbValorIni.Size = new System.Drawing.Size(100, 20);
-            this.tbValorIni.TabIndex = 16;
-            // 
-            // labelValorFinal
-            // 
-            this.labelValorFinal.AutoSize = true;
-            this.labelValorFinal.Location = new System.Drawing.Point(186, 43);
-            this.labelValorFinal.Name = "labelValorFinal";
-            this.labelValorFinal.Size = new System.Drawing.Size(25, 13);
-            this.labelValorFinal.TabIndex = 17;
-            this.labelValorFinal.Text = "até:";
-            // 
-            // tbValorFinal
-            // 
-            this.tbValorFinal.Location = new System.Drawing.Point(218, 38);
-            this.tbValorFinal.Name = "tbValorFinal";
-            this.tbValorFinal.Size = new System.Drawing.Size(109, 20);
-            this.tbValorFinal.TabIndex = 18;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(340, 43);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(97, 25);
-            this.btnBuscar.TabIndex = 19;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // BuscaImovel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 467);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.tbValorFinal);
-            this.Controls.Add(this.labelValorFinal);
-            this.Controls.Add(this.tbValorIni);
-            this.Controls.Add(this.labelValorIni);
             this.Controls.Add(this.buttonSair);
             this.Controls.Add(this.btnAlterarDeletar);
             this.Controls.Add(this.dgvImovel);
@@ -211,10 +159,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMetragem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValor;
-        private System.Windows.Forms.Label labelValorIni;
-        private System.Windows.Forms.TextBox tbValorIni;
-        private System.Windows.Forms.Label labelValorFinal;
-        private System.Windows.Forms.TextBox tbValorFinal;
-        private System.Windows.Forms.Button btnBuscar;
     }
 }

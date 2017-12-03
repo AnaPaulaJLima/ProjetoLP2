@@ -272,7 +272,7 @@
             // vendaAluguelToolStripMenuItem
             // 
             this.vendaAluguelToolStripMenuItem.Name = "vendaAluguelToolStripMenuItem";
-            this.vendaAluguelToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
+            this.vendaAluguelToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
             this.vendaAluguelToolStripMenuItem.Text = "Venda/Aluguel";
             this.vendaAluguelToolStripMenuItem.Click += new System.EventHandler(this.vendaAluguelToolStripMenuItem_Click);
             // 
@@ -290,21 +290,21 @@
             // imoveisDisponiveisToolStripMenuItem
             // 
             this.imoveisDisponiveisToolStripMenuItem.Name = "imoveisDisponiveisToolStripMenuItem";
-            this.imoveisDisponiveisToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
+            this.imoveisDisponiveisToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.imoveisDisponiveisToolStripMenuItem.Text = "Imoveis Disponiveis";
             this.imoveisDisponiveisToolStripMenuItem.Click += new System.EventHandler(this.imoveisDisponiveisToolStripMenuItem_Click);
             // 
             // vendasPorFuncionarioToolStripMenuItem
             // 
             this.vendasPorFuncionarioToolStripMenuItem.Name = "vendasPorFuncionarioToolStripMenuItem";
-            this.vendasPorFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
+            this.vendasPorFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.vendasPorFuncionarioToolStripMenuItem.Text = "Vendas Por Funcionario";
             this.vendasPorFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.vendasPorFuncionarioToolStripMenuItem_Click);
             // 
             // vendasPorPeriodoToolStripMenuItem
             // 
             this.vendasPorPeriodoToolStripMenuItem.Name = "vendasPorPeriodoToolStripMenuItem";
-            this.vendasPorPeriodoToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
+            this.vendasPorPeriodoToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.vendasPorPeriodoToolStripMenuItem.Text = "Vendas Por Periodo";
             this.vendasPorPeriodoToolStripMenuItem.Click += new System.EventHandler(this.vendasPorPeriodoToolStripMenuItem_Click);
             // 
@@ -412,13 +412,15 @@
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.Location = new System.Drawing.Point(611, 152);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(51, 16);
+            this.lblHora.Size = new System.Drawing.Size(52, 16);
             this.lblHora.TabIndex = 11;
             this.lblHora.Text = "label1";
             this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btn_buscar

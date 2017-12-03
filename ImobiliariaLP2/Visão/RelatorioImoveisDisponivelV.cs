@@ -23,5 +23,11 @@ namespace ImobiliariaLP2.Visão
             RelatoriosV r = new RelatoriosV();
             r.ShowDialog();
         }
+
+        private void btnGerar_Click(object sender, EventArgs e)
+        {
+            FormRelatorioImoveis fri = new FormRelatorioImoveis();
+            fri.Show();
+        }
     }
 }

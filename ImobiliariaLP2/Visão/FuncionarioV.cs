@@ -97,6 +97,7 @@ namespace ImobiliariaLP2.Visão
             f.Email = textBoxEmail.Text;
             f.Login = textBoxLogin.Text;
             f.Senha = textBoxSenha.Text;
+            f.Acesso = int.Parse(textBox1.Text);
 
             return f; 
         }
@@ -110,6 +111,7 @@ namespace ImobiliariaLP2.Visão
             maskedTextBoxTelefone.Clear();
             textBoxLogin.Clear();
             textBoxSenha.Clear();
+            textBox1.Clear();
         }
 
        

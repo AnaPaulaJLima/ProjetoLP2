@@ -109,7 +109,7 @@ namespace ImobiliariaLP2.Visão
             }
             catch
             {
-                MessageBox.Show("Erro!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cliente não encontrado.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
             {
@@ -137,7 +137,7 @@ namespace ImobiliariaLP2.Visão
             }
             catch
             {
-                MessageBox.Show("Erro!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Imóvel não disponível ou não encontrado.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
             {
@@ -193,15 +193,23 @@ namespace ImobiliariaLP2.Visão
                 // Mando atualizar o imovel no banco
                 iDAO.Atualizar(v.I);
                 v.Tipo = comboBox1.Text;
-                v.DataVenda = DateTime.Parse(dateTimePickerDATA.Text);
+                v.DataVenda = dateTimePickerDATA.Value.ToString("ddMMyyyy");
                 vDAO.Salvar(v);
-                MessageBox.Show("cadastrado!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Venda realizada.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Erro!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro para realizar venda. Certifique-se de preencher todos os dados.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                Dispose();
+            }
+        }
 
+        private void btnSair_Click_1(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

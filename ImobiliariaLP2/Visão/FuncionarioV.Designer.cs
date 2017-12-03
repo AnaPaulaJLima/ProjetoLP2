@@ -46,6 +46,8 @@
             this.labelSenha = new System.Windows.Forms.Label();
             this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.maskedTextBoxCRECI = new System.Windows.Forms.MaskedTextBox();
+            this.labelAcesso = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblID
@@ -213,11 +215,29 @@
             this.maskedTextBoxCRECI.TabIndex = 2;
             this.maskedTextBoxCRECI.TextChanged += new System.EventHandler(this.textBoxNome_TextChanged);
             // 
+            // labelAcesso
+            // 
+            this.labelAcesso.AutoSize = true;
+            this.labelAcesso.Location = new System.Drawing.Point(32, 169);
+            this.labelAcesso.Name = "labelAcesso";
+            this.labelAcesso.Size = new System.Drawing.Size(88, 13);
+            this.labelAcesso.TabIndex = 18;
+            this.labelAcesso.Text = "Nível de acesso:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(126, 166);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 19;
+            // 
             // FuncionarioV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 250);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelAcesso);
             this.Controls.Add(this.maskedTextBoxCRECI);
             this.Controls.Add(this.textBoxSenha);
             this.Controls.Add(this.labelSenha);
@@ -267,5 +287,7 @@
         private System.Windows.Forms.Label labelSenha;
         private System.Windows.Forms.TextBox textBoxSenha;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCRECI;
+        private System.Windows.Forms.Label labelAcesso;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

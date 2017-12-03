@@ -7,15 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ImobiliariaLP2.Modelo;
 
 namespace ImobiliariaLP2.Visão
 {
     public partial class Inicio : Form
     {
+        public Funcionario funcionario = null;
         public Inicio()
         {
             InitializeComponent();
             lblHora.Text = DateTime.Now.ToString();
+        }
+
+        public Inicio(Funcionario f)
+        {
+            InitializeComponent();
+            lblHora.Text = DateTime.Now.ToString();
+            if(f.Acesso != 1)
+            {
+                btnFuncionario.Enabled = false;
+                funcionariosToolStripMenuItem.Enabled = false;
+                funcionariosToolStripMenuItem1.Enabled = false;
+                vendasPorFuncionarioToolStripMenuItem.Enabled = false;
+                vendasPorPeriodoToolStripMenuItem.Enabled = false;
+            }
+            funcionario = f;
         }
 
         private void btnProprietarios_Click(object sender, EventArgs e)
@@ -68,7 +85,7 @@ namespace ImobiliariaLP2.Visão
 
         private void btnRelatorios_Click(object sender, EventArgs e)
         {
-            RelatoriosV r = new RelatoriosV();
+            RelatoriosV r = new RelatoriosV(funcionario);
             r.ShowDialog();
         }
 

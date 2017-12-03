@@ -38,7 +38,7 @@ namespace ImobiliariaLP2.Visão
 
         private void textBoxNome_TextChanged(object sender, EventArgs e)// para habilitar o botão somento com o preenchimento dos campos obrigatorios
         {
-            if (textBoxNome.Text.Trim() == "" || !maskedTextBoxTelefone.MaskCompleted || !maskedTextBoxCpf.MaskCompleted || !maskedTextBoxDataN.MaskCompleted)
+            if (textBoxNome.Text.Trim() == "" || !maskedTextBoxTelefone.MaskCompleted || !maskedTextBoxCpf.MaskCompleted)
                 btnSalvar.Enabled = false; /// se não estiver completa ele não aparece o botão
             else
                 btnSalvar.Enabled = true;
@@ -93,7 +93,7 @@ namespace ImobiliariaLP2.Visão
             c.Nome = textBoxNome.Text;
             c.Cpf = maskedTextBoxCpf.Text;
             c.Rg = textBoxRg.Text;
-            c.DataNasc = maskedTextBoxDataN.Text;
+            c.DataNasc = dateTimePicker1.Value.ToString("ddMMyyyy");
             c.Email = textBoxEmail.Text;
             c.Telefone = maskedTextBoxTelefone.Text;
 
@@ -107,7 +107,6 @@ namespace ImobiliariaLP2.Visão
             textBoxRg.Clear();
             textBoxEmail.Clear();
             maskedTextBoxTelefone.Clear();
-            maskedTextBoxDataN.Clear();
         }
 
         private void ClienteV_Load(object sender, EventArgs e)

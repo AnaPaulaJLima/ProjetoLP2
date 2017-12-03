@@ -44,6 +44,8 @@
     <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <HintPath>..\packages\Crystal.Reports.Essentials.13.0.20.2399\lib\CrystalDecisions.Web.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -51,6 +53,8 @@
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +72,12 @@
     <Compile Include="DAO\ImovelDAO.cs" />
     <Compile Include="DAO\ProprietarioDao.cs" />
     <Compile Include="DAO\VendaDAO.cs" />
+    <Compile Include="ImoveisDisponiveis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImoveisDisponiveis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Imovel.cs" />
@@ -116,6 +126,12 @@
     </Compile>
     <Compile Include="Visão\ClienteV.Designer.cs">
       <DependentUpon>ClienteV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visão\FormRelatorioImoveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visão\FormRelatorioImoveis.Designer.cs">
+      <DependentUpon>FormRelatorioImoveis.cs</DependentUpon>
     </Compile>
     <Compile Include="Visão\FuncionarioV.cs">
       <SubType>Form</SubType>
@@ -219,6 +235,10 @@
     <Compile Include="Visão\VizualizarProprietario.Designer.cs">
       <DependentUpon>VizualizarProprietario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ImoveisDisponiveis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ImoveisDisponiveis.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -250,6 +270,9 @@
     <EmbeddedResource Include="Visão\ClienteV.resx">
       <DependentUpon>ClienteV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visão\FormRelatorioImoveis.resx">
+      <DependentUpon>FormRelatorioImoveis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visão\FuncionarioV.resx">
       <DependentUpon>FuncionarioV.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visão\ProprietariosV.resx">
       <DependentUpon>ProprietariosV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visão\RelatorioContratoscs.resx">
+      <DependentUpon>RelatorioContratoscs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visão\RelatorioImoveisDisponivelV.resx">
       <DependentUpon>RelatorioImoveisDisponivelV.cs</DependentUpon>
@@ -440,6 +466,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

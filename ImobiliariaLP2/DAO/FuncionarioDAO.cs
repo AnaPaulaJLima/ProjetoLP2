@@ -23,6 +23,7 @@ namespace ImobiliariaLP2.DAO
             f.Login = dr["login"].ToString();
             f.Senha = dr["senha"].ToString();
             f.Ativo = int.Parse(dr["ativo"].ToString());
+            f.Acesso = int.Parse(dr["acesso"].ToString());
             return f;
         }
 
@@ -37,6 +38,7 @@ namespace ImobiliariaLP2.DAO
             cmd.Parameters.Add("@creci", MySqlDbType.VarChar);
             cmd.Parameters.Add("@login", MySqlDbType.VarChar);
             cmd.Parameters.Add("@senha", MySqlDbType.VarChar);
+            cmd.Parameters.Add("@acesso", MySqlDbType.Int32);
 
             cmd.Parameters["@nome"].Value = f.Nome;
             cmd.Parameters["@telefone"].Value = f.Telefone;
@@ -45,13 +47,14 @@ namespace ImobiliariaLP2.DAO
             cmd.Parameters["@creci"].Value = f.Creci;
             cmd.Parameters["@login"].Value = f.Login;
             cmd.Parameters["@senha"].Value = f.Senha;
+            cmd.Parameters["@acesso"].Value = f.Acesso;
 
             db.ExecuteNonQuery(cmd);
         }
 
         public void Salvar(Funcionario f)
         {
-            string query = "INSERT INTO funcionario(nome, telefone, email, funcao, creci, login, senha, ativo) VALUES(@nome, @telefone, @email, @funcao, @creci, @login, @senha, 1)";
+            string query = "INSERT INTO funcionario(nome, telefone, email, funcao, creci, login, senha, ativo, acesso) VALUES(@nome, @telefone, @email, @funcao, @creci, @login, @senha, 1, @acesso)";
             GetDTO(query, f);
         }
 

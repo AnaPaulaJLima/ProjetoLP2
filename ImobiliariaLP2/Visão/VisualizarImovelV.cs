@@ -78,8 +78,14 @@ namespace ImobiliariaLP2.Visão
             comboBoxCategoria.Text = i.Categoria;
             comboBoxTipo.Text = i.Tipo;
             textBoxMetragem.Text = i.Metragem.ToString();
-            textBoxFrente.Text = i.Frente.ToString();
-            textBoxFundo.Text = i.Fundo.ToString();
+            if (i.Frente == 0)
+                textBoxFrente.Text = "Não informado";
+            else
+                textBoxFrente.Text = i.Frente.ToString();
+            if (i.Fundo == 0)
+                textBoxFundo.Text = "Não informado";
+            else
+                textBoxFundo.Text = i.Fundo.ToString();
             textBoxValor.Text = i.Valor.ToString();
             textBoxRua.Text = i.Rua;
             textBoxCidade.Text = i.Cidade;

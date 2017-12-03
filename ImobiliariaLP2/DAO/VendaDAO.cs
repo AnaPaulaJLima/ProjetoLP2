@@ -20,19 +20,13 @@ namespace ImobiliariaLP2.DAO
 
         public void Salvar(Venda v)
         {
-            string dt = v.DataVenda.ToString("dd/mm/yyyy");
-            string query = "INSERT INTO vendas(id_proprietario, id_cliente, id_imovel, id_funcionario, dataVenda, tipo) VALUES(" + v.IdProprietario + ", " + v.IdCliente + ", " + v.IdImovel + ", " + v.IdFuncionario + ", '" + dt + "', '" + v.Tipo + "')";
+            string query = "INSERT INTO vendas(id_proprietario, id_cliente, id_imovel, id_funcionario, dataVenda, tipo) VALUES(" + v.IdProprietario + ", " + v.IdCliente + ", " + v.IdImovel + ", " + v.IdFuncionario + ", '" + v.DataVenda + "', '" + v.Tipo + "')";
             GetDTO(query, v);
         }
 
-        public void Busca(Venda v)
+        public void Busca()
         {
-            Database db = Database.GetInstance();
-            List<Venda> lista = new List<Venda>();
-            DataRow dr = null;
-            int linhas;
 
-            string query = "";
         }
     }
 }

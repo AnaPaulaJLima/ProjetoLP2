@@ -17,13 +17,7 @@ namespace ImobiliariaLP2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            LoginV login = new LoginV();
-            login.ShowDialog();
-            if (login.logado == true)
-            {
-                Application.Run(new Inicio());
-            }
+            Application.Run(new LoginV());
         }
     }
 }

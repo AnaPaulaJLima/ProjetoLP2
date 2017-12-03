@@ -102,6 +102,7 @@
             this.btnGerar.TabIndex = 5;
             this.btnGerar.Text = "Gerar";
             this.btnGerar.UseVisualStyleBackColor = true;
+            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
             // 
             // btnSair
             // 

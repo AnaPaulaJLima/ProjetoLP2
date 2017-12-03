@@ -17,6 +17,7 @@ namespace ImobiliariaLP2.Modelo
         private string login;
         private string senha;
         private int ativo;
+        private int acesso; // 1 para admin, 0 para outros
 
         public int Ativo
         {
@@ -111,6 +112,19 @@ namespace ImobiliariaLP2.Modelo
             set
             {
                 creci = value;
+            }
+        }
+
+        public int Acesso
+        {
+            get
+            {
+                return acesso;
+            }
+
+            set
+            {
+                acesso = value;
             }
         }
     }

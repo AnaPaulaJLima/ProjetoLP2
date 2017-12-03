@@ -74,28 +74,24 @@ namespace ImobiliariaLP2.DAO
         /*
          Busca um imovel pelo Bairro e pela margem de valor
         */
-        public List<Imovel> Buscar(string chave, float vIni, float vFinal)
+        public List<Imovel> Buscar(string chave)
         {
             Database bd = Database.GetInstance();
             List<Imovel> lista = new List<Imovel>();
             DataRow dr = null;
             int linhas;
 
-            string query = "SELECT i.id, i.tipo, i.categoria, i.metragem, i.frente, i.fundo, i.valor, i.bairro, i.rua, i.cidade, i.numero, i.id_proprietario, i.vendido, i.alugado FROM imovel i";
+            string query = "SELECT i.id, i.tipo, i.categoria, i.metragem, i.frente, i.fundo, i.valor, i.bairro, i.rua, i.cidade, i.numero, i.id_proprietario, i.vendido, i.alugado FROM imovel i WHERE i.vendido = 0";
             if (chave != "")
-                query += " WHERE i.bairro LIKE '%" + @chave + "%' ";
+                query += " AND i.bairro LIKE '%" + @chave + "%' ";
 
             MySqlCommand comando = new MySqlCommand(query, bd.GetConnection());
 
             // Especificações do aroba , atribuindo tipo.
             comando.Parameters.Add("@chave", MySqlDbType.VarChar);
-            comando.Parameters.Add("@vIni", MySqlDbType.Float);
-            comando.Parameters.Add("@vFinal", MySqlDbType.Float);
 
             // Atribuindo valor ao aroba
             comando.Parameters["@chave"].Value = chave;
-            comando.Parameters["@vIni"].Value = vIni;
-            comando.Parameters["@vFinal"].Value = vFinal;
 
             DataSet ds = bd.ExecuteQuery(comando);
             linhas = ds.Tables[0].Rows.Count;
@@ -114,7 +110,7 @@ namespace ImobiliariaLP2.DAO
             Imovel imovel = new Imovel();
             DataRow dr = null;
 
-            string query = "SELECT * FROM imovel WHERE id = " + id;
+            string query = "SELECT * FROM imovel WHERE id = " + id + " AND vendido = 0";
             MySqlCommand comando = new MySqlCommand(query, db.GetConnection());
             DataSet ds = db.ExecuteQuery(comando);
 

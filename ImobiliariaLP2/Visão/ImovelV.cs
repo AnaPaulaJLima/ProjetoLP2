@@ -37,7 +37,8 @@ namespace ImobiliariaLP2.Visão
                 e.Handled = true; // o iscontrol é para conseguir apagar e o isnumber é para aaceitar letra 
         }
 
-        // FALTA VALIDAR OS CAMPOS OBRIGATORIO 
+        // FALTA VALIDAR OS CAMPOS OBRIGATORIOS
+        // METROS DE FUNDO E FRENTE NÃO SÃO OBRIGATORIOS
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -56,12 +57,21 @@ namespace ImobiliariaLP2.Visão
                 }
 
                 // criando DTO
-
                 i.Tipo = comboBoxTipo.Text;
                 i.Categoria = comboBoxCategoria.Text;
                 i.Metragem = float.Parse(textBoxMetragem.Text);
                 i.Frente = float.Parse(textBoxFrente.Text);
-                i.Fundo = float.Parse(textBoxFundo.Text);
+                // Se estiverem vazios, salva com o valor 0
+                i.Frente = 0;
+                if(textBoxFrente.Text != "")
+                {
+                    i.Frente = float.Parse(textBoxFrente.Text);
+                }
+                i.Fundo = 0;
+                if(textBoxFundo.Text != "")
+                {
+                    i.Fundo = float.Parse(textBoxFundo.Text);
+                }
                 i.Valor = float.Parse(textBoxValor.Text);
                 i.Bairro = textBoxBairro.Text;
                 i.Cidade = textBoxCidade.Text;
@@ -76,7 +86,7 @@ namespace ImobiliariaLP2.Visão
             }
             catch
             {
-                MessageBox.Show("Erro!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao cadastrar imóvel.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
