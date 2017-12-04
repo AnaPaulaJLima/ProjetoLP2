@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtBoxTipo = new System.Windows.Forms.TextBox();
+            this.mtbData = new System.Windows.Forms.MaskedTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBoxCreci = new System.Windows.Forms.TextBox();
             this.textBoxNomeF = new System.Windows.Forms.TextBox();
@@ -98,8 +100,6 @@
             this.lblTipo = new System.Windows.Forms.Label();
             this.textBoxIDVenda = new System.Windows.Forms.TextBox();
             this.lblIDVenda = new System.Windows.Forms.Label();
-            this.mtbData = new System.Windows.Forms.MaskedTextBox();
-            this.txtBoxTipo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -126,6 +126,23 @@
             this.groupBox1.TabIndex = 115;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "VENDA ";
+            // 
+            // txtBoxTipo
+            // 
+            this.txtBoxTipo.Location = new System.Drawing.Point(265, 19);
+            this.txtBoxTipo.Name = "txtBoxTipo";
+            this.txtBoxTipo.ReadOnly = true;
+            this.txtBoxTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxTipo.TabIndex = 192;
+            // 
+            // mtbData
+            // 
+            this.mtbData.Location = new System.Drawing.Point(469, 19);
+            this.mtbData.Mask = "00/00/0000";
+            this.mtbData.Name = "mtbData";
+            this.mtbData.ReadOnly = true;
+            this.mtbData.Size = new System.Drawing.Size(81, 20);
+            this.mtbData.TabIndex = 191;
             // 
             // groupBox5
             // 
@@ -404,7 +421,7 @@
             // textBoxIDI
             // 
             this.textBoxIDI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxIDI.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxIDI.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxIDI.Location = new System.Drawing.Point(54, 18);
             this.textBoxIDI.Name = "textBoxIDI";
             this.textBoxIDI.ReadOnly = true;
@@ -829,23 +846,6 @@
             this.lblIDVenda.Size = new System.Drawing.Size(24, 13);
             this.lblIDVenda.TabIndex = 115;
             this.lblIDVenda.Text = "ID :";
-            // 
-            // mtbData
-            // 
-            this.mtbData.Location = new System.Drawing.Point(469, 19);
-            this.mtbData.Mask = "00/00/0000";
-            this.mtbData.Name = "mtbData";
-            this.mtbData.ReadOnly = true;
-            this.mtbData.Size = new System.Drawing.Size(81, 20);
-            this.mtbData.TabIndex = 191;
-            // 
-            // txtBoxTipo
-            // 
-            this.txtBoxTipo.Location = new System.Drawing.Point(265, 19);
-            this.txtBoxTipo.Name = "txtBoxTipo";
-            this.txtBoxTipo.ReadOnly = true;
-            this.txtBoxTipo.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxTipo.TabIndex = 192;
             // 
             // VisualizarVenda
             // 

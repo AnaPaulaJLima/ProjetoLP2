@@ -26,11 +26,7 @@ namespace ImobiliariaLP2.Visão
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-            RelatorioContratoscs relatorio = new RelatorioContratoscs();
-            relatorio.tipoRelatorio = 2;
-
-            this.Dispose();
-            relatorio.Show();
+            
         }
     }
 }
