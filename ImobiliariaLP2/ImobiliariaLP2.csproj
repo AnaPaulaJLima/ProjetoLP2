@@ -50,6 +50,8 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -72,6 +74,11 @@
     <Compile Include="DAO\ImovelDAO.cs" />
     <Compile Include="DAO\ProprietarioDao.cs" />
     <Compile Include="DAO\VendaDAO.cs" />
+    <Compile Include="imobiliaria_lp2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>imobiliaria_lp2DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Imovel.cs" />
@@ -79,6 +86,36 @@
     <Compile Include="Modelo\Venda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\FormPorprietariocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FormPorprietariocs.Designer.cs">
+      <DependentUpon>FormPorprietariocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\FormRelatorioFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FormRelatorioFunc.Designer.cs">
+      <DependentUpon>FormRelatorioFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\FormRelatorioImovel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FormRelatorioImovel.Designer.cs">
+      <DependentUpon>FormRelatorioImovel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\FormRelatorioVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\FormRelatorioVendas.Designer.cs">
+      <DependentUpon>FormRelatorioVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visão\aula13_11.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +163,6 @@
     </Compile>
     <Compile Include="Visão\ClienteV.Designer.cs">
       <DependentUpon>ClienteV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visão\FormRelatorioImoveis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Visão\FormRelatorioImoveis.Designer.cs">
-      <DependentUpon>FormRelatorioImoveis.cs</DependentUpon>
     </Compile>
     <Compile Include="Visão\FuncionarioV.cs">
       <SubType>Form</SubType>
@@ -229,6 +260,7 @@
     <Compile Include="Visão\VizualizarProprietario.Designer.cs">
       <DependentUpon>VizualizarProprietario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Modelo\rptVendas.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -239,6 +271,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Relatorios\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\FormPorprietariocs.resx">
+      <DependentUpon>FormPorprietariocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\FormRelatorioFunc.resx">
+      <DependentUpon>FormRelatorioFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\FormRelatorioImovel.resx">
+      <DependentUpon>FormRelatorioImovel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\FormRelatorioVendas.resx">
+      <DependentUpon>FormRelatorioVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\rptClientes.rdlc" />
+    <EmbeddedResource Include="Relatorios\rptFuncionario.rdlc" />
+    <EmbeddedResource Include="Relatorios\rptImovel.rdlc" />
+    <EmbeddedResource Include="Relatorios\rptProprietario.rdlc" />
     <EmbeddedResource Include="Visão\aula13_11.resx">
       <DependentUpon>aula13_11.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,9 +313,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visão\ClienteV.resx">
       <DependentUpon>ClienteV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visão\FormRelatorioImoveis.resx">
-      <DependentUpon>FormRelatorioImoveis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visão\FuncionarioV.resx">
       <DependentUpon>FuncionarioV.cs</DependentUpon>
@@ -314,6 +362,17 @@
     <EmbeddedResource Include="Visão\VizualizarProprietario.resx">
       <DependentUpon>VizualizarProprietario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="imobiliaria_lp2DataSet.xsc">
+      <DependentUpon>imobiliaria_lp2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="imobiliaria_lp2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>imobiliaria_lp2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="imobiliaria_lp2DataSet.xss">
+      <DependentUpon>imobiliaria_lp2DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ImobiliariaLP2.Modelo.Funcionario.datasource" />
     <None Include="Properties\Settings.settings">
@@ -460,8 +519,6 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Relatorios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

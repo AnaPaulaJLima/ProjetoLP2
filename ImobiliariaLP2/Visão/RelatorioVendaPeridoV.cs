@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ImobiliariaLP2.Relatorios;
 
 namespace ImobiliariaLP2.Visão
 {
@@ -22,6 +23,11 @@ namespace ImobiliariaLP2.Visão
             Dispose();
             RelatoriosV r = new RelatoriosV();
             r.ShowDialog();
+        }
+
+        private void btnGerar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

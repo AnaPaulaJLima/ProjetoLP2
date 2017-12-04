@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ImobiliariaLP2.Relatorios;
 
 namespace ImobiliariaLP2.Visão
 {

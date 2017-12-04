@@ -17,6 +17,9 @@ namespace ImobiliariaLP2.Visão
             InitializeComponent();
         }
 
-       
+        private void btnRelatorios_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

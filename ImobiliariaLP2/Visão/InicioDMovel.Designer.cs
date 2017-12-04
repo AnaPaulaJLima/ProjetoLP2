@@ -99,7 +99,6 @@
             this.btn_sair.Text = "Sair";
             this.btn_sair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_sair.UseVisualStyleBackColor = true;
-
             // 
             // btnRelatorios
             // 
@@ -115,6 +114,7 @@
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRelatorios.UseVisualStyleBackColor = true;
+            this.btnRelatorios.Click += new System.EventHandler(this.btnRelatorios_Click);
             // 
             // btnVenda
             // 
