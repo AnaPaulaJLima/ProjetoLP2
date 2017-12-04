@@ -366,3 +366,4 @@ C:\Users\Ana Paula\Source\Repos\TrabalhoLP2\ImobiliariaLP2\bin\Debug\ShockwaveFl
 C:\Users\Ana Paula\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.csproj.ImobiliariaLP2.exe.config
 C:\Users\Ana Paula\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.FormRelatorioImoveis.resources
 C:\Users\Ana Paula\Source\Repos\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.RelatorioContratoscs.resources
+C:\Users\João Pedro\Documents\ProjetoLP2\TrabalhoLP2\ImobiliariaLP2\obj\Debug\ImobiliariaLP2.Visão.BuscaVendas.resources

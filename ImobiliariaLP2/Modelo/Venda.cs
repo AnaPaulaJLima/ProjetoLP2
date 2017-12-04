@@ -11,10 +11,10 @@ namespace ImobiliariaLP2.Modelo
         private int id;
         private string tipo; //é pra saber se vai ser aluguel ou venda (combo box)
         private string dataVenda;
-        private Imovel i; 
-        private Proprietario p;
-        private Cliente c;
-        private Funcionario f;
+        private Imovel i = new Imovel(); 
+        private Proprietario p = new Proprietario();
+        private Cliente c = new Cliente();
+        private Funcionario f = new Funcionario();
         private int idImovel;
         private int idProprietario;
         private int idCliente;

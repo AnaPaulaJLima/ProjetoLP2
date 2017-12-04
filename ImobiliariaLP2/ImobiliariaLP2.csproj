@@ -138,6 +138,12 @@
     <Compile Include="Visão\Buscas.Designer.cs">
       <DependentUpon>Buscas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visão\BuscaVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visão\BuscaVendas.Designer.cs">
+      <DependentUpon>BuscaVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visão\ClienteV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visão\Buscas.resx">
       <DependentUpon>Buscas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visão\BuscaVendas.resx">
+      <DependentUpon>BuscaVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visão\ClienteV.resx">
       <DependentUpon>ClienteV.cs</DependentUpon>

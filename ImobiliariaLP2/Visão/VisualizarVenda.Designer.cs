@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnBuscarF = new System.Windows.Forms.Button();
             this.textBoxCreci = new System.Windows.Forms.TextBox();
             this.textBoxNomeF = new System.Windows.Forms.TextBox();
             this.textBoxID = new System.Windows.Forms.TextBox();
@@ -38,11 +37,12 @@
             this.lblNomeF = new System.Windows.Forms.Label();
             this.lblIDFuncionario = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBoxTipo = new System.Windows.Forms.TextBox();
+            this.textBoxCategoria = new System.Windows.Forms.TextBox();
             this.textBoxFundo = new System.Windows.Forms.TextBox();
             this.textBoxFrente = new System.Windows.Forms.TextBox();
             this.lblFundo = new System.Windows.Forms.Label();
             this.lblFrente = new System.Windows.Forms.Label();
-            this.btnBuscarI = new System.Windows.Forms.Button();
             this.maskedTextBoxCpfPImovel = new System.Windows.Forms.MaskedTextBox();
             this.textBoxBairroI = new System.Windows.Forms.TextBox();
             this.lblBairroI = new System.Windows.Forms.Label();
@@ -59,13 +59,8 @@
             this.lblCategoriaI = new System.Windows.Forms.Label();
             this.lblTipoI = new System.Windows.Forms.Label();
             this.lbIDImovel = new System.Windows.Forms.Label();
-            this.btnDeletar = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnBuscarC = new System.Windows.Forms.Button();
-            this.maskedTextBoxCpfCliente = new System.Windows.Forms.MaskedTextBox();
-            this.lbCpfCliente = new System.Windows.Forms.Label();
             this.textBoxIDC = new System.Windows.Forms.TextBox();
             this.lbIDC = new System.Windows.Forms.Label();
             this.textBoxRgC = new System.Windows.Forms.TextBox();
@@ -87,9 +82,6 @@
             this.lblBairroP = new System.Windows.Forms.Label();
             this.lblNumeroP = new System.Windows.Forms.Label();
             this.lblRuaP = new System.Windows.Forms.Label();
-            this.btnBuscarP = new System.Windows.Forms.Button();
-            this.maskedTextBoxCpfProprietario = new System.Windows.Forms.MaskedTextBox();
-            this.lbCpfProprietario = new System.Windows.Forms.Label();
             this.textBoxIDP = new System.Windows.Forms.TextBox();
             this.lbIDP = new System.Windows.Forms.Label();
             this.textBoxRgP = new System.Windows.Forms.TextBox();
@@ -102,14 +94,12 @@
             this.lbRgP = new System.Windows.Forms.Label();
             this.lbCpfP = new System.Windows.Forms.Label();
             this.lbNomeP = new System.Windows.Forms.Label();
-            this.dateTimePickerDATA = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblData = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.textBoxIDVenda = new System.Windows.Forms.TextBox();
             this.lblIDVenda = new System.Windows.Forms.Label();
-            this.textBoxCategoria = new System.Windows.Forms.TextBox();
-            this.textBoxTipo = new System.Windows.Forms.TextBox();
+            this.mtbData = new System.Windows.Forms.MaskedTextBox();
+            this.txtBoxTipo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -119,15 +109,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtBoxTipo);
+            this.groupBox1.Controls.Add(this.mtbData);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.btnDeletar);
-            this.groupBox1.Controls.Add(this.btnAlterar);
             this.groupBox1.Controls.Add(this.btnSair);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.dateTimePickerDATA);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblData);
             this.groupBox1.Controls.Add(this.lblTipo);
             this.groupBox1.Controls.Add(this.textBoxIDVenda);
@@ -141,7 +129,6 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.btnBuscarF);
             this.groupBox5.Controls.Add(this.textBoxCreci);
             this.groupBox5.Controls.Add(this.textBoxNomeF);
             this.groupBox5.Controls.Add(this.textBoxID);
@@ -154,16 +141,6 @@
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Funcionario: ";
-            // 
-            // btnBuscarF
-            // 
-            this.btnBuscarF.Location = new System.Drawing.Point(119, 22);
-            this.btnBuscarF.Name = "btnBuscarF";
-            this.btnBuscarF.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarF.TabIndex = 190;
-            this.btnBuscarF.TabStop = false;
-            this.btnBuscarF.Text = "Buscar";
-            this.btnBuscarF.UseVisualStyleBackColor = true;
             // 
             // textBoxCreci
             // 
@@ -187,6 +164,7 @@
             // 
             this.textBoxID.Location = new System.Drawing.Point(56, 24);
             this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(56, 20);
             this.textBoxID.TabIndex = 0;
             // 
@@ -225,7 +203,6 @@
             this.groupBox4.Controls.Add(this.textBoxFrente);
             this.groupBox4.Controls.Add(this.lblFundo);
             this.groupBox4.Controls.Add(this.lblFrente);
-            this.groupBox4.Controls.Add(this.btnBuscarI);
             this.groupBox4.Controls.Add(this.maskedTextBoxCpfPImovel);
             this.groupBox4.Controls.Add(this.textBoxBairroI);
             this.groupBox4.Controls.Add(this.lblBairroI);
@@ -248,6 +225,24 @@
             this.groupBox4.TabIndex = 190;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Imovel:";
+            // 
+            // textBoxTipo
+            // 
+            this.textBoxTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxTipo.Location = new System.Drawing.Point(405, 44);
+            this.textBoxTipo.Name = "textBoxTipo";
+            this.textBoxTipo.Size = new System.Drawing.Size(109, 20);
+            this.textBoxTipo.TabIndex = 201;
+            this.textBoxTipo.TabStop = false;
+            // 
+            // textBoxCategoria
+            // 
+            this.textBoxCategoria.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxCategoria.Location = new System.Drawing.Point(261, 44);
+            this.textBoxCategoria.Name = "textBoxCategoria";
+            this.textBoxCategoria.Size = new System.Drawing.Size(110, 20);
+            this.textBoxCategoria.TabIndex = 200;
+            this.textBoxCategoria.TabStop = false;
             // 
             // textBoxFundo
             // 
@@ -284,16 +279,6 @@
             this.lblFrente.Size = new System.Drawing.Size(90, 13);
             this.lblFrente.TabIndex = 196;
             this.lblFrente.Text = "Metros de frente: ";
-            // 
-            // btnBuscarI
-            // 
-            this.btnBuscarI.Location = new System.Drawing.Point(118, 16);
-            this.btnBuscarI.Name = "btnBuscarI";
-            this.btnBuscarI.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarI.TabIndex = 195;
-            this.btnBuscarI.TabStop = false;
-            this.btnBuscarI.Text = "Buscar";
-            this.btnBuscarI.UseVisualStyleBackColor = true;
             // 
             // maskedTextBoxCpfPImovel
             // 
@@ -422,6 +407,7 @@
             this.textBoxIDI.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxIDI.Location = new System.Drawing.Point(54, 18);
             this.textBoxIDI.Name = "textBoxIDI";
+            this.textBoxIDI.ReadOnly = true;
             this.textBoxIDI.Size = new System.Drawing.Size(58, 20);
             this.textBoxIDI.TabIndex = 0;
             // 
@@ -455,41 +441,19 @@
             this.lbIDImovel.TabIndex = 177;
             this.lbIDImovel.Text = "ID: ";
             // 
-            // btnDeletar
-            // 
-            this.btnDeletar.Location = new System.Drawing.Point(628, 543);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletar.TabIndex = 189;
-            this.btnDeletar.TabStop = false;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Location = new System.Drawing.Point(307, 543);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterar.TabIndex = 188;
-            this.btnAlterar.TabStop = false;
-            this.btnAlterar.Text = "Alterar ";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(21, 543);
+            this.btnSair.Location = new System.Drawing.Point(607, 546);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 187;
             this.btnSair.TabStop = false;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click_1);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnBuscarC);
-            this.groupBox3.Controls.Add(this.maskedTextBoxCpfCliente);
-            this.groupBox3.Controls.Add(this.lbCpfCliente);
             this.groupBox3.Controls.Add(this.textBoxIDC);
             this.groupBox3.Controls.Add(this.lbIDC);
             this.groupBox3.Controls.Add(this.textBoxRgC);
@@ -509,36 +473,9 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente: ";
             // 
-            // btnBuscarC
-            // 
-            this.btnBuscarC.Location = new System.Drawing.Point(161, 16);
-            this.btnBuscarC.Name = "btnBuscarC";
-            this.btnBuscarC.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarC.TabIndex = 172;
-            this.btnBuscarC.TabStop = false;
-            this.btnBuscarC.Text = "Buscar";
-            this.btnBuscarC.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBoxCpfCliente
-            // 
-            this.maskedTextBoxCpfCliente.Location = new System.Drawing.Point(62, 18);
-            this.maskedTextBoxCpfCliente.Mask = "000.000.000-00";
-            this.maskedTextBoxCpfCliente.Name = "maskedTextBoxCpfCliente";
-            this.maskedTextBoxCpfCliente.Size = new System.Drawing.Size(93, 20);
-            this.maskedTextBoxCpfCliente.TabIndex = 0;
-            // 
-            // lbCpfCliente
-            // 
-            this.lbCpfCliente.AutoSize = true;
-            this.lbCpfCliente.Location = new System.Drawing.Point(32, 25);
-            this.lbCpfCliente.Name = "lbCpfCliente";
-            this.lbCpfCliente.Size = new System.Drawing.Size(30, 13);
-            this.lbCpfCliente.TabIndex = 170;
-            this.lbCpfCliente.Text = "CPF:";
-            // 
             // textBoxIDC
             // 
-            this.textBoxIDC.Location = new System.Drawing.Point(51, 47);
+            this.textBoxIDC.Location = new System.Drawing.Point(52, 29);
             this.textBoxIDC.Name = "textBoxIDC";
             this.textBoxIDC.ReadOnly = true;
             this.textBoxIDC.Size = new System.Drawing.Size(39, 20);
@@ -548,7 +485,7 @@
             // lbIDC
             // 
             this.lbIDC.AutoSize = true;
-            this.lbIDC.Location = new System.Drawing.Point(32, 50);
+            this.lbIDC.Location = new System.Drawing.Point(33, 32);
             this.lbIDC.Name = "lbIDC";
             this.lbIDC.Size = new System.Drawing.Size(21, 13);
             this.lbIDC.TabIndex = 168;
@@ -556,7 +493,7 @@
             // 
             // textBoxRgC
             // 
-            this.textBoxRgC.Location = new System.Drawing.Point(198, 79);
+            this.textBoxRgC.Location = new System.Drawing.Point(199, 61);
             this.textBoxRgC.Name = "textBoxRgC";
             this.textBoxRgC.ReadOnly = true;
             this.textBoxRgC.Size = new System.Drawing.Size(134, 20);
@@ -565,7 +502,7 @@
             // 
             // maskedTextBoxTelefoneC
             // 
-            this.maskedTextBoxTelefoneC.Location = new System.Drawing.Point(595, 47);
+            this.maskedTextBoxTelefoneC.Location = new System.Drawing.Point(596, 29);
             this.maskedTextBoxTelefoneC.Mask = "(00) 0000-00009";
             this.maskedTextBoxTelefoneC.Name = "maskedTextBoxTelefoneC";
             this.maskedTextBoxTelefoneC.ReadOnly = true;
@@ -575,7 +512,7 @@
             // 
             // maskedTextBoxCpfC
             // 
-            this.maskedTextBoxCpfC.Location = new System.Drawing.Point(60, 79);
+            this.maskedTextBoxCpfC.Location = new System.Drawing.Point(61, 61);
             this.maskedTextBoxCpfC.Mask = "000.000.000-00";
             this.maskedTextBoxCpfC.Name = "maskedTextBoxCpfC";
             this.maskedTextBoxCpfC.ReadOnly = true;
@@ -585,7 +522,7 @@
             // 
             // textBoxNomeC
             // 
-            this.textBoxNomeC.Location = new System.Drawing.Point(133, 47);
+            this.textBoxNomeC.Location = new System.Drawing.Point(134, 29);
             this.textBoxNomeC.Name = "textBoxNomeC";
             this.textBoxNomeC.ReadOnly = true;
             this.textBoxNomeC.Size = new System.Drawing.Size(398, 20);
@@ -594,7 +531,7 @@
             // 
             // textBoxEmailC
             // 
-            this.textBoxEmailC.Location = new System.Drawing.Point(374, 79);
+            this.textBoxEmailC.Location = new System.Drawing.Point(375, 61);
             this.textBoxEmailC.Name = "textBoxEmailC";
             this.textBoxEmailC.ReadOnly = true;
             this.textBoxEmailC.Size = new System.Drawing.Size(301, 20);
@@ -604,7 +541,7 @@
             // lbEmailC
             // 
             this.lbEmailC.AutoSize = true;
-            this.lbEmailC.Location = new System.Drawing.Point(338, 82);
+            this.lbEmailC.Location = new System.Drawing.Point(339, 64);
             this.lbEmailC.Name = "lbEmailC";
             this.lbEmailC.Size = new System.Drawing.Size(38, 13);
             this.lbEmailC.TabIndex = 162;
@@ -613,7 +550,7 @@
             // lbTelefoneC
             // 
             this.lbTelefoneC.AutoSize = true;
-            this.lbTelefoneC.Location = new System.Drawing.Point(537, 50);
+            this.lbTelefoneC.Location = new System.Drawing.Point(538, 32);
             this.lbTelefoneC.Name = "lbTelefoneC";
             this.lbTelefoneC.Size = new System.Drawing.Size(52, 13);
             this.lbTelefoneC.TabIndex = 161;
@@ -622,7 +559,7 @@
             // lbRgC
             // 
             this.lbRgC.AutoSize = true;
-            this.lbRgC.Location = new System.Drawing.Point(168, 82);
+            this.lbRgC.Location = new System.Drawing.Point(169, 64);
             this.lbRgC.Name = "lbRgC";
             this.lbRgC.Size = new System.Drawing.Size(26, 13);
             this.lbRgC.TabIndex = 160;
@@ -631,7 +568,7 @@
             // lbCpfC
             // 
             this.lbCpfC.AutoSize = true;
-            this.lbCpfC.Location = new System.Drawing.Point(33, 82);
+            this.lbCpfC.Location = new System.Drawing.Point(34, 64);
             this.lbCpfC.Name = "lbCpfC";
             this.lbCpfC.Size = new System.Drawing.Size(30, 13);
             this.lbCpfC.TabIndex = 159;
@@ -640,7 +577,7 @@
             // lbNomeC
             // 
             this.lbNomeC.AutoSize = true;
-            this.lbNomeC.Location = new System.Drawing.Point(89, 50);
+            this.lbNomeC.Location = new System.Drawing.Point(90, 32);
             this.lbNomeC.Name = "lbNomeC";
             this.lbNomeC.Size = new System.Drawing.Size(38, 13);
             this.lbNomeC.TabIndex = 158;
@@ -656,9 +593,6 @@
             this.groupBox2.Controls.Add(this.lblBairroP);
             this.groupBox2.Controls.Add(this.lblNumeroP);
             this.groupBox2.Controls.Add(this.lblRuaP);
-            this.groupBox2.Controls.Add(this.btnBuscarP);
-            this.groupBox2.Controls.Add(this.maskedTextBoxCpfProprietario);
-            this.groupBox2.Controls.Add(this.lbCpfProprietario);
             this.groupBox2.Controls.Add(this.textBoxIDP);
             this.groupBox2.Controls.Add(this.lbIDP);
             this.groupBox2.Controls.Add(this.textBoxRgP);
@@ -680,7 +614,7 @@
             // 
             // textBoxCidadeP
             // 
-            this.textBoxCidadeP.Location = new System.Drawing.Point(319, 125);
+            this.textBoxCidadeP.Location = new System.Drawing.Point(319, 109);
             this.textBoxCidadeP.Name = "textBoxCidadeP";
             this.textBoxCidadeP.ReadOnly = true;
             this.textBoxCidadeP.Size = new System.Drawing.Size(160, 20);
@@ -689,7 +623,7 @@
             // 
             // textBoxBairroP
             // 
-            this.textBoxBairroP.Location = new System.Drawing.Point(75, 125);
+            this.textBoxBairroP.Location = new System.Drawing.Point(75, 109);
             this.textBoxBairroP.Name = "textBoxBairroP";
             this.textBoxBairroP.ReadOnly = true;
             this.textBoxBairroP.Size = new System.Drawing.Size(149, 20);
@@ -698,7 +632,7 @@
             // 
             // textBoxNumeroP
             // 
-            this.textBoxNumeroP.Location = new System.Drawing.Point(609, 99);
+            this.textBoxNumeroP.Location = new System.Drawing.Point(609, 83);
             this.textBoxNumeroP.Name = "textBoxNumeroP";
             this.textBoxNumeroP.ReadOnly = true;
             this.textBoxNumeroP.Size = new System.Drawing.Size(65, 20);
@@ -707,7 +641,7 @@
             // 
             // textBoxRuaP
             // 
-            this.textBoxRuaP.Location = new System.Drawing.Point(59, 99);
+            this.textBoxRuaP.Location = new System.Drawing.Point(66, 83);
             this.textBoxRuaP.Name = "textBoxRuaP";
             this.textBoxRuaP.ReadOnly = true;
             this.textBoxRuaP.Size = new System.Drawing.Size(488, 20);
@@ -717,7 +651,7 @@
             // lblCidadeP
             // 
             this.lblCidadeP.AutoSize = true;
-            this.lblCidadeP.Location = new System.Drawing.Point(267, 128);
+            this.lblCidadeP.Location = new System.Drawing.Point(267, 112);
             this.lblCidadeP.Name = "lblCidadeP";
             this.lblCidadeP.Size = new System.Drawing.Size(46, 13);
             this.lblCidadeP.TabIndex = 161;
@@ -726,7 +660,7 @@
             // lblBairroP
             // 
             this.lblBairroP.AutoSize = true;
-            this.lblBairroP.Location = new System.Drawing.Point(32, 128);
+            this.lblBairroP.Location = new System.Drawing.Point(32, 112);
             this.lblBairroP.Name = "lblBairroP";
             this.lblBairroP.Size = new System.Drawing.Size(37, 13);
             this.lblBairroP.TabIndex = 160;
@@ -735,7 +669,7 @@
             // lblNumeroP
             // 
             this.lblNumeroP.AutoSize = true;
-            this.lblNumeroP.Location = new System.Drawing.Point(556, 102);
+            this.lblNumeroP.Location = new System.Drawing.Point(556, 86);
             this.lblNumeroP.Name = "lblNumeroP";
             this.lblNumeroP.Size = new System.Drawing.Size(47, 13);
             this.lblNumeroP.TabIndex = 159;
@@ -744,42 +678,15 @@
             // lblRuaP
             // 
             this.lblRuaP.AutoSize = true;
-            this.lblRuaP.Location = new System.Drawing.Point(32, 102);
+            this.lblRuaP.Location = new System.Drawing.Point(32, 86);
             this.lblRuaP.Name = "lblRuaP";
             this.lblRuaP.Size = new System.Drawing.Size(30, 13);
             this.lblRuaP.TabIndex = 158;
             this.lblRuaP.Text = "Rua:";
             // 
-            // btnBuscarP
-            // 
-            this.btnBuscarP.Location = new System.Drawing.Point(170, 16);
-            this.btnBuscarP.Name = "btnBuscarP";
-            this.btnBuscarP.Size = new System.Drawing.Size(65, 22);
-            this.btnBuscarP.TabIndex = 157;
-            this.btnBuscarP.TabStop = false;
-            this.btnBuscarP.Text = "Buscar";
-            this.btnBuscarP.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBoxCpfProprietario
-            // 
-            this.maskedTextBoxCpfProprietario.Location = new System.Drawing.Point(64, 18);
-            this.maskedTextBoxCpfProprietario.Mask = "000.000.000-00";
-            this.maskedTextBoxCpfProprietario.Name = "maskedTextBoxCpfProprietario";
-            this.maskedTextBoxCpfProprietario.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBoxCpfProprietario.TabIndex = 0;
-            // 
-            // lbCpfProprietario
-            // 
-            this.lbCpfProprietario.AutoSize = true;
-            this.lbCpfProprietario.Location = new System.Drawing.Point(32, 25);
-            this.lbCpfProprietario.Name = "lbCpfProprietario";
-            this.lbCpfProprietario.Size = new System.Drawing.Size(30, 13);
-            this.lbCpfProprietario.TabIndex = 155;
-            this.lbCpfProprietario.Text = "CPF:";
-            // 
             // textBoxIDP
             // 
-            this.textBoxIDP.Location = new System.Drawing.Point(59, 44);
+            this.textBoxIDP.Location = new System.Drawing.Point(59, 28);
             this.textBoxIDP.Name = "textBoxIDP";
             this.textBoxIDP.ReadOnly = true;
             this.textBoxIDP.Size = new System.Drawing.Size(41, 20);
@@ -789,7 +696,7 @@
             // lbIDP
             // 
             this.lbIDP.AutoSize = true;
-            this.lbIDP.Location = new System.Drawing.Point(32, 47);
+            this.lbIDP.Location = new System.Drawing.Point(32, 31);
             this.lbIDP.Name = "lbIDP";
             this.lbIDP.Size = new System.Drawing.Size(21, 13);
             this.lbIDP.TabIndex = 153;
@@ -797,7 +704,7 @@
             // 
             // textBoxRgP
             // 
-            this.textBoxRgP.Location = new System.Drawing.Point(197, 73);
+            this.textBoxRgP.Location = new System.Drawing.Point(197, 57);
             this.textBoxRgP.Name = "textBoxRgP";
             this.textBoxRgP.ReadOnly = true;
             this.textBoxRgP.Size = new System.Drawing.Size(134, 20);
@@ -806,7 +713,7 @@
             // 
             // maskedTextBoxTelefoneP
             // 
-            this.maskedTextBoxTelefoneP.Location = new System.Drawing.Point(572, 125);
+            this.maskedTextBoxTelefoneP.Location = new System.Drawing.Point(572, 109);
             this.maskedTextBoxTelefoneP.Mask = "(00) 0000-00009";
             this.maskedTextBoxTelefoneP.Name = "maskedTextBoxTelefoneP";
             this.maskedTextBoxTelefoneP.ReadOnly = true;
@@ -816,7 +723,7 @@
             // 
             // maskedTextBoxCpfP
             // 
-            this.maskedTextBoxCpfP.Location = new System.Drawing.Point(59, 73);
+            this.maskedTextBoxCpfP.Location = new System.Drawing.Point(59, 57);
             this.maskedTextBoxCpfP.Mask = "000.000.000-00";
             this.maskedTextBoxCpfP.Name = "maskedTextBoxCpfP";
             this.maskedTextBoxCpfP.ReadOnly = true;
@@ -826,7 +733,7 @@
             // 
             // textBoxNomeP
             // 
-            this.textBoxNomeP.Location = new System.Drawing.Point(150, 44);
+            this.textBoxNomeP.Location = new System.Drawing.Point(150, 28);
             this.textBoxNomeP.Name = "textBoxNomeP";
             this.textBoxNomeP.ReadOnly = true;
             this.textBoxNomeP.Size = new System.Drawing.Size(524, 20);
@@ -835,7 +742,7 @@
             // 
             // textBoxEmailP
             // 
-            this.textBoxEmailP.Location = new System.Drawing.Point(373, 73);
+            this.textBoxEmailP.Location = new System.Drawing.Point(373, 57);
             this.textBoxEmailP.Name = "textBoxEmailP";
             this.textBoxEmailP.ReadOnly = true;
             this.textBoxEmailP.Size = new System.Drawing.Size(301, 20);
@@ -845,7 +752,7 @@
             // lbEmailP
             // 
             this.lbEmailP.AutoSize = true;
-            this.lbEmailP.Location = new System.Drawing.Point(333, 76);
+            this.lbEmailP.Location = new System.Drawing.Point(333, 60);
             this.lbEmailP.Name = "lbEmailP";
             this.lbEmailP.Size = new System.Drawing.Size(38, 13);
             this.lbEmailP.TabIndex = 147;
@@ -854,7 +761,7 @@
             // lbTelefoneP
             // 
             this.lbTelefoneP.AutoSize = true;
-            this.lbTelefoneP.Location = new System.Drawing.Point(514, 128);
+            this.lbTelefoneP.Location = new System.Drawing.Point(514, 112);
             this.lbTelefoneP.Name = "lbTelefoneP";
             this.lbTelefoneP.Size = new System.Drawing.Size(52, 13);
             this.lbTelefoneP.TabIndex = 146;
@@ -863,7 +770,7 @@
             // lbRgP
             // 
             this.lbRgP.AutoSize = true;
-            this.lbRgP.Location = new System.Drawing.Point(167, 76);
+            this.lbRgP.Location = new System.Drawing.Point(167, 60);
             this.lbRgP.Name = "lbRgP";
             this.lbRgP.Size = new System.Drawing.Size(26, 13);
             this.lbRgP.TabIndex = 145;
@@ -872,7 +779,7 @@
             // lbCpfP
             // 
             this.lbCpfP.AutoSize = true;
-            this.lbCpfP.Location = new System.Drawing.Point(32, 76);
+            this.lbCpfP.Location = new System.Drawing.Point(32, 60);
             this.lbCpfP.Name = "lbCpfP";
             this.lbCpfP.Size = new System.Drawing.Size(30, 13);
             this.lbCpfP.TabIndex = 144;
@@ -881,33 +788,11 @@
             // lbNomeP
             // 
             this.lbNomeP.AutoSize = true;
-            this.lbNomeP.Location = new System.Drawing.Point(106, 47);
+            this.lbNomeP.Location = new System.Drawing.Point(106, 31);
             this.lbNomeP.Name = "lbNomeP";
             this.lbNomeP.Size = new System.Drawing.Size(38, 13);
             this.lbNomeP.TabIndex = 143;
             this.lbNomeP.Text = "Nome:";
-            // 
-            // dateTimePickerDATA
-            // 
-            this.dateTimePickerDATA.Checked = false;
-            this.dateTimePickerDATA.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePickerDATA.Location = new System.Drawing.Point(479, 19);
-            this.dateTimePickerDATA.Name = "dateTimePickerDATA";
-            this.dateTimePickerDATA.Size = new System.Drawing.Size(211, 20);
-            this.dateTimePickerDATA.TabIndex = 1;
-            this.dateTimePickerDATA.Value = new System.DateTime(2017, 11, 30, 3, 6, 0, 0);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Aluguel",
-            "Venda"});
-            this.comboBox1.Location = new System.Drawing.Point(261, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
             // 
             // lblData
             // 
@@ -945,23 +830,22 @@
             this.lblIDVenda.TabIndex = 115;
             this.lblIDVenda.Text = "ID :";
             // 
-            // textBoxCategoria
+            // mtbData
             // 
-            this.textBoxCategoria.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxCategoria.Location = new System.Drawing.Point(261, 44);
-            this.textBoxCategoria.Name = "textBoxCategoria";
-            this.textBoxCategoria.Size = new System.Drawing.Size(110, 20);
-            this.textBoxCategoria.TabIndex = 200;
-            this.textBoxCategoria.TabStop = false;
+            this.mtbData.Location = new System.Drawing.Point(469, 19);
+            this.mtbData.Mask = "00/00/0000";
+            this.mtbData.Name = "mtbData";
+            this.mtbData.ReadOnly = true;
+            this.mtbData.Size = new System.Drawing.Size(81, 20);
+            this.mtbData.TabIndex = 191;
             // 
-            // textBoxTipo
+            // txtBoxTipo
             // 
-            this.textBoxTipo.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxTipo.Location = new System.Drawing.Point(405, 44);
-            this.textBoxTipo.Name = "textBoxTipo";
-            this.textBoxTipo.Size = new System.Drawing.Size(109, 20);
-            this.textBoxTipo.TabIndex = 201;
-            this.textBoxTipo.TabStop = false;
+            this.txtBoxTipo.Location = new System.Drawing.Point(265, 19);
+            this.txtBoxTipo.Name = "txtBoxTipo";
+            this.txtBoxTipo.ReadOnly = true;
+            this.txtBoxTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxTipo.TabIndex = 192;
             // 
             // VisualizarVenda
             // 
@@ -992,7 +876,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button btnBuscarF;
         private System.Windows.Forms.TextBox textBoxCreci;
         private System.Windows.Forms.TextBox textBoxNomeF;
         private System.Windows.Forms.TextBox textBoxID;
@@ -1004,7 +887,6 @@
         private System.Windows.Forms.TextBox textBoxFrente;
         private System.Windows.Forms.Label lblFundo;
         private System.Windows.Forms.Label lblFrente;
-        private System.Windows.Forms.Button btnBuscarI;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCpfPImovel;
         private System.Windows.Forms.TextBox textBoxBairroI;
         private System.Windows.Forms.Label lblBairroI;
@@ -1021,13 +903,8 @@
         private System.Windows.Forms.Label lblCategoriaI;
         private System.Windows.Forms.Label lblTipoI;
         private System.Windows.Forms.Label lbIDImovel;
-        private System.Windows.Forms.Button btnDeletar;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnBuscarC;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxCpfCliente;
-        private System.Windows.Forms.Label lbCpfCliente;
         private System.Windows.Forms.TextBox textBoxIDC;
         private System.Windows.Forms.Label lbIDC;
         private System.Windows.Forms.TextBox textBoxRgC;
@@ -1049,9 +926,6 @@
         private System.Windows.Forms.Label lblBairroP;
         private System.Windows.Forms.Label lblNumeroP;
         private System.Windows.Forms.Label lblRuaP;
-        private System.Windows.Forms.Button btnBuscarP;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxCpfProprietario;
-        private System.Windows.Forms.Label lbCpfProprietario;
         private System.Windows.Forms.TextBox textBoxIDP;
         private System.Windows.Forms.Label lbIDP;
         private System.Windows.Forms.TextBox textBoxRgP;
@@ -1064,13 +938,13 @@
         private System.Windows.Forms.Label lbRgP;
         private System.Windows.Forms.Label lbCpfP;
         private System.Windows.Forms.Label lbNomeP;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDATA;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.TextBox textBoxIDVenda;
         private System.Windows.Forms.Label lblIDVenda;
         private System.Windows.Forms.TextBox textBoxTipo;
         private System.Windows.Forms.TextBox textBoxCategoria;
+        private System.Windows.Forms.MaskedTextBox mtbData;
+        private System.Windows.Forms.TextBox txtBoxTipo;
     }
 }

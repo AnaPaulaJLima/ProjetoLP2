@@ -61,15 +61,20 @@ namespace ImobiliariaLP2.DAO
             GetDTO(query, v);
         }
 
-        public List<Venda> Busca()
+        public List<Venda> Busca(string chave)
         {
             Database db = Database.GetInstance();
             List<Venda> lista = new List<Venda>();
             DataRow dr = null;
             int linhas;
             string query = "SELECT * FROM vendas";
+            if (chave != "")
+                query += " WHERE nome_funcionario LIKE '%" + @chave + "%';";
 
             MySqlCommand cmd = new MySqlCommand(query, db.GetConnection());
+            cmd.Parameters.Add("@chave", MySqlDbType.VarChar);
+            cmd.Parameters["@chave"].Value = chave;
+
             DataSet ds = db.ExecuteQuery(cmd);
             linhas = ds.Tables[0].Rows.Count;
 
@@ -80,6 +85,26 @@ namespace ImobiliariaLP2.DAO
                 lista.Add(venda);
             }
             return lista;
+        }
+
+        public Venda BuscaPorId(int chave)
+        {
+            Venda v = new Venda();
+            Database db = Database.GetInstance();
+            DataRow dr = null;
+            string query = "SELECT * FROM vendas WHERE id = " + chave;
+
+            MySqlCommand cmd = new MySqlCommand(query, db.GetConnection());
+            DataSet ds = db.ExecuteQuery(cmd);
+
+            int linhas = ds.Tables[0].Rows.Count;
+            for(int i = 0; i < linhas; i++)
+            {
+                dr = ds.Tables[0].Rows[i];
+                v = SetDTO(dr);
+            }
+
+            return v;
         }
     }
 }

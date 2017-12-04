@@ -125,6 +125,28 @@ namespace ImobiliariaLP2.DAO
             return imovel;
         }
 
+        // Busca mesmo se estiver vendido
+        public Imovel BuscaTodosPorId(int id)
+        {
+            Database db = Database.GetInstance();
+            Imovel imovel = new Imovel();
+            DataRow dr = null;
+
+            string query = "SELECT * FROM imovel WHERE id = " + id;
+            MySqlCommand comando = new MySqlCommand(query, db.GetConnection());
+            DataSet ds = db.ExecuteQuery(comando);
+
+            int linhas = ds.Tables[0].Rows.Count;
+
+            for (int i = 0; i < linhas; i++)
+            {
+                dr = ds.Tables[0].Rows[i];
+                imovel = SetDTO(dr);
+            }
+
+            return imovel;
+        }
+
         public void Atualizar (Imovel i)
         {
             string query = "UPDATE imovel SET id = " + i.Id + ", tipo = @tipo, categoria = @categoria, metragem = @metragem, frente = @frente, fundo = @fundo, valor = @valor, bairro = @bairro, rua = @rua, cidade = @cidade, numero = @numero, id_proprietario = " + i.IdProprietario + ", vendido = " + i.Vendido + ", alugado = " + i.Alugado + " WHERE id = " + i.Id;

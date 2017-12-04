@@ -20,7 +20,7 @@ namespace ImobiliariaLP2.Modelo
         private string cidade;
         private int numero;
         private int idProprietario;
-        private Proprietario p;
+        private Proprietario p = new Proprietario();
         private int vendido;
         private int alugado;
 

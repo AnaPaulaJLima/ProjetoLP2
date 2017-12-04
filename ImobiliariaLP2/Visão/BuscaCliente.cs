@@ -44,8 +44,9 @@ namespace ImobiliariaLP2.Visão
 
         private void textBoxNome_KeyUp(object sender, KeyEventArgs e)
         {
-           ClienteDAO cDAO = new ClienteDAO();
-           dgvCliente.DataSource = cDAO.Buscar(textBoxNome.Text);
+            //ClienteDAO cDAO = new ClienteDAO();
+            //dgvCliente.DataSource = cDAO.Buscar(textBoxNome.Text);
+            Fill(textBoxNome.Text);
         }
 
         private void textBoxNome_KeyPress(object sender, KeyPressEventArgs e)

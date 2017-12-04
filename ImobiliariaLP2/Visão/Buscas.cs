@@ -54,8 +54,8 @@ namespace ImobiliariaLP2.Visão
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            RelatorioContratoscs rcv = new RelatorioContratoscs();
-            rcv.Show();
+            BuscaVendas bv = new BuscaVendas();
+            bv.ShowDialog();
         }
     }
 }
